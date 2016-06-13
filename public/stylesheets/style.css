@@ -280,11 +280,46 @@ a {
 }
 
 .box {
-  border: 2px solid red;
   height: 200px;
   width: 200px;
   display: inline-block;
   margin: 50px 5.7%;
+}
+
+#schedule-apt {
+    background-image: url(../images/schedule.jpg);
+    background-size: contain;
+}
+
+#patient-portal {
+    background-image: url(../images/portal.jpg);
+    background-size: contain;
+}
+
+#review-us {
+    background-image: url(../images/reviews.jpg);
+    background-size: contain;
+}
+
+#lasik {
+    background-image: url(../images/lasik.jpg);
+    background-size: contain;
+}
+
+#premium-eye-screen {
+    background-image: url(../images/premium.jpg);
+    background-size: contain;
+}
+
+#follow-us {
+    background-image: url(../images/follow-us.jpg);
+    background-size: contain;
+}
+.box >p {
+    color: darkblue;
+    text-align: center;
+    clear: both;
+    margin: 85% 0 0 0; 
 }
 
 
