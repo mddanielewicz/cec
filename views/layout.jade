@@ -1,0 +1,85 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+   #apt-modal-wrap
+    #modal-apt
+      h2 Schedule an appointment
+      p Fill out the information below, including three days that work best for you, and we will call you with options that work best around your schedule!
+      form#apt(action="#" method="POST")
+        input(type="text" name="fName" id="fName" placeholder="First Name")
+        input(type="text" name="lName" id="lName" placeholder="Last Name")
+        .phone-container
+          input.phone(type="tel" name="phoneNumOne" id="phoneNumOne" placeholder="###")
+          input.phone(type="tel" name="phoneNumTwo" id="phoneNumTwo" placeholder="###")
+          input.phone(type="tel" name="phoneNumThree" id="phoneNumThree" placeholder="####")
+        input(type="email" name="email" id="email" placeholder="Email")
+        input(type="date" name="aptChoiceOne" id="aptChoiceOne")
+        label(for="aptChoiceOne") First Choice
+        input(type="date" name="aptChoiceTwo" id="aptChoiceTwo")
+        label(for="aptChoiceTwo") Second Choice
+        input(type="date" name="aptChoiceThree" id="aptChoiceThree")
+        label(for="aptChoiceThree") Third Choice
+        input(type="submit" value="Submit")
+        
+        
+        
+   #header-container
+    .header-overlay
+      //.header-logo
+        img(src="../images/Conrad Eye 2.jpg" alt='Conrad Eye Centers Logo')
+      .main-nav
+        ul
+          li
+            a(href="#") Services
+          li 
+            a(href="#") About  
+          li
+            a(href="#") Resources             
+          li
+            a(href='#') Contact
+          li
+            #nav-apt
+              a Schedule Appointment
+
+      .title-container
+        h1 #{title}
+        p Personalized, Comprehensive Eyecare.          
+    block content
+    #social-links-bkgrnd
+      .social-links-container
+        .social-icon
+              img(src="images/facebook-icon.png" alt="Facebook Logo")
+        .social-icon
+              img(src="images/Google-plus-icon.png" alt="Google Plus Louisville Logo")
+        .social-icon
+              img(src="images/Google-plus-icon.png" alt="Google Plus New Albany Logo")
+        .social-icon
+              img(src="images/twitter-logo.png" alt="Twitter")
+    #footer-container
+        .partner-logo-container
+          .bbb-logo
+            img(src="#" alt="Better Buisness Bueru Logo")
+          .aao-logo
+            img(src="#" alt="American Academy of Opthamologists")
+        .office-louisville
+          p Louisville Office
+          p 204 Breckenridge Lane
+          p Louisville, KY 40207
+          p p. 502-899-7778
+        .office-devide
+        .office-indiana
+          p New Albany Office 
+          p 1919 State Street
+          p Suite 210
+          p New Albany, IN ?????
+          p p. 812-944-6063
+          
+script(src="/javascripts/social-media.js")
+  
+        
+  
+        
