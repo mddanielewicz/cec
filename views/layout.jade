@@ -24,6 +24,56 @@ html
         input(type="date" name="aptChoiceThree" id="aptChoiceThree")
         label(for="aptChoiceThree") Third Choice
         input(type="submit" value="Submit")
+   #review-modal-wrap
+    #review-modal
+      .left
+        h2 Review us and get rewards!!
+        h3 Help us, our valued patiens, grow our online presence!!
+        p If you were satisfied with your most recent visit, please consider leaving  us a positive review on one of the websites listed below. Simply click on a link, leave a review, and complete the form to let us know! Once confirmed, we will send you a free Conrad Eye Centers water bottle or coffee tumbler; you're choice! Thank you for your valued support!
+        ul
+          li
+            a(href="#") Yelp Louisville
+          li
+            a(href="#") Yelp New Albany
+          li
+            a(href="#") Google+ Louisville
+          li
+            a(href="#") Google+ New Albany
+          li
+            a(href="#") Better Buesness Bueru
+          li
+            a(href="#") Healthgrades
+          li
+            a(href="#") Yelp
+          li
+            a(href="#") Yelp
+          li
+            a(href="#") Yelp
+          li
+            a(href="#") Yelp
+          li
+            a(href="#") Yelp
+          li
+            a(href="#") Yelp
+      .right
+        h2 Submision Form
+        form(action='#' method='POST')
+          input(type='text' id='reviewFname' placeholder='First Name')
+          input(type='text' id='reviewLname' placeholder='Last Name')
+          input(type='email' id='reviewEmail' placeholder='Email')
+          select(id='reviewSite' name='reviewSite')
+            option(value='Yelp - Louisville') Yelp - Louisville
+            option(value='Yelp - New Albany') Yelp - New Albany
+            option(value='Google+ - Louisville') Google+ - Louisville
+            option(value='Google+ - New Albany') Google+ - New Albany
+            option(value='Better Bueisness Bueru') Better Bueisness Beurue
+            option(value='Healthgrades') Healthgrades
+            option(value='UCompare Healthcare') UCompate Healthcare
+          input(type='date' id='reviewPostDate')
+          select(id='reviewReward' name='reviewReward')
+            option(value='waterBottle') Water Bottle
+            option(value='coffeeTumbler') Coffee Tumbler
+          input(type='submit' value='Submit')
         
         
         

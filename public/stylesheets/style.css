@@ -20,8 +20,13 @@ p {
 
 
 /*============================
-==========Modal===============
+==========Modals===============
 ============================*/
+
+
+/*=============================
+============Appointment========
+=============================*/
 
 #apt-modal-wrap {
   display: none;
@@ -63,6 +68,104 @@ p {
   font-size: 1.1rem;
   color: darkblue;
 }
+
+/*===========================
+==========Reviews============
+===========================*/
+
+#review-modal-wrap {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5); 
+}
+
+#review-modal {
+  margin: 5% auto;
+  width: 60%;
+  height: 80%;
+  background-color: #fff;
+}
+
+.left {
+  width: 49%;
+  height: 100%;
+  padding-right: 5px;
+  border-right: 2px solid rgba(0,0,0,0.5);
+  float: left;
+  clear: left;
+}
+
+.left h2,
+.left h3,
+.right h2,
+.left p {
+  color: darkblue;
+  text-align: center;
+}
+
+.left p {
+  text-align: justify;
+  margin: 0 10px;
+}
+
+.left ul {
+  margin-top: 5%;
+}
+
+.left li {
+  list-style: none;
+  text-align: center;
+}
+
+.left a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+
+.left a:hover {
+  background: gold;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.right{
+  width: 49%;
+  float: right;
+}
+
+.right form {
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.right input {
+  float: left;
+  clear: both;
+  width: 80%;
+  height: 30px;
+  margin: 10px 0;
+}
+
+.right select {
+  float: left;
+  clear: both;
+  width: 81%;
+  height: 30px;
+  margin: 10px 0;
+}
+
+.right option {
+  margin:  0 25px;
+}
+
+
 
 input[type=date]::-webkit-inner-spin-button, 
 input[type=date]::-webkit-outer-spin-button { 
