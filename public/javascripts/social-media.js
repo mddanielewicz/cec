@@ -23,7 +23,6 @@ var reviewModalBtn = document.getElementById('review-us');
 reviewModalBtn.onclick = function() {
   modalWrap.style.display = 'block';
   modalReview.style.display = 'block';
-  console.log("modal");
 }
 
 //Modal Premium Eye Screening
@@ -46,21 +45,32 @@ premiumModalBtn.onclick = function() {
 
 glaucomaLnk.onclick = function () {
     glaucomaPkg.style.display='block';
-    glaucomaLnk.style.backgroundColor='gold';
+    glaucomaLnk.style.backgroundColor='#848BAE';
     retinalPkg.style.display='none';
     retinalLnk.style.backgroundColor='';
 }
 
 retinalLnk.onclick = function () {
     glaucomaPkg.style.display='none';
-    glaucomaLnk.style.backgroundColor='rgba(0,0,0,0.0)';
+    //glaucomaLnk.style.backgroundColor='rgba(0,0,0,0.0)';
     retinalPkg.style.display='block';
-    retinalLnk.style.backgroundColor='gold';
+    retinalLnk.style.backgroundColor='#848BAE';
+}
+
+//Modal Follow Us
+
+var modalFollow = document.getElementById('follow-modal');
+var followModalBtn = document.getElementById('follow-us');
+
+followModalBtn.onclick = function() {
+  modalWrap.style.display='block';
+  modalFollow.style.display='block';
 }
 
 // Modal Clear
 window.onclick = function(event) {
     if (event.target == modalWrap) {
+        modalFollow.style.display='none';
         modalPremium.style.display='none';
         modalReview.style.display='none';
         modalApt.style.display="none";

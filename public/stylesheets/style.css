@@ -2,22 +2,36 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+h1,
+h2,
+h3,
+p {
+    color: #152157;
+}
+
 h1 {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 h2 {
-  font-size: 1.7rem;
+    font-size: 1.7rem;
 }
 
 h3 {
   font-size: 1.5rem;
 }
 
-p {
-  font-size: 1.1rem;
+p,
+li,
+a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    list-style: none;
 }
 
+a {
+  color: #556091
+}
 
 /*============================
 ==========Modals===============
@@ -29,7 +43,7 @@ p {
 =============================*/
 
 #modal-wrap {
-  display: block;
+  display: none;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -54,7 +68,6 @@ p {
 #apt-modal p {
   margin: 15px 20px;
   text-align: justify;
-  color: darkblue;
 }
 
 #apt-modal input {
@@ -67,7 +80,6 @@ p {
   float: left;
   clear: both;
   font-size: 1.1rem;
-  color: darkblue;
 }
 
 /*===========================
@@ -95,7 +107,6 @@ p {
 .left h3,
 .right h2,
 .left p {
-  color: darkblue;
   text-align: center;
 }
 
@@ -120,7 +131,7 @@ p {
 }
 
 .left a:hover {
-  background: gold;
+  background: #848BAE;
   padding-right: 10px;
   padding-left: 10px;
 }
@@ -166,7 +177,7 @@ p {
 ===========================*/
 
 #premium-modal {
-  display: block;
+  display: none;
   margin: 5% auto;
   width: 60%;
   height: 80%;
@@ -174,7 +185,7 @@ p {
 }
 
 #premium-modal .nav {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgb(132, 139, 174);
     margin-left: 5px;
 }
 
@@ -186,7 +197,7 @@ p {
 }
 
 #premium-modal li:hover {
-    background-color: gold;
+    background-color: #848BAE;
 }
 
 #glaucoma-pkg {
@@ -198,7 +209,7 @@ p {
 }
 
 #glaucoma-link {
-    background-color: gold;
+    background-color: #848BAE;
 }
 
 input[type=date]::-webkit-inner-spin-button, 
@@ -218,12 +229,24 @@ input[type=date]::-webkit-outer-spin-button {
 
 #modal-apt label {
   margin-left: 32%;
-  color: darkblue;
   font-size: 1.1rem;
   float: left;
   clear: left;
   flex: auto;
   flex-direction: column;
+}
+
+
+/*===========================
+==========Follow Us==========
+===========================*/
+
+#follow-modal {
+  display: none;
+  margin: 5% auto;
+  width: 20%;
+  height: 80%;
+  background-color: #fff;
 }
 
 /*=============================
@@ -268,7 +291,7 @@ input[type=date]::-webkit-outer-spin-button {
   margin-right: 1%;
   margin-top: 35px;
   clear: right;
-  background-color: rgba(192, 185, 185, 0.7);
+  background-color: rgba(132, 139, 174, 0.7);
 }
 
 .main-nav li {
@@ -297,7 +320,7 @@ input[type=date]::-webkit-outer-spin-button {
   clear: both;
   margin-left: 35%;
   margin-top: 200px;
-  background-color: rgba(192, 185, 185, 0.7);
+  background-color: rgba(132, 139, 174, 0.7);
   width: 500px;
     
 }
@@ -313,14 +336,10 @@ input[type=date]::-webkit-outer-spin-button {
   text-align: center;
 }
 
-a {
-  color: #00B7FF;
-}
-
 #social-links-bkgrnd {
   width: 100%;
   height: 75px;
-  background-color: darkblue;
+  background-color: #303C74;
   
 }
 
@@ -345,7 +364,7 @@ a {
 #footer-container {
   position: absolute;
   width: 100%;
-  background-color: blue;
+  background-color: #556091;
   margin: 0;
 }
 
@@ -368,9 +387,7 @@ a {
 .office-indiana p {
   margin: 0;
   padding: 3px 0;
-}{
-  margin: 0;
-  padding: 3px 0;
+  color: #fff;
 }
 
 .office-devide {
@@ -403,7 +420,6 @@ a {
 .page-main-text {
   width: 60%;
   margin: 50px auto;
-  color: darkblue;
 }
 
 .page-main-text h2 {
@@ -452,8 +468,7 @@ a {
     background-image: url(../images/follow-us.jpg);
     background-size: contain;
 }
-.box >p {
-    color: darkblue;
+.box p {
     text-align: center;
     clear: both;
     margin: 85% 0 0 0; 
