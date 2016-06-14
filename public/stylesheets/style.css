@@ -29,7 +29,7 @@ p {
 =============================*/
 
 #modal-wrap {
-  display: none;
+  display: block;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -40,7 +40,7 @@ p {
   background-color: rgba(0,0,0,0.5);
 }
 
-#modal-apt {
+#apt-modal {
   display: none;
   background-color: #fefefe;
   margin: 5% auto;
@@ -50,14 +50,14 @@ p {
   box-shadow: 5px 5px 20px #C0B9B9; 
 }
 
-#modal-apt h2,
-#modal-apt p {
+#apt-modal h2,
+#apt-modal p {
   margin: 15px 20px;
   text-align: justify;
   color: darkblue;
 }
 
-#modal-apt input {
+#apt-modal input {
   width: 85%;
   height: 30px;
   margin: 10px auto;
@@ -73,18 +73,6 @@ p {
 /*===========================
 ==========Reviews============
 ===========================*/
-
-#-modal-wrap {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.5); 
-}
 
 #review-modal {
   display: none;
@@ -155,6 +143,11 @@ p {
   margin: 10px 0;
 }
 
+.right label {
+    float: left;
+    clear: both;
+}
+
 .right select {
   float: left;
   clear: both;
@@ -168,6 +161,45 @@ p {
 }
 
 
+/*===========================
+==========Premium============
+===========================*/
+
+#premium-modal {
+  display: block;
+  margin: 5% auto;
+  width: 60%;
+  height: 80%;
+  background-color: #fff;
+}
+
+#premium-modal .nav {
+    background-color: rgba(0,0,0,0.5);
+    margin-left: 5px;
+}
+
+#premium-modal li {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#premium-modal li:hover {
+    background-color: gold;
+}
+
+#glaucoma-pkg {
+    display: block;
+}
+
+#retinal-pkg {
+    display: none;
+}
+
+#glaucoma-link {
+    background-color: gold;
+}
 
 input[type=date]::-webkit-inner-spin-button, 
 input[type=date]::-webkit-outer-spin-button { 
@@ -411,7 +443,7 @@ a {
     background-size: contain;
 }
 
-#premium-eye-screen {
+#premium-eye {
     background-image: url(../images/premium.jpg);
     background-size: contain;
 }
