@@ -38,7 +38,7 @@ var retinalLnk = document.getElementById('retinal-link');
 premiumModalBtn.onclick = function() {
     modalWrap.style.display='block';
     modalPremium.style.display='block';
-    glaucomaLnk.style.backgroundColor='gold';
+    glaucomaLnk.style.backgroundColor='#848BAE';
 }
 
 //Toggle Premium Eye Packages
@@ -52,7 +52,7 @@ glaucomaLnk.onclick = function () {
 
 retinalLnk.onclick = function () {
     glaucomaPkg.style.display='none';
-    //glaucomaLnk.style.backgroundColor='rgba(0,0,0,0.0)';
+    glaucomaLnk.style.backgroundColor='rgba(0,0,0,0.0)';
     retinalPkg.style.display='block';
     retinalLnk.style.backgroundColor='#848BAE';
 }

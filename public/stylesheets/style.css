@@ -33,6 +33,10 @@ a {
   color: #556091
 }
 
+li:hover {
+    background-color: #848BAE;
+}
+
 /*============================
 ==========Modals===============
 ============================*/
@@ -185,19 +189,16 @@ a {
 }
 
 #premium-modal .nav {
-    background-color: rgb(132, 139, 174);
-    margin-left: 5px;
+    background-color: #556091;
+    margin-left: 2px;
 }
 
 #premium-modal li {
     display: inline-block;
-    margin: 0 5px;
+   /* margin: 0 5px; */
     padding: 5px;
+    color: #060F3A;
     border-radius: 5px;
-}
-
-#premium-modal li:hover {
-    background-color: #848BAE;
 }
 
 #glaucoma-pkg {
@@ -313,6 +314,13 @@ input[type=date]::-webkit-outer-spin-button {
   border:3px #fff solid;
   border-radius: 20px;
   padding: 5px;
+  margin-left: 15px;
+}
+
+
+
+#nav-apt:hover {
+  border-radius: 20px;
 }
 
 .title-container {
