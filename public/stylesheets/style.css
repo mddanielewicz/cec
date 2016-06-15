@@ -1,11 +1,13 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 h1,
 h2,
 h3,
-p {
+p, 
+input,
+label{
     color: #152157;
 }
 
@@ -14,17 +16,18 @@ h1 {
 }
 
 h2 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 p,
 li,
-a {
-    font-size: 1.1rem;
+a,
+input {
+    font-size: 1rem;
     text-decoration: none;
     list-style: none;
 }
@@ -37,14 +40,14 @@ li:hover {
     background-color: #848BAE;
 }
 
+input[type=date]::-webkit-inner-spin-button, 
+input[type=date]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
 /*============================
 ==========Modals===============
 ============================*/
-
-
-/*=============================
-============Appointment========
-=============================*/
 
 #modal-wrap {
   display: none;
@@ -58,47 +61,67 @@ li:hover {
   background-color: rgba(0,0,0,0.5);
 }
 
-#apt-modal {
-  display: none;
-  background-color: #fefefe;
-  margin: 5% auto;
-  height: 75%;
-  border: 1px solid #888;
-  width: 20%;
-  box-shadow: 5px 5px 20px #C0B9B9; 
+.modal-thin {
+    margin: 5% auto;
+    background-color: #f3f3f3;
+    height: 80%;
+    border: 1px solid #888;
+    width: 25%;
+    box-shadow: 5px 5px 20px #c0B9B9;
 }
 
-#apt-modal h2,
-#apt-modal p {
-  margin: 15px 20px;
-  text-align: justify;
+.modal-wide .left h2,
+.modal-wide .left h3,
+.modal-wide .right h2,
+.modal-thin h2 {
+    margin: 10px 0;
+    text-align: center;
 }
 
-#apt-modal input {
-  width: 85%;
-  height: 30px;
-  margin: 10px auto;
-  margin-left: 6%;
-  text-align: center;
-  border-radius: 5px;
-  float: left;
-  clear: both;
-  font-size: 1.1rem;
+.modal-wide .left p,
+.modal-thin p {
+    margin: 10px 10px;
+    text-align: justify
 }
 
-/*===========================
-==========Reviews============
-===========================*/
+.modal-thin input {
+    width: 85%;
+    height: 30px;
+    margin: 10px auto;
+    margin-left: 6%;
+    text-align: center;
+    float: left;
+    clear: both;
+}
 
-#review-modal {
-  display: none;
+.modal-thin label {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.modal-thin ul {
+    padding: 0;
+}
+
+.modal-thin li {
+    text-align: center;
+    margin: 0 auto;
+    width: 45%;
+    line-height: 1.5rem;
+}
+
+/*==========Modal Wide======*/
+
+.modal-wide {
   margin: 5% auto;
   width: 60%;
-  height: 80%;
+  height: 88%;
   background-color: #fff;
+  box-shadow: 5px 5px 20px #c0B9B9;
 }
 
-.left {
+.modal-wide .left {
   width: 49%;
   height: 100%;
   padding-right: 5px;
@@ -107,50 +130,38 @@ li:hover {
   clear: left;
 }
 
-.left h2,
-.left h3,
-.right h2,
-.left p {
+.modal-wide .left ul {
+  padding: 0;
+}
+
+.modal-wide .left li {
   text-align: center;
+  width: 50%;
+  margin: 0 auto;
 }
 
-.left p {
-  text-align: justify;
-  margin: 0 10px;
+.modal-wide .left a {
+  line-height: 1.7rem;
+  display: block;
 }
 
-.left ul {
-  margin-top: 5%;
-}
-
-.left li {
-  list-style: none;
-  text-align: center;
-}
-
-.left a {
-  text-decoration: none;
-  font-size: 1.1rem;
-  line-height: 2rem;
-}
-
-.left a:hover {
+.modal-wide .left a:hover {
   background: #848BAE;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding: 3px 7px;
+  color: #fff;
 }
 
-.right{
+.modal-wide .right{
   width: 49%;
   float: right;
 }
 
-.right form {
+.modal-wide .right form {
   margin-left: 10%;
   margin-top: 5%;
 }
 
-.right input {
+.modal-wide .right input {
   float: left;
   clear: both;
   width: 80%;
@@ -158,12 +169,12 @@ li:hover {
   margin: 10px 0;
 }
 
-.right label {
+.modal-wide .right label {
     float: left;
     clear: both;
 }
 
-.right select {
+.modal-wide .right select {
   float: left;
   clear: both;
   width: 81%;
@@ -171,22 +182,31 @@ li:hover {
   margin: 10px 0;
 }
 
-.right option {
+.modal-wide .right option {
   margin:  0 25px;
 }
 
+/*=======Modal Display=====*/
+
+#apt-modal {
+  display: none;
+}
+
+#review-modal {
+  display: none;
+}
+
+#premium-modal {
+  display: none;
+}
+
+#follow-modal {
+  display: none;
+}
 
 /*===========================
 ==========Premium============
 ===========================*/
-
-#premium-modal {
-  display: none;
-  margin: 5% auto;
-  width: 60%;
-  height: 80%;
-  background-color: #fff;
-}
 
 #premium-modal .nav {
     background-color: #556091;
@@ -195,9 +215,9 @@ li:hover {
 
 #premium-modal li {
     display: inline-block;
-   /* margin: 0 5px; */
+    margin: 0 5px; 
     padding: 5px;
-    color: #060F3A;
+    color: #fff;
     border-radius: 5px;
 }
 
@@ -213,42 +233,7 @@ li:hover {
     background-color: #848BAE;
 }
 
-input[type=date]::-webkit-inner-spin-button, 
-input[type=date]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-}
 
-.phone-container {
-  margin-left: 18%;
-}
-
-#modal-apt .phone {
-  float: left;
-  clear: right;
-  width: 50px;
-}
-
-#modal-apt label {
-  margin-left: 32%;
-  font-size: 1.1rem;
-  float: left;
-  clear: left;
-  flex: auto;
-  flex-direction: column;
-}
-
-
-/*===========================
-==========Follow Us==========
-===========================*/
-
-#follow-modal {
-  display: none;
-  margin: 5% auto;
-  width: 20%;
-  height: 80%;
-  background-color: #fff;
-}
 
 /*=============================
 ========Layout.jade============
@@ -287,8 +272,7 @@ input[type=date]::-webkit-outer-spin-button {
 
 .main-nav {
   float: right;
-  width: 900px;
-  height: 75px;
+  width: 800px;
   margin-right: 1%;
   margin-top: 35px;
   clear: right;
@@ -305,9 +289,9 @@ input[type=date]::-webkit-outer-spin-button {
   color: #fff;
   padding: 15px;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: right;
-  font-weight: bold;
+  font-weight: bold; 
 }
 
 #nav-apt {
@@ -316,8 +300,6 @@ input[type=date]::-webkit-outer-spin-button {
   padding: 5px;
   margin-left: 15px;
 }
-
-
 
 #nav-apt:hover {
   border-radius: 20px;
@@ -338,11 +320,12 @@ input[type=date]::-webkit-outer-spin-button {
   color: #fff;
 }
 
-.title-container p {
-  font-size: 1.3rem;
+.title-container h3 {
   color: #fff;
   text-align: center;
 }
+
+/*=======Social Footer =======*/
 
 #social-links-bkgrnd {
   width: 100%;
@@ -369,25 +352,33 @@ input[type=date]::-webkit-outer-spin-button {
   width: 50px;
 }
 
+/*=====Main Footer=====*/
+
 #footer-container {
   position: absolute;
   width: 100%;
   background-color: #556091;
   margin: 0;
+  padding-bottom: 15px;
 }
 
 .partner-logo-container {
-  margin-top: 30px;
-  border: 3px solid red;
-  width: 20%;
-  height: 300px;
+  margin-top: 15px;
+  margin-left: 3%;
+  width: 10%;
+  height: 100%;
   float: left;
+}
+
+.bbb-logo img,
+.aao-logo img{
+  width: 100%;
 }
 
 .office-louisville {
   float: left;
-  margin-left: 15%;
-  margin-top: 100px;
+  margin-left: 25%;
+  margin-top: 50px;
   color: #fff;
 }
 
@@ -400,11 +391,11 @@ input[type=date]::-webkit-outer-spin-button {
 
 .office-devide {
   float: left;
-  margin-top: 55px;
+  margin-top: 40px;
   margin-left: 3%;
   margin-right: 3%;
   width: 1px;
-  height: 200px;
+  height: 120px;
   border: 1px solid #fff;
   border-radius: 1px;
   background-color: #fff;
@@ -412,7 +403,7 @@ input[type=date]::-webkit-outer-spin-button {
 
 .office-indiana {
   margin-left: 15%;
-  margin-top: 85px;
+  margin-top: 30px;
   color: #fff;
 } 
 
@@ -444,7 +435,7 @@ input[type=date]::-webkit-outer-spin-button {
   height: 200px;
   width: 200px;
   display: inline-block;
-  margin: 50px 5.7%;
+  margin: 50px 8.7%;
 }
 
 #schedule-apt {

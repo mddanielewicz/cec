@@ -6,16 +6,13 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
    #modal-wrap
-    #apt-modal
+    #apt-modal.modal-thin
       h2 Schedule an appointment
       p Fill out the information below, including three days that work best for you, and we will call you with options that work best around your schedule!
       form#apt(action="#" method="POST")
         input(type="text" name="fName" id="fName" placeholder="First Name")
         input(type="text" name="lName" id="lName" placeholder="Last Name")
-        .phone-container
-          input.phone(type="tel" name="phoneNumOne" id="phoneNumOne" placeholder="###")
-          input.phone(type="tel" name="phoneNumTwo" id="phoneNumTwo" placeholder="###")
-          input.phone(type="tel" name="phoneNumThree" id="phoneNumThree" placeholder="####")
+        input(type="tel" name="phoneNum" id="phoneNum" placeholder="###-###-####")
         input(type="email" name="email" id="email" placeholder="Email")
         input(type="date" name="aptChoiceOne" id="aptChoiceOne")
         label(for="aptChoiceOne") First Choice
@@ -25,7 +22,7 @@ html
         label(for="aptChoiceThree") Third Choice
         input(type="submit" value="Submit")
    
-    #review-modal
+    #review-modal.modal-wide
       .left
         h2 Review us and get rewards!!
         h3 Help us, our valued patiens, grow our online presence!!
@@ -74,7 +71,7 @@ html
             option(value='waterBottle') Water Bottle
             option(value='coffeeTumbler') Coffee Tumbler
           input(type='submit' value='Submit')
-    #premium-modal
+    #premium-modal.modal-wide
         .left
             .nav
                 ul
@@ -106,7 +103,8 @@ html
                 label(for='premiumSecondtApt') Secondary appointment date
                 input(type='date' id='premiumSecondApt' )
                 input(type='submit' value='Submit')
-    #follow-modal
+    #follow-modal.modal-thin
+        h2 Follow us online!
         p Join our onine community to keep current with what is happening at Conrad Eye Centers.
         ul
             li 
@@ -135,7 +133,7 @@ html
 
       .title-container
         h1 #{title}
-        p Personalized, Comprehensive Eyecare.          
+        h3 Personalized, Comprehensive Eyecare.          
     block content
     #social-links-bkgrnd
       .social-links-container
@@ -150,9 +148,9 @@ html
     #footer-container
         .partner-logo-container
           .bbb-logo
-            img(src="#" alt="Better Buisness Bueru Logo")
+            img(src="../images/bbb.png" alt="Better Buisness Bueru Logo")
           .aao-logo
-            img(src="#" alt="American Academy of Opthamologists")
+            img(src="../images/aao.png" alt="American Academy of Opthamologists")
         .office-louisville
           p Louisville Office
           p 204 Breckenridge Lane
