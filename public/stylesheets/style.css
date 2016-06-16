@@ -486,6 +486,9 @@ input[type=date]::-webkit-outer-spin-button {
   float: left;
 }
 
+#left-column .nav a {
+}
+
 #middle-column {
   width: 60%;
   height: 100%;
