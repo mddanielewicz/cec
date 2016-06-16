@@ -6,4 +6,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Conrad Eye Centers' });
 });
 
+/* GET service page */
+router.get('/service', function(req, res, next) {
+  res.render('service', {title: 'Conrad Eye Centers'});
+});
+
 module.exports = router;

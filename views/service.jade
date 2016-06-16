@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  #left-column
+    .nav: ul
+      each val in ['Eye Exams', 'Glasses and Contacts', 'Eye Injuries and Infections', 'Eye Diseases', 'Laser Vsion Correction', 'Eye Implants', 'Surgical Procedures', 'Pediatric Ophthamology', 'Cosmetics']
+        li: h3(id=val)= val
+  #middle-column
+    h2 filler text
+  #right-column
+    h2 filler text thrice

@@ -1,6 +1,115 @@
 extends layout
 
 block content
+  #modal-wrap
+    #apt-modal.modal-thin
+      h2 Schedule an appointment
+      p Fill out the information below, including three days that work best for you, and we will call you with options that work best around your schedule!
+      form#apt(action="#" method="POST")
+        input(type="text" name="fName" id="fName" placeholder="First Name")
+        input(type="text" name="lName" id="lName" placeholder="Last Name")
+        input(type="tel" name="phoneNum" id="phoneNum" placeholder="###-###-####")
+        input(type="email" name="email" id="email" placeholder="Email")
+        input(type="date" name="aptChoiceOne" id="aptChoiceOne")
+        label(for="aptChoiceOne") First Choice
+        input(type="date" name="aptChoiceTwo" id="aptChoiceTwo")
+        label(for="aptChoiceTwo") Second Choice
+        input(type="date" name="aptChoiceThree" id="aptChoiceThree")
+        label(for="aptChoiceThree") Third Choice
+        input(type="submit" value="Submit")
+   
+    #review-modal.modal-wide
+      .left
+        h2 Review us and get rewards!!
+        h3 Help us, our valued patiens, grow our online presence!!
+        p If you were satisfied with your most recent visit, please consider leaving  us a positive review on one of the websites listed below. Simply click on a link, leave a review, and complete the form to let us know! Once confirmed, we will send you a free Conrad Eye Centers water bottle or coffee tumbler; you're choice! Thank you for your valued support!
+        ul
+          li
+            a(href="#") Yelp Louisville
+          li
+            a(href="#") Yelp New Albany
+          li
+            a(href="#") Google+ Louisville
+          li
+            a(href="#") Google+ New Albany
+          li
+            a(href="#") Better Buesness Bueru
+          li
+            a(href="#") Healthgrades
+          li
+            a(href="#") Yelp
+          li
+            a(href="#") Yelp
+          li
+            a(href="#") Yelp
+          li
+            a(href="#") Yelp
+          li
+            a(href="#") Yelp
+          li
+            a(href="#") Yelp
+      .right
+        h2 Submision Form
+        form(action='#' method='POST')
+          input(type='text' id='reviewFname' placeholder='First Name')
+          input(type='text' id='reviewLname' placeholder='Last Name')
+          input(type='email' id='reviewEmail' placeholder='Email')
+          select(id='reviewSite' name='reviewSite')
+            option(value='Yelp - Louisville') Yelp - Louisville
+            option(value='Yelp - New Albany') Yelp - New Albany
+            option(value='Google+ - Louisville') Google+ - Louisville
+            option(value='Google+ - New Albany') Google+ - New Albany
+            option(value='Better Bueisness Bueru') Better Bueisness Beurue
+            option(value='Healthgrades') Healthgrades
+            option(value='UCompare Healthcare') UCompate Healthcare
+          input(type='date' id='reviewPostDate')
+          select(id='reviewReward' name='reviewReward')
+            option(value='waterBottle') Water Bottle
+            option(value='coffeeTumbler') Coffee Tumbler
+          input(type='submit' value='Submit')
+    #premium-modal.modal-wide
+        .left
+            .nav
+                ul
+                    li#glaucoma-link Glaucoma Risk Assessment
+                    li#retinal-link Retinal Helath Assessment
+            #glaucoma-pkg    
+                h3 Glaucoma Risk Assessment
+                p As many as two million Americans may have glaucoma, but over 50% of them don't know it.
+                p Learn your risk for glaucoma with our premium Glaucoma Rish Assessment package. We will measure the thickness of your corneas and scan your optic nerve. At these screenings, the doctor will personally discuss your risk factors and any recomendations.
+                h2 Schedule your preventative care appointment today!
+                p.fine-print *Since the purpose of these assessments is to rule out the presence of one or more ocular diseases, they are not billable to insurance.
+            #retinal-pkg
+                h3 Retinal Helath Assessment
+                p Without a healthy retina, the human eye is like a camera without a film. Retinal disease or injury often results in partial or complete vison loss.
+                p Learn your risk for retinal diseases like diabetic retinopathy, macular degeneration, and more with our premium Retinal Health Assessment package. We will take a focused look at the back of your eye by scanning the retina. At these screenings, the doctor will personally discuss your risk factors and any recommendations.
+                p.fine-print Since the purpose of these assessments is to rule out the presence of one or more ocular diseases, they are not billable to insurance.
+        .right
+            form(action="#" method="POST")
+                input(type='text' id='premiumFname' placeholder='First Name')
+                input(type='text' id='premiumLname' placeholder='Last Name')
+                input(type='tel' id='premiumPhone' placeholder='###-###-####')
+                input(type='email' id='premiumEmail' placeholder='Email')
+                select(id='premiumPackage' name='premiumPackage')
+                    option(value='Glaucoma Risk Assessment') Glaucoma Risk Assessment
+                    option(value='Retinal Health Assessment') Retinal Health Assessment
+                    option(value='Premium Eye Health Package - Both') Premium Eye Health Package - Both
+                label(for='premiumFirstApt') Preferred appointment date
+                input(type='date' id='premiumFirstApt' )
+                label(for='premiumSecondtApt') Secondary appointment date
+                input(type='date' id='premiumSecondApt' )
+                input(type='submit' value='Submit')
+    #follow-modal.modal-thin
+        h2 Follow us online!
+        p Join our onine community to keep current with what is happening at Conrad Eye Centers.
+        ul
+            li 
+                a(href='#') Friend us on Facebook
+            li 
+                a(href='#') Follow us on Twitter
+            li 
+                a(href='#') Conntect on Google+
+                
   #page-container
     .page-main-text
       h2 Conrad Eye Centers is Kentuckiana's one-stop-shop for all your eye care needs.
