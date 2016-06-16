@@ -481,12 +481,26 @@ input[type=date]::-webkit-outer-spin-button {
 ==========================*/
 
 #left-column {
+  background-color: #556091;
   width: 20%;
   height: 100%;
   float: left;
 }
 
-#left-column .nav a {
+#left-column ul {
+  padding: 0;
+  margin: 0;
+}
+
+#left-column h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 3.5%;
+  color: #152157;
+}
+
+#left-column h3:hover {
+  color: #fff;
 }
 
 #middle-column {
@@ -499,4 +513,13 @@ input[type=date]::-webkit-outer-spin-button {
   width: 20%;
   height: 100%;
   float: left;
+}
+
+#vision-networks {
+  float: left;
+  clear: right;
+}
+
+#vision-phone {
+  float: left
 }
