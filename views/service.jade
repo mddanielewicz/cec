@@ -19,12 +19,15 @@ block content
           table
             tr
               th vision Networks
-              th Member Benefits
-            each val in ['Anthem', 'Block Vision', 'Cigna', 'Davis Vision', 'EyeMed' , 'Humana', 'NVA', 'Opticare', 'Tricare', 'VCP', 'Vision Service Provider (VSP)']
-            each phone in ['1-800-111-1111', '1-800-222-2222', '1-800-333-3333', '1-800-444-4444', '1-800-555-5555', '1-800-666-6666', '1-800-777-7777', '1-800-888-8888', '1-800-999-9999', '1-888-111-1111', '1-888-222-2222']
-                  tr 
-                    td= val
-                    td= phone
+              th#vision-member-ben Member Benefits
+            - var i = 0
+            - var visionIns = ['Anthem', 'Block Vision', 'Cigna', 'Davis Vision', 'EyeMed' , 'Humana', 'NVA', 'Opticare', 'Tricare', 'VCP', 'Vision Service Provider (VSP)']
+            - var visionMemberBen = ['1-800-111-1111', '1-800-222-2222', '1-800-333-3333', '1-800-444-4444', '1-800-555-5555', '1-800-666-6666', '1-800-777-7777', '1-800-888-8888', '1-800-999-9999', '1-888-111-1111', '1-888-222-2222']
+            -for ( ; i < visionIns.length; i++)
+              tr 
+                td= visionIns[i]
+                td#vision-member-ben= visionMemberBen[i]
+  
             
       
         

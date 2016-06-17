@@ -10,10 +10,10 @@ aptModalLnk.onclick = function(){
   modalApt.style.display='block';
 };  
 
-aptModalBtn.onclick = function(){
+  aptModalBtn.onclick = function(){
   modalWrap.style.display='block';
   modalApt.style.display='block';
-};  
+};
 
 //Modal for patient reviews
 
@@ -76,4 +76,15 @@ window.onclick = function(event) {
         modalApt.style.display="none";
         modalWrap.style.display='none';
     }
+}
+
+
+//SERVICE PAGE JS
+
+//Vision-exam-slidebar
+
+var visionNetworkWrap = document.getElementById('vision-network')
+
+visionNetworkWrap.onclick = function() {
+  console.log('Click');
 }

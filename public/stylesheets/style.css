@@ -19,14 +19,16 @@ h2 {
     font-size: 1.5rem;
 }
 
-h3 {
+h3,
+th {
   font-size: 1.3rem;
 }
 
 p,
 li,
 a,
-input {
+input,
+td {
     font-size: 1rem;
     text-decoration: none;
     list-style: none;
@@ -481,7 +483,8 @@ input[type=date]::-webkit-outer-spin-button {
 ==========================*/
 
 #left-column {
-  background-color: #556091;
+  /* background-color: #556091; */
+  background-color: #848BAE;
   width: 20%;
   height: 100%;
   float: left;
@@ -507,17 +510,24 @@ input[type=date]::-webkit-outer-spin-button {
   width: 60%;
   height: 100%;
   float: left;
+  background-color: #D4C770;
 }
 
 #right-column {
   width: 20%;
   height: 100%;
   float: left;
+  background-color: #FFF5B8;
 }
 
 #vision-networks {
   float: left;
   clear: right;
+}
+
+th#vision-member-ben,
+td#vision-member-ben {
+  display: none;
 }
 
 #vision-phone {
