@@ -514,9 +514,20 @@ input[type=date]::-webkit-outer-spin-button {
 }
 
 #right-column {
+  position: absolute;
+  left: 1522px;
+  top: 700px;
   width: 20%;
   height: 100%;
-  float: left;
+  background-color: #FFF5B8;
+}
+
+.right-column-active {
+  position: absolute;
+  left: 1332px;
+  top: 700px;
+  width: 30%;
+  height: 100%;
   background-color: #FFF5B8;
 }
 
