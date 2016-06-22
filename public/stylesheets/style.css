@@ -563,10 +563,8 @@ td#vision-member-ben {
 
 /*Page Content Display */
 
-#eye-exam-content {
-  display: none;
-}
-
-#gls-cls-content {
+#eye-exam-content,
+#eye-exam-sidebar,
+#gls-cls-content{
   display: none;
 }

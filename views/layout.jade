@@ -1,5 +1,5 @@
 doctype html
-html
+html(ng-app='cec')
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/normalize.css')
@@ -12,7 +12,7 @@ html
       .main-nav
         ul
           li
-            a(href="#") Services
+            a(href="/service") Services
           li 
             a(href="#") About  
           li
@@ -23,8 +23,9 @@ html
             a Schedule Appointment
 
       .title-container
-        h1 #{title}
-        h3 Personalized, Comprehensive Eyecare.          
+        a(href="/")
+          h1 #{title}
+          h3 Personalized, Comprehensive Eyecare.          
     
     block content
     
@@ -57,7 +58,7 @@ html
           p Suite 210
           p New Albany, IN ?????
           p p. 812-944-6063
-script(src="/javascripts/social-media.js")
+script(src="/javascripts/index.js")
 
   
         
