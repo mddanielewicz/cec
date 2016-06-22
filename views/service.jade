@@ -6,27 +6,36 @@ block content
       each val in ['Eye Exams', 'Glasses and Contacts', 'Eye Injuries and Infections', 'Eye Diseases', 'Laser Vsion Correction', 'Eye Implants', 'Surgical Procedures', 'Pediatric Ophthamology', 'Cosmetics']
         li: h3(id=val)= val
   #middle-column
-    #eye-exam-content
-      h2 Vision Exams
-      h3 Conrad Eye Centers focuses on your vision with one-on-one personalized eye exams for any age.
-      p We know your sight is important. That is why Dr. Conrad personally examines every patient. Dr. Conrad is a trained and nationally recognized ophthalmologist; this means during even a routine eye exam everything about your eye is being examined by one of the best medical doctors in Louisville. Though optometrists are qualified to prescribe glasses and contacts and even treat some disorders of the eye, an ophthalmologist is a medical doctor who can prescribe contacts and glasses, diagnose and treat all conditions of the eye, prescribe medications, and perform surgery on the eye.
-      p We accept most vision and eye care plans. Every full routine eye exam will leave you with a custom prescription for glasses and the assurance that you had the most in-depth exam possible.
+    .middle-container
+      #eye-exam-content
+        h2 Vision Exams
+        h3 Conrad Eye Centers focuses on your vision with one-on-one personalized eye exams for any age.
+        p We know your sight is important. That is why Dr. Conrad personally examines every patient. Dr. Conrad is a trained and nationally recognized ophthalmologist; this means during even a routine eye exam everything about your eye is being examined by one of the best medical doctors in Louisville. Though optometrists are qualified to prescribe glasses and contacts and even treat some disorders of the eye, an ophthalmologist is a medical doctor who can prescribe contacts and glasses, diagnose and treat all conditions of the eye, prescribe medications, and perform surgery on the eye.
+        p We accept most vision and eye care plans. Every full routine eye exam will leave you with a custom prescription for glasses and the assurance that you had the most in-depth exam possible.
+      #gls-cls-content
+        h2 Glasses and Contacts
+        h3 Each of our locations has a full service optical boutique. Our optician has years of experience and will work one-on-one with you to find the perfect balance of style, quality, and affordability.
+        h4 Glasses
+        p Conrad Eye Centers specializes in providing each patient with a wide array of choices for lenses and frames alike. We believe in custom building the perfect glasses for the individual, and we offer top-end name brand frames at affordable prices. When choosing the frames and lenses, it is important to consider your facial features, personal style, and day-to-day activities. Our skilled certified optician will work directly with you to choose the best combination.
+        h4 Contacts
+        p Dr. Conrad fits all types of contact lenses, including soft, rigid, multi-focal and specialty contacts. We carry all major types including daily disposable lenses, rigid gas permeable lenses, and multifocal lenses. Our skilled certified optician will work directly with you to choose the contact lenses that are right for you.
 
   #right-column
-    #eye-exam-sidebar
-      #vision-networks 
-        h2 Our Vision Network
-          table
-            tr
-              th vision Networks
-              th#vision-member-ben Member Benefits
-            - var i = 0
-            - var visionIns = ['Anthem', 'Block Vision', 'Cigna', 'Davis Vision', 'EyeMed' , 'Humana', 'NVA', 'Opticare', 'Tricare', 'VCP', 'Vision Service Provider (VSP)']
-            - var visionMemberBen = ['1-800-111-1111', '1-800-222-2222', '1-800-333-3333', '1-800-444-4444', '1-800-555-5555', '1-800-666-6666', '1-800-777-7777', '1-800-888-8888', '1-800-999-9999', '1-888-111-1111', '1-888-222-2222']
-            -for ( ; i < visionIns.length; i++)
-              tr 
-                td= visionIns[i]
-                td#vision-member-ben= visionMemberBen[i]
+   .right-container
+      #eye-exam-sidebar
+        #vision-networks 
+          h2 Our Vision Network
+            table
+              tr
+                th vision Networks
+                th#vision-member-ben Member Benefits
+              - var i = 0
+              - var visionIns = ['Anthem', 'Block Vision', 'Cigna', 'Davis Vision', 'EyeMed' , 'Humana', 'NVA', 'Opticare', 'Tricare', 'VCP', 'Vision Service Provider (VSP)']
+              - var visionMemberBen = ['1-800-111-1111', '1-800-222-2222', '1-800-333-3333', '1-800-444-4444', '1-800-555-5555', '1-800-666-6666', '1-800-777-7777', '1-800-888-8888', '1-800-999-9999', '1-888-111-1111', '1-888-222-2222']
+              -for ( ; i < visionIns.length; i++)
+                tr 
+                  td= visionIns[i]
+                  td#vision-member-ben= visionMemberBen[i]
   
             
       

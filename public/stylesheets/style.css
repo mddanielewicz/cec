@@ -507,19 +507,33 @@ input[type=date]::-webkit-outer-spin-button {
 }
 
 #middle-column {
-  width: 60%;
+  width: 55%;
   height: 100%;
   float: left;
-  background-color: #D4C770;
+  //background-color: #D4C770;
+}
+
+#middle-column .middle-container {
+  padding: 0 5%;
+}
+
+#middle-column h3 {
+  text-align: center;
+}
+
+#middle-column p {
+  text-align: justify;
 }
 
 #right-column {
-  position: absolute;
-  left: 1522px;
-  top: 700px;
-  width: 20%;
+  float: left;
+  width: 25%;
   height: 100%;
   background-color: #FFF5B8;
+}
+
+#right-column .right-container {
+  padding: 0 2%;
 }
 
 .right-column-active {
@@ -538,9 +552,21 @@ input[type=date]::-webkit-outer-spin-button {
 
 th#vision-member-ben,
 td#vision-member-ben {
-  display: none;
+  display: block;
+  padding-left: 50px;
 }
 
 #vision-phone {
   float: left
+}
+
+
+/*Page Content Display */
+
+#eye-exam-content {
+  display: none;
+}
+
+#gls-cls-content {
+  display: none;
 }
