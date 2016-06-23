@@ -103,13 +103,30 @@ window.onload = function() {
       var injuryLink = document.getElementById('Eye Injuries and Infections')
       var injuryContent =  document.getElementById('injury-content');
       var injurySidebar = document.getElementById('injury-sidebar');
-
+      var diseaseLink = document.getElementById('Eye Diseases');
+      var diseaseContent = document.getElementById('disease-content');
+      var diseaseSidebar = document.getElementById('disease-sidebar');
+      var laserVisionLink = document.getElementById('Laser Vsion Correction');
+      var laserVisionContent = document.getElementById('laser-vis-content');
+      var implantLink = document.getElementById('Eye Implants');
+      var implantContent = document.getElementById('implant-content');
+      var pediatricLink = document.getElementById('Pediatric Ophthamology');
+      var pediatricContent = document.getElementById('pediatric-content');
+      var cosmeticLink = document.getElementById('Cosmetics');
+      var cosmeticContent = document.getElementById('cosmetics-content');
+      
       var serviceNavClear = function() {
         eyeExamContent.style.display='none';
         eyeExamSidebar.style.display='none';
         glsClsContent.style.display='none';
         injuryContent.style.display='none';
         injurySidebar.style.display='none';
+        diseaseContent.style.display='none';
+        diseaseSidebar.style.display='none';
+        laserVisionContent.style.display= 'none';
+        implantContent.style.display='none';
+        pediatricContent.style.display='none';
+        cosmeticContent.style.display='none';
       }
 
       eyeExamLink.onclick = function() {
@@ -127,6 +144,32 @@ window.onload = function() {
         serviceNavClear();
         injuryContent.style.display='block';
         injurySidebar.style.display='block';
+      }
+      
+      diseaseLink.onclick = function() {
+        serviceNavClear();
+        diseaseContent.style.display='block';
+        diseaseSidebar.style.display='block';
+      }
+      
+      laserVisionLink.onclick = function() {
+        serviceNavClear();
+        laserVisionContent.style.display='block';
+      }
+      
+      implantLink.onclick = function() {
+        serviceNavClear();
+        implantContent.style.display='block';
+      }
+      
+      pediatricLink.onclick = function() {
+        serviceNavClear();
+        pediatricContent.style.display='block';
+      }
+      
+      cosmeticLink.onclick = function() {
+        serviceNavClear();
+        cosmeticContent.style.display='block';
       }
       
     /*common problem selector */
@@ -150,6 +193,43 @@ window.onload = function() {
         getCommonProblemVal = getCommonProblem.value;
               
         document.getElementById('common-problem-text').innerHTML = (commonProblems.getCommonProblemVal)
+      }
+  }else if (window.location.pathname == '/about'){
+    //ABOUT PAGE JS
+      var officeInfoLink = document.getElementById('Office Information');
+      var officeInfoContent = document.getElementById('general-office-information');
+      var bioLink = document.getElementById('Tim J. Conrad, M.D.');
+      var bioContent = document.getElementById('bio');
+      var historyLink = document.getElementById('CEC: Past, Present, and Future');
+      var historyContent = document.getElementById('history');
+      var medicalCentersLink = document.getElementById('Suburban Excimer Laser Center and hysicians Medical Center');
+      var medicalCenterContent = document.getElementById('medical-centers');
+    
+      var aboutNavClear = function() {
+        officeInfoContent.style.display='none';
+        bioContent.style.display='none';
+        historyContent.style.display='none';
+        medicalCenterContent.style.display='none';
+      }
+      
+      officeInfoLink.onclick = function(){
+        aboutNavClear();
+        officeInfoContent.style.display='block';
+      }
+      
+      bioLink.onclick = function(){
+        aboutNavClear();
+        bioContent.style.display='block';
+      }
+      
+      historyLink.onclick = function(){
+        aboutNavClear();
+        historyContent.style.display='block';
+      }
+      
+      medicalCentersLink.onclick = function(){
+        aboutNavClear();
+        medicalCenterContent.style.display='block';
       }
   }
 }

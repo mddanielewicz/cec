@@ -446,7 +446,7 @@ input[type=date]::-webkit-outer-spin-button {
     background-size: contain;
 }
 
-#patient-portal {
+#patient-portal-button {
     background-image: url(../images/portal.jpg);
     background-size: contain;
 }
@@ -479,7 +479,7 @@ input[type=date]::-webkit-outer-spin-button {
 
 
 /*==========================
-=========service.jade=======
+==service/about Template====
 ==========================*/
 
 #left-column {
@@ -545,6 +545,10 @@ input[type=date]::-webkit-outer-spin-button {
   background-color: #FFF5B8;
 }
 
+/*==========================
+========Service.jade========
+==========================*/
+
 #vision-networks {
   float: left;
   clear: right;
@@ -565,6 +569,25 @@ td#vision-member-ben {
 
 #eye-exam-content,
 #eye-exam-sidebar,
-#gls-cls-content{
+#gls-cls-content,
+#disease-content,
+#disease-sidebar,
+#laser-vis-content,
+#implant-content,
+#pediatric-content,
+#cosmetics-content {
+  display: none;
+}
+
+
+
+/*==========================
+========About.jade========
+==========================*/
+
+#general-office-information,
+#bio,
+#history,
+#medical-centers {
   display: none;
 }
