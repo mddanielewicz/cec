@@ -11,4 +11,14 @@ router.get('/service', function(req, res, next) {
   res.render('service', {title: 'Conrad Eye Centers'});
 });
 
+/* GET about page */
+router.get('/about', function(req, res, next) {
+  res.render('about', {title: 'Conrad Eye Centers'});
+});
+
+/* GET resources page */
+router.get('/resources', function(req, res, next) {
+  res.render('resources', {title: 'Conrad Eye Centers'});
+});
+
 module.exports = router;
