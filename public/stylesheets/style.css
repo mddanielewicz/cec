@@ -508,7 +508,6 @@ input[type=date]::-webkit-outer-spin-button {
 
 #middle-column {
   width: 55%;
-  height: 100%;
   float: left;
   //background-color: #D4C770;
 }
@@ -591,3 +590,17 @@ td#vision-member-ben {
 #medical-centers {
   display: none;
 }
+
+
+
+/*==========================
+======Resources.jade========
+==========================*/
+
+#patient-portal,
+#privacy-practice,
+#insurance {
+  display: none;
+}
+
+

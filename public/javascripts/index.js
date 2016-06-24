@@ -231,5 +231,34 @@ window.onload = function() {
         aboutNavClear();
         medicalCenterContent.style.display='block';
       }
+  }else if(window.location.pathname == '/resources'){
+    //ABOUT PAGE JS
+      var patientPortalLink = document.getElementById('Patient Portal');
+      var patientPortalContent = document.getElementById('patient-portal');
+      var privacyLink = document.getElementById('Notice of Privacy Practices');
+      var privacyContent = document.getElementById('privacy-practice');
+      var insuranceLink = document.getElementById('Insurance Options');
+      var insuranceContent = document.getElementById('insurance');
+    
+      var resourcesNavClear = function(){
+        patientPortalContent.style.display='none';
+        privacyContent.style.display='none';
+        insuranceContent.style.display='none';
+      }
+      
+      patientPortalLink.onclick = function(){
+        resourcesNavClear();
+        patientPortalContent.style.display='block';
+      }
+      
+      privacyLink.onclick = function(){
+        resourcesNavClear();
+        privacyContent.style.display='block';
+      }
+      
+      insuranceLink.onclick = function(){
+        resourcesNavClear();
+        insuranceContent.style.display='block';
+      }
   }
 }

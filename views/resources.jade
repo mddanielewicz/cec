@@ -5,8 +5,7 @@ block content
   #left-column
     .nav
       ul
-      each val in ['Patient Portal', 'Notice of Privacy Practices', 'Insurance Options', 'Glossary of Common Eye Problems']
-        li: h3(id=val)= val
+        li: a(href='/resources/patient_portal') Patient Portal
   #middle-column
     .middle-container
       #patient-portal
@@ -126,5 +125,3 @@ block content
                 td United Health Care
                 td 1-800-123-4567
         
-        
-  #right-column

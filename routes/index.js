@@ -16,9 +16,19 @@ router.get('/about', function(req, res, next) {
   res.render('about', {title: 'Conrad Eye Centers'});
 });
 
-/* GET resources page */
-router.get('/resources', function(req, res, next) {
-  res.render('resources', {title: 'Conrad Eye Centers'});
+/* GET Resources page */
+router.get('/resources/patient_portal', function(req, res, next) {
+  res.render('resources/patient_portal', {title: 'Conrad Eye Centers'});
+});
+
+/* GET Patient Portal page */
+router.get('/resources/patient_portal', function(req, res, next) {
+  res.render('resources/patient_portal', {title: 'Conrad Eye Centers'});
+});
+
+/* GET contact page */
+router.get('/contact', function(req, res, next) {
+  res.render('contact', {title: 'Conrad Eye Centers'});
 });
 
 module.exports = router;
