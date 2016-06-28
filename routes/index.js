@@ -21,11 +21,6 @@ router.get('/resources', function(req, res, next) {
   res.render('resources', {title: 'Conrad Eye Centers'});
 });
 
-/* GET Patient Portal page */
-router.get('/resources/patient-portal', function(req, res, next) {
-  res.render('/resources/patient-portal', {title: 'Conrad Eye Centers'});
-});
-
 /* GET contact page */
 router.get('/contact', function(req, res, next) {
   res.render('contact', {title: 'Conrad Eye Centers'});

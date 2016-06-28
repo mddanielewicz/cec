@@ -5,7 +5,8 @@ block content
   #left-column
     .nav
       ul
-        li: a(href='/resources/patient-portal') Patient Portal
+        each val in ['Patient Portal', 'Notice of Privacy Practices', 'Insurance Options', 'Glossary of Common Eye Problems']
+          li: h3(id=val)= val
   #middle-column
     .middle-container
       #patient-portal
