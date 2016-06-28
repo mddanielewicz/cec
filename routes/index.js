@@ -17,13 +17,13 @@ router.get('/about', function(req, res, next) {
 });
 
 /* GET Resources page */
-router.get('/resources/patient_portal', function(req, res, next) {
-  res.render('resources/patient_portal', {title: 'Conrad Eye Centers'});
+router.get('/resources', function(req, res, next) {
+  res.render('resources', {title: 'Conrad Eye Centers'});
 });
 
 /* GET Patient Portal page */
-router.get('/resources/patient_portal', function(req, res, next) {
-  res.render('resources/patient_portal', {title: 'Conrad Eye Centers'});
+router.get('/resources/patient-portal', function(req, res, next) {
+  res.render('/resources/patient-portal', {title: 'Conrad Eye Centers'});
 });
 
 /* GET contact page */
