@@ -199,7 +199,6 @@ window.onload = function() {
               
         document.getElementById('common-problem-text').innerHTML = commonProblemsObj.commonProblemVal;
       }
-      console.log(commonProblemsObj.commonProblemVal);
   
   }
   else if (window.location.pathname == '/about'){
