@@ -79,7 +79,8 @@ window.onload = function() {
             modalWrap.style.display='none';
         }
     }
-}else if (window.location.pathname == '/service'){
+}
+  else if (window.location.pathname == '/service'){
 
     //SERVICE PAGE JS
 
@@ -172,9 +173,9 @@ window.onload = function() {
         cosmeticContent.style.display='block';
       }
       
-    /*common problem selector */
+    //common problem selector
       
-      var commonProblems = {
+      var commonProblemsObj = {
         "Farsighted":"<strong>Farsightedness (hyperopia)</strong> is a condition in which the cornea is too flat causing light to focus past the retina. This condition causes a person to see blurry up close and occasionally blurry far away (though better than up close). Most of the time this condition can be resolved using contacts, glasses, or LASIK.",
         "Nearsightedness":"<strong>Nearsightedness (myopia)</strong> is a condition in which the cornea is too curved or the eye itself is too long causing light to focus in front of the retina. This condition causes a person to see blurry far away and somewhat sharper up close. Most of the time this condition can be resolved using contacts, glasses, or LASIK.",
         "Presbyopia":"<strong>Presbyopia</strong> is a condition that naturally occurs around age 40 wherein the lens inside the eye loses its elasticity and ability to change shape. Without being able to change shape the eye can no longer accommodate meaning that a person can generally see far away but gets increasingly blurry vision up close as they age. Most of the time this condition can be resolved using bifocal contacts and glasses or reading glasses.",
@@ -185,17 +186,23 @@ window.onload = function() {
         "Macular degeneration":"<strong>Macular degeneration</strong> is a condition in which the integrity of the nerve layer in the macula (part of the eye responsible for focusing fine details in your central vision) is gradually lost. Unlike glaucoma macular degeneration starts affecting vision in the central field of view and works outward. Studies have shown certain vitamins and other naturally occurring nutrients can help stave off the effects of the disease. Macular degeneration has been linked to heredity, so Dr. Conrad will discuss your personal risk factors and medical history before starting any treatment.",
         "Floaters and flashes":"<strong>Floaters and flashes</strong> are generally harmless, but they can be signs of a serious condition called a retinal detachment. Floaters are caused by tiny bits of debris or fibers “floating” through the back chamber of your eye. You interpret these obstructions in your eyes as hair-like or bug-like objects in your line of sight. The flashes are usually caused by the tugging of the materials in the back of your eye on the nerve layer. Experiencing floaters or flashes should not be alarming, but you should visit an ophthalmologist to make sure they are not serious. Dr. Conrad conducts a thorough exam of the back layers of your eye to make sure there are no serious problems and continues to monitor them at each visit. Though you cannot necessarily get rid of floaters the human brain is generally good at tuning them out after they remain in the same area for a while.",
         "Pink Eye":"<strong>\"Pink Eye\" (conjunctivitis)</strong> is a condition wherein the conjunctiva (thin membranous layer covering the inside of the eyelids and the outer surface of the eye) becomes inflamed due to allergies or viral/bacterial infection. Symptoms include red, itchy, painful, scratchy, and/or watering eyes. If you show any symptoms you should call and schedule and appointment right away. Several eye drops have been shown to be very effective at treating conjunctivitis, but Dr. Conrad will conduct a thorough exam of your individual case before prescribing anything."
-      };
+      }
   
       var getCommonProblem = document.getElementById('common-problem');
-      var getCommonProblemVal = '';
+      var commonProblemVal = '';
   
       getCommonProblem.onchange = function() {
-        getCommonProblemVal = getCommonProblem.value;
+        commonProblemVal = getCommonProblem.value;
+
+        console.log(commonProblemVal);
+        console.log(commonProblemsObj.commonProblemVal);
               
-        document.getElementById('common-problem-text').innerHTML = (commonProblems.getCommonProblemVal)
+        document.getElementById('common-problem-text').innerHTML = commonProblemsObj.commonProblemVal;
       }
-  }else if (window.location.pathname == '/about'){
+      console.log(commonProblemsObj.commonProblemVal);
+  
+  }
+  else if (window.location.pathname == '/about'){
     //ABOUT PAGE JS
       var officeInfoLink = document.getElementById('Office Information');
       var officeInfoContent = document.getElementById('general-office-information');
@@ -232,7 +239,8 @@ window.onload = function() {
         aboutNavClear();
         medicalCenterContent.style.display='block';
       }
-  }else if(window.location.pathname == '/resources'){
+  }
+  else if(window.location.pathname == '/resources'){
     //ABOUT PAGE JS
       var patientPortalLink = document.getElementById('Patient Portal');
       var patientPortalContent = document.getElementById('patient-portal');
