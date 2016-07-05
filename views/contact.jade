@@ -1,3 +1,79 @@
 extends layout
 
 block content
+
+      #left-column
+        .nav
+          ul
+          each val in ['Schedule Appointment', 'Louisville Office', 'New Albany Office']
+            li: h3(id=val)= val
+      #middle-column
+        #contact-schedule-apt
+          h2 Schedule an appointment
+          p Fill out the information below, including three days that work best for you, and we will call you with options that work best around your schedule!
+          form#apt.form(action="#" method="POST")
+            input(type="text" name="fName" id="fName" placeholder="First Name")
+            input(type="text" name="lName" id="lName" placeholder="Last Name")
+            input(type="tel" name="phoneNum" id="phoneNum" placeholder="###-###-####")
+            input(type="email" name="email" id="email" placeholder="Email")
+            select#office-location
+              option Louisville
+              option New Albany
+            input(type="date" name="aptChoiceOne" id="aptChoiceOne")
+            label(for="aptChoiceOne") First Choice
+            input(type="date" name="aptChoiceTwo" id="aptChoiceTwo")
+            label(for="aptChoiceTwo") Second Choice
+            input(type="date" name="aptChoiceThree" id="aptChoiceThree")
+            label(for="aptChoiceThree") Third Choice
+            input(type="submit" value="Submit")
+        #louisville-office
+          #contact-phone-wrap
+            h3.contact-call Call:
+            p.contact-call 502-899-7778
+            h3.contact-fax Fax:
+            p.contact-fax 502-897-5757
+            #louisville-hours
+              h2 Hours
+              table
+                tr 
+                  th Monday
+                  td 9am - 5pm*
+                  td closed
+                tr 
+                  th Tuesday
+                  td 9am - 5pm
+                  td Closed
+                tr
+                  th Wednesday
+                  td 9am - 5pm*
+                  td Closed
+                tr
+                  th Thursday
+                  td 9am - 5pm
+                  td Closed
+                tr
+                  th Friday
+                  td 9am - 5pm*
+                  td Closed
+                tr
+                  th Saturday
+                  td Closed
+                  td Closed
+                tr
+                  th Sunday
+                  td Closed
+                  td Closed
+              p *Office is only open for material pickups and administrative needs.
+          #contact-address-wrap
+            h3.contact-address Find us!
+            p.contact-address.one 204 Breckenridge Lane
+            p.contact-address.two Louisville, KY 40207
+            #louisville-map
+              p Map goes here
+          
+          
+          
+        #new-albany-office
+          h2 Test New Albany Office
+      #right-column
+        h2 Test Right

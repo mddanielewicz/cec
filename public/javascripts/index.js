@@ -189,7 +189,9 @@ window.onload = function() {
       }
   
       var getCommonProblem = document.getElementById('common-problem');
-      var commonProblemVal = '';
+      var commonProblemVal = getCommonProblem.value;
+    
+      document.getElementById('common-problem-text').innerHTML = commonProblemsObj[commonProblemVal];
   
       getCommonProblem.onchange = function() {
         commonProblemVal = getCommonProblem.value;
@@ -197,7 +199,7 @@ window.onload = function() {
         console.log(commonProblemVal);
         console.log(commonProblemsObj.commonProblemVal);
               
-        document.getElementById('common-problem-text').innerHTML = commonProblemsObj.commonProblemVal;
+        document.getElementById('common-problem-text').innerHTML = commonProblemsObj[commonProblemVal];
       }
   
   }
@@ -267,6 +269,36 @@ window.onload = function() {
       insuranceLink.onclick = function(){
         resourcesNavClear();
         insuranceContent.style.display='block';
+      }
+  }
+  else if(window.location.pathname == '/contact'){
+    //CONTACT PAGE JS
+      var scheduleAptLink = document.getElementById('Schedule Appointment');
+      var scheduleAptContent = document.getElementById('contact-schedule-apt');
+      var LouisvilleOfficeLink = document.getElementById('Louisville Office');
+      var louisvilleOfficeContent = document.getElementById('louisville-office');
+      var newAlbanyOffficeLink = document.getElementById('New Albany Office');
+      var newAlbanyOfficeContent = document.getElementById('new-albany-office');
+    
+      var contactNavClear = function(){
+        scheduleAptContent.style.display='none';
+        louisvilleOfficeContent.style.display='none';
+        newAlbanyOfficeContent.style.display='none';
+      }
+      
+      scheduleAptLink.onclick = function(){
+        contactNavClear();
+        scheduleAptContent.style.display='block';
+      }
+      
+      LouisvilleOfficeLink.onclick = function(){
+        contactNavClear();
+        louisvilleOfficeContent.style.display='block';
+      }
+      
+      newAlbanyOffficeLink.onclick = function(){
+        contactNavClear();
+        newAlbanyOfficeContent.style.display='block';
       }
   }
 }
