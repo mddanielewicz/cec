@@ -1,3 +1,5 @@
+var fname = '';
+
 window.onload = function() {
   if (window.location.pathname == '/'){ 
     //Modal for apt schedule
@@ -300,5 +302,30 @@ window.onload = function() {
         contactNavClear();
         newAlbanyOfficeContent.style.display='block';
       }
+  }
+  else if(window.location.pathname == '/submit'){
+//    var firstNameText = document.getElementById('first-name');
+//    
+//    var fname = document.getElementById('fname').value;
+//    firstNameText=fname;
+//    console.log(fname);
+  
+    // Connection URL
+  var url = 'mongodb://localhost:27017/myapp';
+  // Use connect method to connect to the Server
+  MongoClient.connect(url, function(err, db) {
+    assert.equal(null, err);
+    console.log("Connected correctly to server");
+
+    var collection = db.collection('test')
+    collection.insert({name: 'Martin Luther', reformer: true}, function(err, result) { 
+    collection.find({name: 'Martin Luther'}).toArray(function(err, docs) {
+      console.log(docs[0])
+
+    db.close();
+      })
+    })
+  });
+    
   }
 }

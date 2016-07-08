@@ -26,4 +26,15 @@ router.get('/contact', function(req, res, next) {
   res.render('contact', {title: 'Conrad Eye Centers'});
 });
 
+router.get('/userlist', function(req, res){
+  res.render('submit', {title: 'Conrad Eye Centers'});
+  var db = req.db;
+  var collection = db.get('usercollection');
+  collection.find({},{},function(e, docs){
+    res.render('userlist', {
+      "userlist" : docs
+    });
+  });
+});
+
 module.exports = router;

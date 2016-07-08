@@ -5,10 +5,39 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var mongo = require('mongodb');
+var monk = require('monk');
+var db = monk('localhost:27017/myapp');
+
+app.use(function(req, res, next){
+  req.db = db;
+  next();
+});
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+//var MongoClient = require('mongodb').MongoClient
+//  , assert = require('assert');
+
+//// Connection URL
+//var url = 'mongodb://localhost:27017/myapp';
+//// Use connect method to connect to the Server
+//MongoClient.connect(url, function(err, db) {
+//  assert.equal(null, err);
+//  console.log("Connected correctly to server");
+//  
+//  var collection = db.collection('test')
+//  collection.insert({name: 'Martin Luther', reformer: true}, function(err, result) { 
+//  collection.find({name: 'Martin Luther'}).toArray(function(err, docs) {
+//    console.log(docs[0])
+//
+//  db.close();
+//    })
+//  })
+//});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -22,6 +51,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+app.use(function(req,res,next){
+  req.db = db;
+  next();
+});
 app.use('/', routes);
 app.use('/users', users);
 
@@ -58,3 +92,8 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+
+
+
+
+

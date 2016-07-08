@@ -5,7 +5,7 @@ block content
     #apt-modal.modal-thin
       h2 Schedule an appointment
       p Fill out the information below, including three days that work best for you, and we will call you with options that work best around your schedule!
-      form#apt(action="#" method="POST")
+      form#apt(action="/submit", method="POST")
         input(type="text" name="fName" id="fName" placeholder="First Name")
         input(type="text" name="lName" id="lName" placeholder="Last Name")
         input(type="tel" name="phoneNum" id="phoneNum" placeholder="###-###-####")
@@ -19,7 +19,7 @@ block content
         label(for="aptChoiceTwo") Second Choice
         input(type="date" name="aptChoiceThree" id="aptChoiceThree")
         label(for="aptChoiceThree") Third Choice
-        input(type="submit" value="Submit")
+        input(type="submit" id="submit" value="Submit")
    
     #review-modal.modal-wide
       .left
