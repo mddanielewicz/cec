@@ -59,14 +59,21 @@ html(ng-app='cec')
           p New Albany, IN ?????
           p p. 812-944-6063
         .office-devide
+        .patient-reviews-foot
           h2 Patient Reviews
             each user, i in userreviews
-              ul
-                li= user.reviewfirstname
-                li= user.reviewlastname
-                li= user.reviewsite
-                li= user.reviewdate
-                li= user.reviewtext
+                ul
+                  li= user.reviewfirstname
+                  li= user.reviewlastname
+                  li= user.reviewsite
+                  li= user.reviewdate
+                  li= user.reviewtext
+//            ul
+//              li User Fist Name
+//              li User Last Name
+//              li Review Site
+              
+            
               
 script(src="/javascripts/index.js")
 
