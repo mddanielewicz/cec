@@ -5,10 +5,11 @@ router.get('/', function(req, res, next) {
 
   var db = req.db;
   var collection = db.get('userreviews');
-  collection.aggregate( [ {sample: { size: 3} } ] ,function(e,docs){
+  collection.aggregate( [ {$sample: { size: 1} } ], function(e,docs){
+    console.log(e);
     res.render('index', {
-      title: 'Reviews',
-      "userreviews" : docs
+      title: 'Conrad Eye Centers',
+      userreviews : docs
     });
   });
   
