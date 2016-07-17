@@ -41,10 +41,10 @@ block content
           li: a(href="#") Yelp
       .right
         h2 Submision Form
-        form(action='#' method='POST')
-          input(type='text' id='reviewFname' placeholder='First Name')
-          input(type='text' id='reviewLname' placeholder='Last Name')
-          input(type='email' id='reviewEmail' placeholder='Email')
+        form(name='addreview' action='/' method='post')
+          input(type='text' id='reviewFname' name='reviewFname' placeholder='First Name')
+          input(type='text' id='reviewLname' name='reviewLname' placeholder='Last Name')
+          input(type='email' id='reviewEmail' name='reviewEmail' placeholder='Email')
           select(id='reviewSite' name='reviewSite')
             option(value='Yelp - Louisville') Yelp - Louisville
             option(value='Yelp - New Albany') Yelp - New Albany
@@ -53,11 +53,13 @@ block content
             option(value='Better Bueisness Bueru') Better Bueisness Beurue
             option(value='Healthgrades') Healthgrades
             option(value='UCompare Healthcare') UCompate Healthcare
-          input(type='date' id='reviewPostDate')
+          input(type='date' id='reviewPostDate' name='reviewDate')
           select(id='reviewReward' name='reviewReward')
             option(value='waterBottle') Water Bottle
             option(value='coffeeTumbler') Coffee Tumbler
+          textarea(type='text' id='reviewtext' name='reviewText' placeholder='Let us know how we did...')
           input(type='submit' value='Submit')
+          
     #premium-modal.modal-wide
         .left
             .nav
@@ -115,5 +117,6 @@ block content
         p Premium Eye Screening
       #follow-us.box
         p Follow us!
+        
         
 

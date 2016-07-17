@@ -1,4 +1,4 @@
-doctype html
+doctype html 
 html(ng-app='cec')
   head
     title= title
@@ -58,6 +58,16 @@ html(ng-app='cec')
           p Suite 210
           p New Albany, IN ?????
           p p. 812-944-6063
+        .office-devide
+          h2 Patient Reviews
+            each user, i in userreviews
+              ul
+                li= user.reviewfirstname
+                li= user.reviewlastname
+                li= user.reviewsite
+                li= user.reviewdate
+                li= user.reviewtext
+              
 script(src="/javascripts/index.js")
 
   

@@ -81,6 +81,7 @@ window.onload = function() {
             modalWrap.style.display='none';
         }
     }
+    
 }
   else if (window.location.pathname == '/service'){
 
@@ -313,7 +314,7 @@ window.onload = function() {
     // Connection URL
   var url = 'mongodb://localhost:27017/myapp';
   // Use connect method to connect to the Server
-  MongoClient.connect(url, function(err, db) {
+    MongoClient.connect(url, function(err, db) {
     assert.equal(null, err);
     console.log("Connected correctly to server");
 
