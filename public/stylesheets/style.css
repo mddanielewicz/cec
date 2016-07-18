@@ -1092,24 +1092,41 @@ td#vision-member-ben {
   margin: 0 auto;
   text-align: left;
 }
+  
+#general-wrap {
+  margin-left: 35%;
+}
 
 .button-wrap {
-  margin: 20px 0;
+  margin-left: 35%;
+  width: 600px;
+  float: left;
 }
 
 .button-wrap h3 {
   
-    margin: 0 35% 0 0;
-    padding: 5px 15px;
-    display: inline-block;
-    /* border: 3px solid; */
-    /* border-radius: 10px; */
+  margin: 0 10% 0 0;
+  border: 3px solid;
+  float: left;
+  width: 100px;
 }
 
 #louisville-wrap,
 #new-albany-wrap {
-  width: 48%;
+  width: 100%;
   float: left;
+  margin-left: 35%;
+}
+  
+#new-albany-wrap {
+  display: none;
+}
+  
+#louisville-hours,
+#new-albany-hours {
+  margin-top: 20px;
+  margin-left: 0;
+  clear: none;
 }
 
 #louisville-info tr,
@@ -1132,7 +1149,7 @@ td#vision-member-ben {
 
 #louisville-info td,
 #new-albany-info td {
-  padding-left: 50px;
+  padding-left: 40px;
 }
 
 
@@ -1228,11 +1245,13 @@ td#vision-member-ben {
   margin: 15px 0 0 90px;
 }
 
+/*
 #louisville-hours {
   clear: left;
   margin-top: 120px;
   margin-left: 10px;
 }
+*/
 
 
 

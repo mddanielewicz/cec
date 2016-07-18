@@ -42,10 +42,10 @@ block content
       .right
         h2 Submision Form
         form(name='addreview' action='/' method='post')
-          input(type='text' id='reviewFname' name='reviewFname' placeholder='First Name')
-          input(type='text' id='reviewLname' name='reviewLname' placeholder='Last Name')
-          input(type='email' id='reviewEmail' name='reviewEmail' placeholder='Email')
-          select(id='reviewSite' name='reviewSite')
+          input(type='text' id='reviewFname' name='reviewFname' placeholder='First Name' required)
+          input(type='text' id='reviewLname' name='reviewLname' placeholder='Last Name' required)
+          input(type='email' id='reviewEmail' name='reviewEmail' placeholder='Email' required)
+          select(id='reviewSite' name='reviewSite' required)
             option(value='Yelp - Louisville') Yelp - Louisville
             option(value='Yelp - New Albany') Yelp - New Albany
             option(value='Google+ - Louisville') Google+ - Louisville
@@ -53,11 +53,11 @@ block content
             option(value='Better Bueisness Bueru') Better Bueisness Beurue
             option(value='Healthgrades') Healthgrades
             option(value='UCompare Healthcare') UCompate Healthcare
-          input(type='date' id='reviewPostDate' name='reviewDate')
-          select(id='reviewReward' name='reviewReward')
+          input(type='date' id='reviewPostDate' name='reviewDate' required)
+          select(id='reviewReward' name='reviewReward' required)
             option(value='waterBottle') Water Bottle
             option(value='coffeeTumbler') Coffee Tumbler
-          textarea(type='text' id='reviewtext' name='reviewText' placeholder='Let us know how we did...')
+          textarea(type='text' id='reviewtext' name='reviewText' placeholder='Let us know how we did...' required)
           input(type='submit' value='Submit')
           
     #premium-modal.modal-wide

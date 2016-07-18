@@ -7,38 +7,70 @@ router.get('/', function(req, res, next) {
   var collection = db.get('userreviews');
   collection.aggregate( [ {$sample: { size: 1} } ], function(e,docs){
     console.log(e);
+    console.log(docs);
     res.render('index', {
       title: 'Conrad Eye Centers',
       userreviews : docs
     });
   });
-  
-//  collection.find({},{},function(e,docs){
-//    res.render('index', {
-//      title: 'Conrad Eye Centers',
-//      "userreviews" : docs
-//    });
-//  });
 });
 
 /* GET service page */
 router.get('/service', function(req, res, next) {
-  res.render('service', {title: 'Conrad Eye Centers'});
+
+  var db = req.db;
+  var collection = db.get('userreviews');
+  collection.aggregate( [ {$sample: { size: 1} } ], function(e,docs){
+    console.log(e);
+    console.log(docs);
+    res.render('service', {
+      title: 'Conrad Eye Centers',
+      userreviews : docs
+    });
+  });
 });
 
 /* GET about page */
 router.get('/about', function(req, res, next) {
-  res.render('about', {title: 'Conrad Eye Centers'});
+
+  var db = req.db;
+  var collection = db.get('userreviews');
+  collection.aggregate( [ {$sample: { size: 1} } ], function(e,docs){
+    console.log(e);
+    console.log(docs);
+    res.render('about', {
+      title: 'Conrad Eye Centers',
+      userreviews : docs
+    });
+  });
 });
 
 /* GET Resources page */
 router.get('/resources', function(req, res, next) {
-  res.render('resources', {title: 'Conrad Eye Centers'});
+  var db = req.db;
+  var collection = db.get('userreviews');
+  collection.aggregate( [ {$sample: { size: 1} } ], function(e,docs){
+    console.log(e);
+    console.log(docs);
+    res.render('resources', {
+      title: 'Conrad Eye Centers',
+      userreviews : docs
+    });
+  });
 });
 
 /* GET contact page */
 router.get('/contact', function(req, res, next) {
-  res.render('contact', {title: 'Conrad Eye Centers'});
+  var db = req.db;
+  var collection = db.get('userreviews');
+  collection.aggregate( [ {$sample: { size: 1} } ], function(e,docs){
+    console.log(e);
+    console.log(docs);
+    res.render('contact', {
+      title: 'Conrad Eye Centers',
+      userreviews : docs
+    });
+  });
 });
 
 //Post request for patient review form on homepage

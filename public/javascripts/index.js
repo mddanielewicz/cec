@@ -132,6 +132,7 @@ window.onload = function() {
         pediatricContent.style.display='none';
         cosmeticContent.style.display='none';
       }
+      
 
       eyeExamLink.onclick = function() {
         serviceNavClear();
@@ -243,9 +244,37 @@ window.onload = function() {
         aboutNavClear();
         medicalCenterContent.style.display='block';
       }
+      
+      var size = {
+        width: window.innerWidth || document.body.clientWidth,
+      }
+      
+      if (size.width <= 1024) {
+        console.log('Window is equal to or smaller than 1024')
+        
+        var louisvilleLink = document.getElementById('louisville-link');
+        var newAlbanyLink = document.getElementById('new-albany-link');
+        var louisvilleWrap = document.getElementById('louisville-wrap');
+        var newAlbanyWrap = document.getElementById('new-albany-wrap');
+        
+        var clearGeneralInfo = function() {
+          louisvilleWrap.style.display='none';
+          newAlbanyWrap.style.display='none';
+        }
+        
+        louisvilleLink.onclick = function() {
+          clearGeneralInfo();
+          louisvilleWrap.style.display='block';
+        }
+        
+        newAlbanyLink.onclick = function() {
+          clearGeneralInfo();
+          newAlbanyWrap.style.display='block';
+        }
+      }
   }
   else if(window.location.pathname == '/resources'){
-    //ABOUT PAGE JS
+    //Resource PAGE JS
       var patientPortalLink = document.getElementById('Patient Portal');
       var patientPortalContent = document.getElementById('patient-portal');
       var privacyLink = document.getElementById('Notice of Privacy Practices');

@@ -63,11 +63,11 @@ html(ng-app='cec')
           h2 Patient Reviews
             each user, i in userreviews
                 ul
-                  li= user.reviewfirstname
-                  li= user.reviewlastname
+                  li= '"'+user.reviewtext+'"'
+                  li= '-'+user.reviewfirstname+' '+user.reviewlastname[0]+'.' 
                   li= user.reviewsite
                   li= user.reviewdate
-                  li= user.reviewtext
+                  
 //            ul
 //              li User Fist Name
 //              li User Last Name
