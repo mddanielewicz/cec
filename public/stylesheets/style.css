@@ -80,6 +80,13 @@ input[type=date]::-webkit-outer-spin-button {
     text-align: center;
 }
 
+.modal-wide textarea {
+  margin: 0;
+  width: 80%;
+  height: 250px;
+  resize: none;
+}
+
 .modal-wide .left p,
 .modal-thin p {
     margin: 10px 10px;
@@ -352,7 +359,7 @@ input[type=date]::-webkit-outer-spin-button {
 }
 
 .social-links-container {
-  width: 32%;
+  width: 23%;
   margin: 0 auto;
   
 }
@@ -380,7 +387,7 @@ input[type=date]::-webkit-outer-spin-button {
 }
 
 .partner-logo-container {
-  margin-top: 15px;
+  margin-top: 40px;
   margin-left: 3%;
   width: 10%;
   height: 100%;
@@ -394,7 +401,8 @@ input[type=date]::-webkit-outer-spin-button {
 
 .office-louisville {
   float: left;
-  margin-left: 25%;
+  clear: right;
+  margin-left: 19.5%;
   margin-top: 50px;
   color: #fff;
 }
@@ -420,12 +428,28 @@ input[type=date]::-webkit-outer-spin-button {
 
 .office-indiana {
   float: left;
-  margin-top: 30px;
+  margin-top: 40px;
   color: #fff;
 } 
 
 .patient-reviews-foot {
   margin-top: 40px;
+  float: left;
+  clear: right;
+  width: 25%;
+}
+
+.patient-reviews-foot h2 {
+  margin: 0;
+}
+
+.patient-reviews-foot ul {
+  margin-top: 10px;
+  padding: 0;
+}
+
+.patient-reviews-foot li {
+  line-height: 1.5rem;
 }
 
 /*==========================
@@ -457,6 +481,10 @@ input[type=date]::-webkit-outer-spin-button {
   width: 200px;
   display: inline-block;
   margin: 50px 8.7%;
+}
+
+.buttons-container {
+  text-align: center;
 }
 
 #schedule-apt {
@@ -591,6 +619,10 @@ input[type=date]::-webkit-outer-spin-button {
   width: 60%;
 }
 
+#common-problem-text {
+  line-height: 1.3rem;
+}
+
 
 /*==========================
 ========Service.jade========
@@ -613,10 +645,15 @@ td#vision-member-ben {
 
 
 /*Page Content Display */
-
 #eye-exam-content,
-#eye-exam-sidebar,
+#eye-exam-sidebar {
+  display: block;
+  
+}
+
 #gls-cls-content,
+#injury-content,
+#injury-sidebar,
 #disease-content,
 #disease-sidebar,
 #laser-vis-content,
@@ -632,7 +669,10 @@ td#vision-member-ben {
 ========About.jade========
 ==========================*/
 
-#general-office-information,
+#general-office-information {
+  display: block;
+}
+
 #bio,
 #history,
 #medical-centers {
@@ -791,4 +831,409 @@ td#vision-member-ben {
   clear: left;
   margin-top: 120px;
   margin-left: 10px;
+}
+
+
+/*==========================
+============================
+============================
+======Style for Tablet======
+============================
+============================
+==========================*/
+
+
+@media (max-width: 1024px) {
+ 
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+h3,
+th {
+  font-size: 1rem;
+}
+
+p,
+li,
+a,
+input,
+td {
+    font-size: 0.9rem;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*============================
+==========Modals===============
+============================*/
+
+
+.modal-thin {
+    margin: 0% auto;
+    background-color: #f3f3f3;
+    height: 80%;
+    border: 1px solid #888;
+    width: 35%;
+    box-shadow: 5px 5px 20px #c0B9B9;
+    overflow: scroll;
+}
+
+.modal-thin input,
+.form input{
+    width: 85%;
+    height: 30px;
+    margin: 10px auto;
+    margin-left: 6%;
+    text-align: center;
+    float: left;
+    clear: both;
+}
+
+.modal-thin select,
+.form select{
+  width: 85%;
+  height: 30px;
+  margin: 10px auto;
+  margin-left: 6%;
+}
+
+/*==========Modal Wide======*/
+
+.modal-wide {
+  margin: 0% auto;
+  width: 80%;
+  height: 80%;
+  background-color: #fff;
+  box-shadow: 5px 5px 20px #c0B9B9;
+  overflow: scroll;
+}
+
+
+/*=============================
+========Layout.jade============
+=============================*/
+
+.main-nav {
+  float: right;
+  width: 600px;
+  margin-right: 1%;
+  margin-top: 35px;
+  clear: right;
+  background-color: rgba(132, 139, 174, 0.7);
+}
+
+.main-nav a {
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  text-align: right;
+  font-weight: bold; 
+}
+
+.title-container {
+  float: left;
+  clear: both;
+  margin-left: 25%;
+  margin-top: 200px;
+  background-color: rgba(132, 139, 174, 0.7);
+  width: 500px;
+    
+}
+
+
+/*=======Social Footer =======*/
+
+.social-links-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/*=====Main Footer=====*/
+
+#footer-container {
+  position: absolute;
+  width: 100%;
+  background-color: #556091;
+  margin: 0;
+  padding-bottom: 15px;
+  height: 100%;
+}
+
+.partner-logo-container {
+  margin-top: 40px;
+  margin-left: 3%;
+  width: 10%;
+  height: 150px;
+  float: left;
+}
+
+.bbb-logo img,
+.aao-logo img{
+  width: 150px;
+}
+
+.office-louisville {
+  float: left;
+  clear: right;
+  margin-left: 9%;
+  margin-top: 50px;
+  color: #fff;
+}
+
+.patient-reviews-foot {
+  margin-top: 40px;
+  float: left;
+  clear: right;
+  width: 30%;
+}
+
+
+/*==========================
+=========index.jade=========
+==========================*/
+
+.page-main-text h2 {
+  text-align: center;
+  line-height: 2.0rem;
+}
+
+.page-main-text p {
+  text-align: justify;
+  line-height: 1.5rem;
+}
+
+
+/*==========================
+==service/about Template====
+==========================*/
+
+
+
+#middle-column {
+  width: 45%;
+  float: left;
+  //background-color: #D4C770;
+}
+
+
+
+#right-column {
+  float: left;
+  width: 35%;
+  height: 100%;
+  background-color: #FFF5B8;
+}
+
+
+  
+#vision-networks th {
+  text-align: left;
+}
+
+
+/*=====Common Problems=====*/
+
+#common-problem {
+  height: 35px;
+  width: 75%;
+  margin: 15px 10%;
+  color: #152157;
+  font-size: 1.1rem;
+  background-color: #fff;
+  box-shadow: 2px 3px 1px 1px #848BAE;
+}
+
+
+/*==========================
+========Service.jade========
+==========================*/
+
+#vision-networks {
+  float: left;
+  clear: right;
+}
+
+th#vision-member-ben,
+td#vision-member-ben {
+  display: block;
+  padding-left: 50px;
+}
+
+#vision-phone {
+  float: left
+}
+
+/*==========================
+========About.jade========
+==========================*/
+
+#bio,
+#history,
+#medical-centers {
+  display: none;
+}
+
+
+/*=====Office Info=====*/
+
+#general-wrap h3,
+#general-wrap table {
+  text-align: center;
+}
+
+#general-wrap table {
+  margin: 0 auto;
+  text-align: left;
+}
+
+.button-wrap {
+  margin: 20px 0;
+}
+
+.button-wrap h3 {
+  
+    margin: 0 35% 0 0;
+    padding: 5px 15px;
+    display: inline-block;
+    /* border: 3px solid; */
+    /* border-radius: 10px; */
+}
+
+#louisville-wrap,
+#new-albany-wrap {
+  width: 48%;
+  float: left;
+}
+
+#louisville-info tr,
+#louisville-hours tr,
+#new-albany-info tr,
+#new-albany-hours tr{
+  height: 50px;
+}
+
+#louisville-info th,
+#louisville-hours th,
+#louisville-info td,
+#louisville-hours td,
+#new-albany-info th,
+#new-albany-info td,
+#new-albany-hours th,
+#new-albany-hours td {
+  text-align: left;
+}
+
+#louisville-info td,
+#new-albany-info td {
+  padding-left: 50px;
+}
+
+
+#louisville-hours td,
+#new-albany-hours td {
+  padding-left: 20px;
+}
+
+
+
+/*==========================
+======Resources.jade========
+==========================*/
+
+#patient-portal,
+#privacy-practice,
+#insurance {
+  display: none;
+}
+
+
+
+/*==========================
+=======Contact=.jade========
+==========================*/
+
+#contact-schedule-apt,
+#louisville-office,
+#new-albany-office {
+  display: none;
+}
+
+
+#apt label,
+#apt input,
+#apt select{
+  float: left;
+  clear: both;
+}
+
+.form input{
+    width: 40%;
+    height: 30px;
+    margin: 10px auto;
+    margin-left: 30%;
+    text-align: center;
+    float: left;
+    clear: both;
+}
+
+.form label{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.form select{
+  width: 40%;
+  height: 30px;
+  margin: 10px auto;
+  margin-left: 30%;
+}
+
+/*=========Louisville Office==========*/
+
+#contact-phone-wrap,
+#contact-address-wrap {
+  width: 48%;
+  float: left;
+}
+
+.contact-call h3 {
+  margin: 25px 0 0 10px;
+  width: 50px;
+  clear: right;
+  float: left;
+}
+
+.contact-call p {
+  float: left;
+  margin: 27px 0 0 90px;
+}
+
+.contact-fax h3 {
+  margin: 10px 0 0 10px;
+  clear: left;
+  float: left;
+  width: 50px;
+}
+
+.contact-fax p {
+  float: left;
+  margin: 15px 0 0 90px;
+}
+
+#louisville-hours {
+  clear: left;
+  margin-top: 120px;
+  margin-left: 10px;
+}
+
+
+
 }
