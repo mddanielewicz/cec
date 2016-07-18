@@ -1082,16 +1082,6 @@ td#vision-member-ben {
 
 
 /*=====Office Info=====*/
-
-#general-wrap h3,
-#general-wrap table {
-  text-align: center;
-}
-
-#general-wrap table {
-  margin: 0 auto;
-  text-align: left;
-}
   
 #general-wrap {
   margin-left: 35%;
@@ -1104,7 +1094,6 @@ td#vision-member-ben {
 }
 
 .button-wrap h3 {
-  
   margin: 0 10% 0 0;
   border: 3px solid;
   float: left;
@@ -1129,34 +1118,6 @@ td#vision-member-ben {
   clear: none;
 }
 
-#louisville-info tr,
-#louisville-hours tr,
-#new-albany-info tr,
-#new-albany-hours tr{
-  height: 50px;
-}
-
-#louisville-info th,
-#louisville-hours th,
-#louisville-info td,
-#louisville-hours td,
-#new-albany-info th,
-#new-albany-info td,
-#new-albany-hours th,
-#new-albany-hours td {
-  text-align: left;
-}
-
-#louisville-info td,
-#new-albany-info td {
-  padding-left: 40px;
-}
-
-
-#louisville-hours td,
-#new-albany-hours td {
-  padding-left: 20px;
-}
 
 
 
@@ -1169,6 +1130,15 @@ td#vision-member-ben {
 #insurance {
   display: none;
 }
+  
+#insurance-info-wrap .button-wrap {
+  margin-left: 0;
+}
+  
+#vision-insurance th,
+#vision-insurance td {
+  padding-right: 60px;
+} 
 
 
 
