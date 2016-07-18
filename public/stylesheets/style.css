@@ -7,7 +7,9 @@ h2,
 h3,
 p, 
 input,
-label{
+label,
+th,
+td{
     color: #152157;
 }
 
@@ -1125,7 +1127,11 @@ td#vision-member-ben {
 ======Resources.jade========
 ==========================*/
 
-#patient-portal,
+#patient-portal {
+  display: block;
+}
+  
+  
 #privacy-practice,
 #insurance {
   display: none;
@@ -1146,7 +1152,23 @@ td#vision-member-ben {
 =======Contact=.jade========
 ==========================*/
 
-#contact-schedule-apt,
+  #middle-column {
+    width: 80%;
+  }
+  
+#contact-schedule-apt {
+  display: block;
+}
+  
+#contact-schedule-apt h2{
+  margin-left: 24%;
+}
+  
+#contact-schedule-apt p {
+  width: 330px;
+  margin-left: 18%;
+}
+  
 #louisville-office,
 #new-albany-office {
   display: none;
@@ -1164,7 +1186,7 @@ td#vision-member-ben {
     width: 40%;
     height: 30px;
     margin: 10px auto;
-    margin-left: 30%;
+    margin-left: 18%;
     text-align: center;
     float: left;
     clear: both;
@@ -1172,23 +1194,35 @@ td#vision-member-ben {
 
 .form label{
     float: left;
-    width: 100%;
+    width: 200px;
     text-align: center;
+  padding-left: 25%;
 }
 
 .form select{
   width: 40%;
   height: 30px;
   margin: 10px auto;
-  margin-left: 30%;
+  margin-left: 18%;
 }
 
 /*=========Louisville Office==========*/
 
 #contact-phone-wrap,
 #contact-address-wrap {
-  width: 48%;
+  width: 35%;
   float: left;
+  clear: right;
+  margin-left: 5%
+}
+  
+#louisville-hours,
+#new-albany-hours {
+  margin-top: -200px;
+  margin-left: 5%;
+  float: left;
+  clear: both;
+  width: 35%;
 }
 
 .contact-call h3 {
@@ -1214,14 +1248,6 @@ td#vision-member-ben {
   float: left;
   margin: 15px 0 0 90px;
 }
-
-/*
-#louisville-hours {
-  clear: left;
-  margin-top: 120px;
-  margin-left: 10px;
-}
-*/
 
 
 
