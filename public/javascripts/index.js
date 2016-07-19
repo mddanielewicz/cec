@@ -118,6 +118,7 @@ window.onload = function() {
       var pediatricContent = document.getElementById('pediatric-content');
       var cosmeticLink = document.getElementById('Cosmetics');
       var cosmeticContent = document.getElementById('cosmetics-content');
+      var rightColumn = document.getElementById('right-column');
       
       var serviceNavClear = function() {
         eyeExamContent.style.display='none';
@@ -138,43 +139,51 @@ window.onload = function() {
         serviceNavClear();
         eyeExamContent.style.display='block';
         eyeExamSidebar.style.display='block';
+        rightColumn.style.display='block';
       }
 
       glsClsLink.onclick = function() {
         serviceNavClear();
         glsClsContent.style.display='block';
+        rightColumn.style.display='none';
       }
       
       injuryLink.onclick = function() {
         serviceNavClear();
         injuryContent.style.display='block';
         injurySidebar.style.display='block';
+        rightColumn.style.display='block';
       }
       
       diseaseLink.onclick = function() {
         serviceNavClear();
         diseaseContent.style.display='block';
         diseaseSidebar.style.display='block';
+        rightColumn.style.display='block';
       }
       
       laserVisionLink.onclick = function() {
         serviceNavClear();
         laserVisionContent.style.display='block';
+        rightColumn.style.display='none';
       }
       
       implantLink.onclick = function() {
         serviceNavClear();
         implantContent.style.display='block';
+        rightColumn.style.display='none';
       }
       
       pediatricLink.onclick = function() {
         serviceNavClear();
         pediatricContent.style.display='block';
+        rightColumn.style.display='none';
       }
       
       cosmeticLink.onclick = function() {
         serviceNavClear();
         cosmeticContent.style.display='block';
+        rightColumn.style.display='none';
       }
       
     //common problem selector
