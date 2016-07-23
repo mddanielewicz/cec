@@ -13,8 +13,8 @@ Web redesign for Conrad Eye Centers
   * ~~Replace yelp page holders with aditional review sites~~
   * ~~Add external links to link tag~~
   * Link form to MongoDB
-4. Social button
-  * Add external links to social media websites
+4. ~~Social button~~
+  * ~~Add external links to social media websites~~
 5. ~~Social bar~~
   * ~~Add external links to social media pages~~
 6. ~~Footer images~~
