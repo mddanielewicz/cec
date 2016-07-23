@@ -5,7 +5,7 @@ Web redesign for Conrad Eye Centers
 
 ### Index Page
 1. Schedule Appointment Button
-..* Link form to mongodb
+..* Link form to mongodb.
 2. Lasik button
 ..* Create content for Lasik page
 ..* Link lasik page to lasik button on home page
