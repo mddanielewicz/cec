@@ -1,10 +1,10 @@
 doctype html 
-html(ng-app='cec')
+html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/normalize.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body       
+  body(ng-controller='mainController')      
    #header-container
     .header-overlay
       //.header-logo
@@ -33,13 +33,21 @@ html(ng-app='cec')
     #social-links-bkgrnd
       .social-links-container
         .social-icon
-              img(src="images/facebook-icon.png" alt="Facebook Logo")
+              a(href="https://www.facebook.com/ConradEyeCenters/" target="_blank")
+                img(src="images/facebook-icon.png" alt="Facebook Logo")
+                
         .social-icon
-              img(src="images/Google-plus-icon.png" alt="Google Plus Louisville Logo")
+              a(href="https://plus.google.com/+ConradEyeCentersLouisville/posts" target="_blank")
+                img(src="images/Google-plus-icon.png" alt="Google Plus Louisville Logo")
+                
         .social-icon
-              img(src="images/Google-plus-icon.png" alt="Google Plus New Albany Logo")
+              a(href="https://plus.google.com/112202261525095620339/about" target="_blank")
+                img(src="images/Google-plus-icon.png" alt="Google Plus New Albany Logo")
+                
         .social-icon
-              img(src="images/twitter-logo.png" alt="Twitter")
+              a(href="https://twitter.com/conradeyecenter" target="_blank")
+                img(src="images/twitter-logo.png" alt="Twitter")
+                
     #footer-container
         .partner-logo-container
           .bbb-logo
@@ -64,7 +72,7 @@ html(ng-app='cec')
             each user, i in userreviews
                 ul
                   li= '"'+user.reviewtext+'"'
-                  li= '-'+user.reviewfirstname+' '+user.reviewlastname[0]+'.' 
+                  li= '-'+user.reviewfirstname+' '+user.reviewlastname+'.' 
                   li= user.reviewsite
                   li= user.reviewdate
                   
@@ -75,7 +83,7 @@ html(ng-app='cec')
               
             
               
-script(src="/javascripts/index.js")
+script(src="/js/app.min.js")
 
   
         
