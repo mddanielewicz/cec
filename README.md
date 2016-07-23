@@ -3,7 +3,7 @@ Web redesign for Conrad Eye Centers
 
 ## To-do
 
-### Index Page
+### Index / Layout Page
 1. Schedule Appointment Button
   * Link form to mongodb
 2. Lasik button
@@ -19,8 +19,8 @@ Web redesign for Conrad Eye Centers
   * ~~Add external links to social media pages~~
 6. ~~Footer images~~
   * ~~Add external links to image sites~~
-7. Footer
-  * Change patient review text color to white
+7. ~~Footer~~
+  * ~~Change patient review text color to white~~
 8. Portal button
   * Create content for portal page
   * Link  portal page to portal button on home page

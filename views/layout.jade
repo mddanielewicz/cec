@@ -4,7 +4,7 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/normalize.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body(ng-controller='mainController')      
+  body     
    #header-container
     .header-overlay
       //.header-logo
@@ -28,7 +28,6 @@ html
           h3 Personalized, Comprehensive Eyecare.          
     
     block content
-    
     
     #social-links-bkgrnd
       .social-links-container
@@ -73,19 +72,8 @@ html
           h2 Patient Reviews
             each user, i in userreviews
                 ul
-                  li= '"'+user.reviewtext+'"'
-                  li= '-'+user.reviewfirstname+' '+user.reviewlastname+'.' 
-                  li= user.reviewsite
-                  li= user.reviewdate
-                  
-//            ul
-//              li User Fist Name
-//              li User Last Name
-//              li Review Site
-              
-            
-              
+                  p= '"'+user.reviewtext+'"'
+                  p= '- '+user.reviewfirstname+' '+user.reviewlastname+'.' 
+                  p= user.reviewsite
+                  p= user.reviewdate              
 script(src="/js/app.min.js")
-
-  
-        
