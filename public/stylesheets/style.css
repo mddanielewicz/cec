@@ -5,6 +5,7 @@ body {
 h1,
 h2,
 h3,
+h4,
 p, 
 input,
 label,
@@ -443,6 +444,7 @@ input[type=date]::-webkit-outer-spin-button {
 
 .patient-reviews-foot h2 {
   margin: 0;
+  color: #fff;
 }
 
 .patient-reviews-foot ul {
@@ -450,8 +452,10 @@ input[type=date]::-webkit-outer-spin-button {
   padding: 0;
 }
 
-.patient-reviews-foot li {
+.patient-reviews-foot p {
   line-height: 1.5rem;
+  color: #fff;
+  font-weight: normal;
 }
 
 /*==========================
@@ -1157,7 +1161,7 @@ td#vision-member-ben {
 /*==========================
 =======Contact=.jade========
 ==========================*/
-
+  
   #middle-column-contact {
     width: 80%;
     float: left;

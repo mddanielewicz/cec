@@ -30,8 +30,8 @@ Web redesign for Conrad Eye Centers
 ### Service Page
 1. Eye Exams
   * Replace placeholder phone numbers & link them
-2. Glasses and Contacts
-  * give h4 blue color
+2. ~~Glasses and Contacts~~
+  * ~~give h4 blue color~~
 3. Eye Diseases
   * Add common problem dropdown to sidebar
   * Add external links for "Eye Injury Resources"
