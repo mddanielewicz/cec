@@ -14,11 +14,11 @@ Web redesign for Conrad Eye Centers
   * ~~Add external links to link tag~~
   * Link form to MongoDB
 4. Social button
-  * ~~Add external links to social media websites~~
-5. Social bar
-  * Add external links to social media pages
-6. Footer images
-  * Add external links to image sites
+  * Add external links to social media websites
+5. ~~Social bar~~
+  * ~~Add external links to social media pages~~
+6. ~~Footer images~~
+  * ~~Add external links to image sites~~
 7. Footer
   * Change patient review text color to white
 8. Portal button
