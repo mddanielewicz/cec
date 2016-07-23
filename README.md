@@ -10,11 +10,11 @@ Web redesign for Conrad Eye Centers
   * Create content for Lasik page
   * Link lasik page to lasik button on home page
 3. Review Button
-  * Replace yelp page holders with aditional review sites
-  * Add external links to link tag
+  * ~~Replace yelp page holders with aditional review sites~~
+  * ~~Add external links to link tag~~
   * Link form to MongoDB
 4. Social button
-  * Add external links to social media websites
+  * ~~Add external links to social media websites~~
 5. Social bar
   * Add external links to social media pages
 6. Footer images
