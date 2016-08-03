@@ -73,6 +73,46 @@ router.get('/contact', function(req, res, next) {
   });
 });
 
+//Post appointment requests
+router.post('/', function(req, res) {
+  //Set interal DB variable
+  var db = req.db;
+  
+  //get our form values
+  var scheduleFirstName = req.body.scheduleFirstName;
+  var scheduleLastName = req.body.scheduleLastName;
+  var schedulePhoneNum = req.body.schedulePhoneNum;
+  var scheduleEmail = req.body.scheduleEmail;
+  var scheduleOfficeLocation = req.body.scheduleOfficeLocation;
+  var scheduleFirstChoice = req.body.scheduleFirstChoice;
+  var scheduleSecondChoice = req.body.scheduleSecondChoice;
+  var scheduleThirdChoice = req.body.scheduleThirdChoice;
+  
+  //set collection
+  var collection = db.get('appointments');
+  
+  //submit to db
+  collection.insert({
+    "scheduleFirstName" : scheduleFirstName,
+    "scheduleLastName" : scheduleLastName,
+    "schedulePhoneNum" : schedulePhoneNum,
+    "scheduleEmail" : scheduleEmail,
+    "scheduleOfficeLocation" : scheduleOfficeLocation,
+    "scheduleFirstChoice" : scheduleFirstChoice,
+    "scheduleSecondChoice" : scheduleSecondChoice,
+    "scheduleThirdChoice" : scheduleThirdChoice
+  }, function(err, doc) {
+    if (err) {
+      //return error
+      res.send("There was a problem requesting your appointment.");
+    }
+    else{
+      //forward to seccess page
+      res.redirect("/");
+    }
+  });
+});
+
 //Post request for patient review form on homepage
 router.post('/', function(req, res) {
   //Set interal DB variable
