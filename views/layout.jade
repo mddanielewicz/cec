@@ -70,10 +70,10 @@ html
         .office-devide
         .patient-reviews-foot
           h2 Patient Reviews
-            each user, i in userreviews
+            each user in userreviews
                 ul
                   p= '"'+user.reviewtext+'"'
-                  p= '- '+user.reviewfirstname+' '+user.reviewlastname+'.' 
+                  p= '- '+user.reviewfirstname+' '+user.reviewlastname 
                   p= user.reviewsite
                   p= user.reviewdate              
 script(src="/js/app.min.js")

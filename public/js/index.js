@@ -120,6 +120,37 @@ window.onload = function() {
       var cosmeticContent = document.getElementById('cosmetics-content');
       var rightColumn = document.getElementById('right-column');
       
+     //common problem selector
+      
+        var commonProblemsObj = {
+        "Farsighted":"<strong>Farsightedness (hyperopia)</strong> is a condition in which the cornea is too flat causing light to focus past the retina. This condition causes a person to see blurry up close and occasionally blurry far away (though better than up close). Most of the time this condition can be resolved using contacts, glasses, or LASIK.",
+        "Nearsightedness":"<strong>Nearsightedness (myopia)</strong> is a condition in which the cornea is too curved or the eye itself is too long causing light to focus in front of the retina. This condition causes a person to see blurry far away and somewhat sharper up close. Most of the time this condition can be resolved using contacts, glasses, or LASIK.",
+        "Presbyopia":"<strong>Presbyopia</strong> is a condition that naturally occurs around age 40 wherein the lens inside the eye loses its elasticity and ability to change shape. Without being able to change shape the eye can no longer accommodate meaning that a person can generally see far away but gets increasingly blurry vision up close as they age. Most of the time this condition can be resolved using bifocal contacts and glasses or reading glasses.",
+        "Astigmatism":"<strong>Astigmatism</strong> is a condition wherein the cornea is shaped more like a football than a basketball. This condition causes light to focus on more than one point on the retina resulting in generally blurry vision at any distance. Most of the time this condition can be resolved using contacts, glasses, or LASIK.",
+        "Dry Eye Syndrome":"<strong>Dry Eye Syndrome</strong> is caused by insufficient moisture in the eye. Constant dryness, scratching sensations, intermittent blurred vision and excessive watering are all symptoms of dry eye syndrome. This condition is a natural effect of the aging process of the eye where the quality of tear film produced begins to lessen. Most of the time over-the-counter drops can be used to alleviate this condition; however, Dr. Conrad can provide varying solutions from punctual plugs to prescription strength drops.",
+        "Cataracts":"<strong>Cataracts</strong> are cloudy or hazy opacities in the natural lens of the eye. They are a natural aging process of the lens and result from the gradual breakdown of the crystalline structure. Symptoms of cataracts include hazy or blurred vision, poor night vision, sensitivity to sunlight, and glare. Dr. Conrad will be able to determine the progression of a cataract, and once mature glasses and contacts can no longer alleviate the vision problems produced by cataracts. Thankfully Dr. Conrad is a highly skilled surgeon in the removal of the natural lens and replacement with a standard or premium intraocular lens implant",
+        "Glaucoma":"<strong>Glaucoma</strong> is usually a very progressive and slow acting eye disease. Like diabetic eye disease it is important to stay in annual contact with your ophthalmologist as most symptoms do not become noticeable until it is too late. Glaucoma results from increased pressure in the eyes usually caused by either too much production of the fluid within the eye or a problem in releasing fluid from the eye. Gradual vision loss can occur starting in the periphery of the visual field and working its way inward toward the center of your field of view. Many drops and some surgical procedures have proven highly successful in the treatment and management of glaucoma. Dr. Conrad will be able to assess your risk factors and help determine the right approach for each individual.",
+        "Macular degeneration":"<strong>Macular degeneration</strong> is a condition in which the integrity of the nerve layer in the macula (part of the eye responsible for focusing fine details in your central vision) is gradually lost. Unlike glaucoma macular degeneration starts affecting vision in the central field of view and works outward. Studies have shown certain vitamins and other naturally occurring nutrients can help stave off the effects of the disease. Macular degeneration has been linked to heredity, so Dr. Conrad will discuss your personal risk factors and medical history before starting any treatment.",
+        "Floaters and flashes":"<strong>Floaters and flashes</strong> are generally harmless, but they can be signs of a serious condition called a retinal detachment. Floaters are caused by tiny bits of debris or fibers “floating” through the back chamber of your eye. You interpret these obstructions in your eyes as hair-like or bug-like objects in your line of sight. The flashes are usually caused by the tugging of the materials in the back of your eye on the nerve layer. Experiencing floaters or flashes should not be alarming, but you should visit an ophthalmologist to make sure they are not serious. Dr. Conrad conducts a thorough exam of the back layers of your eye to make sure there are no serious problems and continues to monitor them at each visit. Though you cannot necessarily get rid of floaters the human brain is generally good at tuning them out after they remain in the same area for a while.",
+        "Pink Eye":"<strong>\"Pink Eye\" (conjunctivitis)</strong> is a condition wherein the conjunctiva (thin membranous layer covering the inside of the eyelids and the outer surface of the eye) becomes inflamed due to allergies or viral/bacterial infection. Symptoms include red, itchy, painful, scratchy, and/or watering eyes. If you show any symptoms you should call and schedule and appointment right away. Several eye drops have been shown to be very effective at treating conjunctivitis, but Dr. Conrad will conduct a thorough exam of your individual case before prescribing anything."
+        }
+  
+        var getCommonProblem = document.getElementById('common-problem');
+        var commonProblemVal = getCommonProblem.value;
+    
+        document.getElementById('common-problem-text').innerHTML = commonProblemsObj[commonProblemVal];
+  
+        getCommonProblem.onchange = function() {
+          commonProblemVal = getCommonProblem.value;
+
+          console.log(commonProblemVal);
+          console.log(commonProblemsObj.commonProblemVal);
+              
+        document.getElementById('common-problem-text').innerHTML =  commonProblemsObj[commonProblemVal];
+        }
+      
+    
+    
       var serviceNavClear = function() {
         eyeExamContent.style.display='none';
         eyeExamSidebar.style.display='none';
@@ -153,6 +184,8 @@ window.onload = function() {
         injuryContent.style.display='block';
         injurySidebar.style.display='block';
         rightColumn.style.display='block';
+        getCommonProblem.style.display='block';
+        
       }
       
       diseaseLink.onclick = function() {
@@ -160,6 +193,7 @@ window.onload = function() {
         diseaseContent.style.display='block';
         diseaseSidebar.style.display='block';
         rightColumn.style.display='block';
+        getCommonProblem.style.display='block';
       }
       
       laserVisionLink.onclick = function() {
@@ -186,34 +220,7 @@ window.onload = function() {
         rightColumn.style.display='none';
       }
       
-    //common problem selector
-      
-      var commonProblemsObj = {
-        "Farsighted":"<strong>Farsightedness (hyperopia)</strong> is a condition in which the cornea is too flat causing light to focus past the retina. This condition causes a person to see blurry up close and occasionally blurry far away (though better than up close). Most of the time this condition can be resolved using contacts, glasses, or LASIK.",
-        "Nearsightedness":"<strong>Nearsightedness (myopia)</strong> is a condition in which the cornea is too curved or the eye itself is too long causing light to focus in front of the retina. This condition causes a person to see blurry far away and somewhat sharper up close. Most of the time this condition can be resolved using contacts, glasses, or LASIK.",
-        "Presbyopia":"<strong>Presbyopia</strong> is a condition that naturally occurs around age 40 wherein the lens inside the eye loses its elasticity and ability to change shape. Without being able to change shape the eye can no longer accommodate meaning that a person can generally see far away but gets increasingly blurry vision up close as they age. Most of the time this condition can be resolved using bifocal contacts and glasses or reading glasses.",
-        "Astigmatism":"<strong>Astigmatism</strong> is a condition wherein the cornea is shaped more like a football than a basketball. This condition causes light to focus on more than one point on the retina resulting in generally blurry vision at any distance. Most of the time this condition can be resolved using contacts, glasses, or LASIK.",
-        "Dry Eye Syndrome":"<strong>Dry Eye Syndrome</strong> is caused by insufficient moisture in the eye. Constant dryness, scratching sensations, intermittent blurred vision and excessive watering are all symptoms of dry eye syndrome. This condition is a natural effect of the aging process of the eye where the quality of tear film produced begins to lessen. Most of the time over-the-counter drops can be used to alleviate this condition; however, Dr. Conrad can provide varying solutions from punctual plugs to prescription strength drops.",
-        "Cataracts":"<strong>Cataracts</strong> are cloudy or hazy opacities in the natural lens of the eye. They are a natural aging process of the lens and result from the gradual breakdown of the crystalline structure. Symptoms of cataracts include hazy or blurred vision, poor night vision, sensitivity to sunlight, and glare. Dr. Conrad will be able to determine the progression of a cataract, and once mature glasses and contacts can no longer alleviate the vision problems produced by cataracts. Thankfully Dr. Conrad is a highly skilled surgeon in the removal of the natural lens and replacement with a standard or premium intraocular lens implant",
-        "Glaucoma":"<strong>Glaucoma</strong> is usually a very progressive and slow acting eye disease. Like diabetic eye disease it is important to stay in annual contact with your ophthalmologist as most symptoms do not become noticeable until it is too late. Glaucoma results from increased pressure in the eyes usually caused by either too much production of the fluid within the eye or a problem in releasing fluid from the eye. Gradual vision loss can occur starting in the periphery of the visual field and working its way inward toward the center of your field of view. Many drops and some surgical procedures have proven highly successful in the treatment and management of glaucoma. Dr. Conrad will be able to assess your risk factors and help determine the right approach for each individual.",
-        "Macular degeneration":"<strong>Macular degeneration</strong> is a condition in which the integrity of the nerve layer in the macula (part of the eye responsible for focusing fine details in your central vision) is gradually lost. Unlike glaucoma macular degeneration starts affecting vision in the central field of view and works outward. Studies have shown certain vitamins and other naturally occurring nutrients can help stave off the effects of the disease. Macular degeneration has been linked to heredity, so Dr. Conrad will discuss your personal risk factors and medical history before starting any treatment.",
-        "Floaters and flashes":"<strong>Floaters and flashes</strong> are generally harmless, but they can be signs of a serious condition called a retinal detachment. Floaters are caused by tiny bits of debris or fibers “floating” through the back chamber of your eye. You interpret these obstructions in your eyes as hair-like or bug-like objects in your line of sight. The flashes are usually caused by the tugging of the materials in the back of your eye on the nerve layer. Experiencing floaters or flashes should not be alarming, but you should visit an ophthalmologist to make sure they are not serious. Dr. Conrad conducts a thorough exam of the back layers of your eye to make sure there are no serious problems and continues to monitor them at each visit. Though you cannot necessarily get rid of floaters the human brain is generally good at tuning them out after they remain in the same area for a while.",
-        "Pink Eye":"<strong>\"Pink Eye\" (conjunctivitis)</strong> is a condition wherein the conjunctiva (thin membranous layer covering the inside of the eyelids and the outer surface of the eye) becomes inflamed due to allergies or viral/bacterial infection. Symptoms include red, itchy, painful, scratchy, and/or watering eyes. If you show any symptoms you should call and schedule and appointment right away. Several eye drops have been shown to be very effective at treating conjunctivitis, but Dr. Conrad will conduct a thorough exam of your individual case before prescribing anything."
-      }
-  
-      var getCommonProblem = document.getElementById('common-problem');
-      var commonProblemVal = getCommonProblem.value;
-    
-      document.getElementById('common-problem-text').innerHTML = commonProblemsObj[commonProblemVal];
-  
-      getCommonProblem.onchange = function() {
-        commonProblemVal = getCommonProblem.value;
-
-        console.log(commonProblemVal);
-        console.log(commonProblemsObj.commonProblemVal);
-              
-        document.getElementById('common-problem-text').innerHTML = commonProblemsObj[commonProblemVal];
-      }
+   
   
   }
   else if (window.location.pathname == '/about'){
