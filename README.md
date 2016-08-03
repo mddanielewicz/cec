@@ -33,7 +33,8 @@ Web redesign for Conrad Eye Centers
 2. ~~Glasses and Contacts~~
   * ~~give h4 blue color~~
 3. Eye Diseases
-  * Add common problem dropdown to sidebar
+  * ~~Add common problem dropdown to sidebar~~
+  * Fix so dropdown on eye disease section will display value from dropdown
   * Add external links for "Eye Injury Resources"
 4. Surgical Procedures
   * Get content for page
