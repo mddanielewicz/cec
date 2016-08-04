@@ -37,29 +37,6 @@ app.use(function(req, res, next){
   next();
 }); 
 
-
-
-//var MongoClient = require('mongodb').MongoClient
-//  , assert = require('assert');
-
-//// Connection URL
-//var url = 'mongodb://localhost:27017/myapp';
-//// Use connect method to connect to the Server
-//MongoClient.connect(url, function(err, db) {
-//  assert.equal(null, err);
-//  console.log("Connected correctly to server");
-//  
-//  var collection = db.collection('test')
-//  collection.insert({name: 'Martin Luther', reformer: true}, function(err, result) { 
-//  collection.find({name: 'Martin Luther'}).toArray(function(err, docs) {
-//    console.log(docs[0])
-//
-//  db.close();
-//    })
-//  })
-//});
-
-
 app.use('/', routes);
 app.use('/users', users);
 
