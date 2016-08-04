@@ -1,4 +1,3 @@
-var fname = '';
 
 window.onload = function() {
   if (window.location.pathname == '/'){ 
@@ -18,6 +17,16 @@ window.onload = function() {
       modalWrap.style.display='block';
       modalApt.style.display='block';
     };
+    
+    //Navigation for Patient Portal Button
+    var patientPortalBtn = document.getElementById('patient-portal-button');
+    var patientPortal = document.getElementById('patient-portal');
+    
+    patientPortalBtn.onclick = function(){
+      window.location.href = "http://localhost:3000/resources";
+      
+    }
+    
 
     //Modal for patient reviews
 
