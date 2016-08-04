@@ -5,7 +5,7 @@ block content
     #apt-modal.modal-thin
       h2 Schedule an appointment
       p Fill out the information below, including three days that work best for you, and we will call you with options that work best around your schedule!
-      form#apt(action="/", method="POST")
+      form#apt(action="scheduleAppointment", method="POST")
         input(type="text" name="scheduleFirstName" id="scheduleFirstName" placeholder="First Name")
         input(type="text" name="scheduleLastName" id="scheduleLastName" placeholder="Last Name")
         input(type="tel" name="schedulePhoneNum" id="schedulePhoneNum" placeholder="###-###-####")
@@ -43,7 +43,7 @@ block content
           li: a(href="http://www.yelp.com/biz/conrad-eye-center-new-albany?osq=conrad+eye+centers" target="_blank") Yelp New Albany
       .right
         h2 Submision Form
-        form(name='addreview' action='/' method='post')
+        form(name='addreview' action='userReview' method='post')
           input(type='text' id='reviewFname' name='reviewFname' placeholder='First Name' required)
           input(type='text' id='reviewLname' name='reviewLname' placeholder='Last Name' required)
           input(type='email' id='reviewEmail' name='reviewEmail' placeholder='Email' required)
@@ -80,19 +80,19 @@ block content
                 p Learn your risk for retinal diseases like diabetic retinopathy, macular degeneration, and more with our premium Retinal Health Assessment package. We will take a focused look at the back of your eye by scanning the retina. At these screenings, the doctor will personally discuss your risk factors and any recommendations.
                 p.fine-print Since the purpose of these assessments is to rule out the presence of one or more ocular diseases, they are not billable to insurance.
         .right
-            form(action="#" method="POST")
-                input(type='text' id='premiumFname' placeholder='First Name')
-                input(type='text' id='premiumLname' placeholder='Last Name')
-                input(type='tel' id='premiumPhone' placeholder='###-###-####')
-                input(type='email' id='premiumEmail' placeholder='Email')
+            form(name="premiumPackageForm" action="premiumPackage" method="post")
+                input(type='text' id='premiumFirstName' name="premiumFirstName" placeholder='First Name')
+                input(type='text' id='premiumLastName' name="premiumLastName" placeholder='Last Name')
+                input(type='tel' id='premiumPhone' name="premiumPhone" placeholder='###-###-####')
+                input(type='email' id='premiumEmail' name="premiumEmail" placeholder='Email')
                 select(id='premiumPackage' name='premiumPackage')
                     option(value='Glaucoma Risk Assessment') Glaucoma Risk Assessment
                     option(value='Retinal Health Assessment') Retinal Health Assessment
                     option(value='Premium Eye Health Package - Both') Premium Eye Health Package - Both
-                label(for='premiumFirstApt') Preferred appointment date
-                input(type='date' id='premiumFirstApt' )
-                label(for='premiumSecondtApt') Secondary appointment date
-                input(type='date' id='premiumSecondApt' )
+                label(for='premiumFirstAppointment') Preferred appointment date
+                input(type='date' id='premiumFirstApt' name="premiumFirstAppointment" )
+                label(for='premiumSecondtAppointment') Secondary appointment date
+                input(type='date' id='premiumSecondApt' name="premiumSecondAppointment")
                 input(type='submit' value='Submit')
     #follow-modal.modal-thin
         h2 Follow us online!
