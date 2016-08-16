@@ -4,39 +4,19 @@ Web redesign for Conrad Eye Centers
 ## To-do
 
 ### Index / Layout Page
-1. ~~Schedule Appointment Button~~
-  * ~~Link form to mongodb~~
-2. Lasik button
+
+1. Lasik button
   * Create content for Lasik page
   * Link lasik page to lasik button on home page
-3. ~~Review Button~~
-  * ~~Replace yelp page holders with aditional review sites~~
-  * ~~Add external links to link tag~~
-  * ~~Link form to MongoDB~~
-4. ~~Social button~~
-  * ~~Add external links to social media websites~~
-5. ~~Social bar~~
-  * ~~Add external links to social media pages~~
-6. ~~Footer images~~
-  * ~~Add external links to image sites~~
-7. ~~Footer~~
-  * ~~Change patient review text color to white~~
-8. ~~Portal button~~
-  * ~~Create content for portal page~~
-  * ~~Link  portal page to portal button on home page~~
-9. ~~Premium eye Testing~~
-  * ~~Link form to mongoDB~~
 
 ### Service Page
 1. Eye Exams
   * Replace placeholder phone numbers & link them
-2. ~~Glasses and Contacts~~
-  * ~~give h4 blue color~~
-3. Eye Diseases
+2. Eye Diseases
   * ~~Add common problem dropdown to sidebar~~
   * Fix so dropdown on eye disease section will display value from dropdown
   * Add external links for "Eye Injury Resources"
-4. Surgical Procedures
+3. Surgical Procedures
   * Get content for page
 
 ### Resources Page
