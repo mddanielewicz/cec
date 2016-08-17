@@ -133,7 +133,7 @@ window.onload = function() {
       var cosmeticLink = document.getElementById('Cosmetics');
       var cosmeticContent = document.getElementById('cosmetics-content');
       var rightColumn = document.getElementById('right-column');
-      var leftColumn = document.getElementById('leftColumn');
+      var leftColumn = document.getElementById('left-column');
       
      //common problem selector
       
@@ -184,14 +184,14 @@ window.onload = function() {
         eyeExamContent.style.display='block';
         eyeExamSidebar.style.display='block';
         rightColumn.style.display='block';
-        leftColumn.style.height = rightColumnHeight+"px";
+        leftColumn.style.height = contentHeight+"px";
       }
 
       glsClsLink.onclick = function() {
         serviceNavClear();
         glsClsContent.style.display='block';
         rightColumn.style.display='none';
-        leftColumn.style.height = rightColumnHeight+"px";
+        leftColumn.style.height = contentHeight+"px";
       }
       
       injuryLink.onclick = function() {
@@ -200,7 +200,7 @@ window.onload = function() {
         injurySidebar.style.display='block';
         rightColumn.style.display='block';
         getCommonProblem.style.display='block';
-        leftColumn.style.height = rightColumnHeight+"px";
+        leftColumn.style.height = contentHeight+"px";
         
       }
       
@@ -210,35 +210,35 @@ window.onload = function() {
         diseaseSidebar.style.display='block';
         rightColumn.style.display='block';
         getCommonProblem.style.display='block';
-        leftColumn.style.height = rightColumnHeight+"px";
+        leftColumn.style.height = contentHeight+"px";
       }
       
       laserVisionLink.onclick = function() {
         serviceNavClear();
         laserVisionContent.style.display='block';
         rightColumn.style.display='none';
-        leftColumn.style.height = rightColumnHeight+"px";
+        leftColumn.style.height = contentHeight+"px";
       }
       
       implantLink.onclick = function() {
         serviceNavClear();
         implantContent.style.display='block';
         rightColumn.style.display='none';
-        leftColumn.style.height = rightColumnHeight+"px";
+        leftColumn.style.height = contentHeight+"px";
       }
       
       pediatricLink.onclick = function() {
         serviceNavClear();
         pediatricContent.style.display='block';
         rightColumn.style.display='none';
-        leftColumn.style.height = rightColumnHeight+"px";
+        leftColumn.style.height = contentHeight+"px";
       }
       
       cosmeticLink.onclick = function() {
         serviceNavClear();
         cosmeticContent.style.display='block';
         rightColumn.style.display='none';
-        leftColumn.style.height = rightColumnHeight+"px";
+        leftColumn.style.height = contentHeight+"px";
       }
       
    
