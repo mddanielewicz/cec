@@ -1,54 +1,56 @@
 extends layout
 
 block content
-  #content
-    #left-column
-      .nav
-        ul
+  #static-nav
+    ul
         each val in ['Eye Exams', 'Glasses and Contacts', 'Eye Injuries and Infections', 'Eye Diseases', 'Laser Vsion Correction', 'Eye Implants', 'Surgical Procedures', 'Pediatric Ophthamology', 'Cosmetics']
-          li: h3(id=val)= val
-    #middle-column
-      .middle-container
-        #eye-exam-content
-          h3 Conrad Eye Centers focuses on your vision with one-on-one personalized eye exams for any age.
-          p We know your sight is important. That is why Dr. Conrad personally examines every patient. Dr. Conrad is a trained and nationally recognized ophthalmologist; this means during even a routine eye exam everything about your eye is being examined by one of the best medical doctors in Louisville. Though optometrists are qualified to prescribe glasses and contacts and even treat some disorders of the eye, an ophthalmologist is a medical doctor who can prescribe contacts and glasses, diagnose and treat all conditions of the eye, prescribe medications, and perform surgery on the eye.
-          p We accept most vision and eye care plans. Every full routine eye exam will leave you with a custom prescription for glasses and the assurance that you had the most in-depth exam possible.
-        #gls-cls-content
-          h3 Each of our locations has a full service optical boutique. Our optician has years of experience and will work one-on-one with you to find the perfect balance of style, quality, and affordability.
-          h4 Glasses
-          p Conrad Eye Centers specializes in providing each patient with a wide array of choices for lenses and frames alike. We believe in custom building the perfect glasses for the individual, and we offer top-end name brand frames at affordable prices. When choosing the frames and lenses, it is important to consider your facial features, personal style, and day-to-day activities. Our skilled certified optician will work directly with you to choose the best combination.
-          h4 Contacts
-          p Dr. Conrad fits all types of contact lenses, including soft, rigid, multi-focal and specialty contacts. We carry all major types including daily disposable lenses, rigid gas permeable lenses, and multifocal lenses. Our skilled certified optician will work directly with you to choose the contact lenses that are right for you.
-        #injury-content
-          h3 Is your eye red, irritated, scratchy, watery, or painful? Dr. Conrad is your convenient, quick, and knowledgeable answer.
-          p When your eyes are itching, watering, red, irritated, or any combination of symptoms, it is important you receive diagnosis and care in a timely manner from a trained ophthalmologist. Dr. Conrad is more than happy to treat whatever infection or injury you may have. Many chronic infections or injuries can lead to more complicated problems if left unchecked. At Conrad Eye Centers we can get you in our office quickly at a time that is convenient for you. For every injury or infection to the eye Conrad Eye Centers should be your first step in proper diagnosis and treatment.
-        #disease-content
-          h3 Conrad Eye Centers can provide you the best care and treatment in Louisville for chronic eye diseases such as glaucoma, macular degeneration, diabetic retinopathy, and many others.
-          p Preserving your eyesight is our top priority at Conrad Eye Centers. Dr. Conrad was named a Scholar in Pathology at Duke University School of Medicine and having collaborated alongside some of the top minds in the world he is an expert in the treatment of eye disease. We use the latest in diagnostic and treatment technology including Optical Coherence Tomography (OCT), visual field exams, pachymetry, intraocular photography, and corneal topography.
-          p Since Conrad Eye Centers is a single physician practice, you can rest assured you will never be bounced back and forth between doctors. All treatment is conducted by Dr. Conrad himself, and he will personally see you at every visit. Dr. Conrad feels that making sure the patient is completely satisfied and current on their condition is of paramount importance. At Conrad Eye Centers we educate you about your eye conditions so you may understand and participate in your eye care.
-        #laser-vis-content
-          h2 LASIK (Laser-Assisted In-Situ Keratomileusis)
-          h3 Dr. Conrad was one of the first surgeons in the Louisville area to perform FDA-approved laser vision correction and has been performing these procedures since 1997.
-          p LASIK procedures boast high patient satisfaction and in many cases underestimated affordability. When compared to contact lens use, many patients can actually save money over the long run with LASIK. According to an article published by WebMD in 2006, when the cost of office visits, fitting fees, and contact lenses is tabulated over the average length of time a person wears contacts (10-20 years) contact lens use can add up to between $9,000 and $15,000! That can make anyone feel like taking a second look at LASIK especially when we offer FREE LASIK SCREENING and payment packages as low as $65/month!
-          p LASIK procedures boast high patient satisfaction and in many cases underestimated affordability. When compared to contact lens use, many patients can actually save money over the long run with LASIK. According to an article published by WebMD in 2006, when the cost of office visits, fitting fees, and contact lenses is tabulated over the average length of time a person wears contacts (10-20 years) contact lens use can add up to between $9,000 and $15,000! That can make anyone feel like taking a second look at LASIK especially when we offer FREE LASIK SCREENING and payment packages as low as $65/month!
-          h2 Surface Ablation, or PRK (Photo-Refractive Keratectomy)
-          h3 There are some patients in which Lasik is not the best choice for laser vision correction. For these patients, surface ablation or PRK is better.
-          p PRK was developed prior to LASIK and was the foundation for the LASIK procedure. Unlike LASIK, PRK does not create a corneal flap. Instead an excimer laser is used directly on the outer surface of the cornea to reshape it. This can allow patients that may not be good candidates for LASIK due to thinner corneas or a handful of other reasons to still have a highly successful option in laser refractive procedures. Dr. Conrad is happy to discuss your options and help you decide which procedure is right for you.
-        #implant-content
-          h3 Conrad Eye Centers uses the most advanced multi-focal lens implant technology in intraocular lens replacement for cataracts.
-          p As we age, the eye’s central focusing structure, the lens, becomes cloudy or hazy due to the natural breakdown of the crystalline structures that compose it. This condition is known as a cataract and causes blurry or hazy vision. Cataracts that impair the vision must be removed surgically. In this procedure, Dr. Conrad will replace the natural lens with an artificial lens implant which can be either monofocal or multifocal. Monofocal implants have been in widespread use since the 70’s and are safe and effective. However, monofocal implants allow good vision at only one distance; so glasses are needed to see well at other distances. Multifocal implants, on the other hand, can focus at both near and far, greatly reducing the need for glasses after cataract surgery. Dr. Conrad is a certified surgeon for the ReStor and Crystallens multifocal lenses. Most patients get better vision than they have ever experienced, and many do not need glasses. Dr. Conrad will help you decide which option is best for you, and should you choose to invest in your eyesight with a multifocal lens, we can determine an easy payment plan for you at our office.
-        #pediatric-content
-          h3 Dr. Conrad sees patients of all ages, and has had additional training in pediatric eye diseases.
-          p Going to the doctor in general can be a troubling experience to a child. Having raised 5 children, Dr. Conrad has a wonderful way with kids of all ages. We see children from six months and up.
-        #cosmetics-content
-          h2 Botox
-          h3 Make those wrinkles disappear with a quick visit to Conrad Eye Centers. We safely administer effective Botox cosmetic and medical injections at competitive rates.
-          p Botox is used in very minute quantities for multiple purposes. Medically, Botox is can be used to treat slight muscle spasms including those in the eyes and eyelids; however, most people know Botox for it’s cosmetic use. Botox can be used to effectively reduce the wrinkles and tension lines on the face. It can also be used to relieve intense underarm sweating. Dr. Conrad has years of experience in proper administration of Botox and would love to help you relieve your muscle spasms or take a few years off your look. Whatever your need we can be your one-stop Botox treatment.
-          h3 Latisse
-          h3 Do not pay more for the cosmetic eyelash drug sweeping the nation when we have it for less!
-          p After releasing Latisse in 2008, this once daily treatment for eyelash growth quickly swept the nation. Using a small brush to administer the product, you can expect full, dark, lush lashes in just 6 to 12 weeks. We have seen a wonderful result and outstanding patient satisfaction with this product and enjoy offering it to our patients for what we believe is the cheapest price in Louisville. Since Latisse is a prescription drug Dr. Conrad needs to conduct a full eye exam before beginning Latisse, so call today to schedule your appointment!
-
-    #right-column
+          li: p(id=val)= val          
+  #eye-exam-content.container
+    h3 Conrad Eye Centers focuses on your vision with one-on-one personalized eye exams for any age.
+    p We know your sight is important. That is why Dr. Conrad personally examines every patient. Dr. Conrad is a trained and nationally recognized ophthalmologist; this means during even a routine eye exam everything about your eye is being examined by one of the best medical doctors in Louisville. Though optometrists are qualified to prescribe glasses and contacts and even treat some disorders of the eye, an ophthalmologist is a medical doctor who can prescribe contacts and glasses, diagnose and treat all conditions of the eye, prescribe medications, and perform surgery on the eye.
+    p We accept most vision and eye care plans. Every full routine eye exam will leave you with a custom prescription for glasses and the assurance that you had the most in-depth exam possible.
+  #divide-line
+  #gls-cls-content.container
+    h3 Each of our locations has a full service optical boutique. Our optician has years of experience and will work one-on-one with you to find the perfect balance of style, quality, and affordability.
+    h4 Glasses
+    p Conrad Eye Centers specializes in providing each patient with a wide array of choices for lenses and frames alike. We believe in custom building the perfect glasses for the individual, and we offer top-end name brand frames at affordable prices. When choosing the frames and lenses, it is important to consider your facial features, personal style, and day-to-day activities. Our skilled certified optician will work directly with you to choose the best combination.
+    h4 Contacts
+    p Dr. Conrad fits all types of contact lenses, including soft, rigid, multi-focal and specialty contacts. We carry all major types including daily disposable lenses, rigid gas permeable lenses, and multifocal lenses. Our skilled certified optician will work directly with you to choose the contact lenses that are right for you.
+  #divide-line
+  #injury-content.container
+    h3 Is your eye red, irritated, scratchy, watery, or painful? Dr. Conrad is your convenient, quick, and knowledgeable answer.
+    p When your eyes are itching, watering, red, irritated, or any combination of symptoms, it is important you receive diagnosis and care in a timely manner from a trained ophthalmologist. Dr. Conrad is more than happy to treat whatever infection or injury you may have. Many chronic infections or injuries can lead to more complicated problems if left unchecked. At Conrad Eye Centers we can get you in our office quickly at a time that is convenient for you. For every injury or infection to the eye Conrad Eye Centers should be your first step in proper diagnosis and treatment.
+  #divide-line
+  #disease-content.container
+    h3 Conrad Eye Centers can provide you the best care and treatment in Louisville for chronic eye diseases such as glaucoma, macular degeneration, diabetic retinopathy, and many others.
+    p Preserving your eyesight is our top priority at Conrad Eye Centers. Dr. Conrad was named a Scholar in Pathology at Duke University School of Medicine and having collaborated alongside some of the top minds in the world he is an expert in the treatment of eye disease. We use the latest in diagnostic and treatment technology including Optical Coherence Tomography (OCT), visual field exams, pachymetry, intraocular photography, and corneal topography.
+    p Since Conrad Eye Centers is a single physician practice, you can rest assured you will never be bounced back and forth between doctors. All treatment is conducted by Dr. Conrad himself, and he will personally see you at every visit. Dr. Conrad feels that making sure the patient is completely satisfied and current on their condition is of paramount importance. At Conrad Eye Centers we educate you about your eye conditions so you may understand and participate in your eye care.
+  #divide-line
+  #laser-vis-content.container
+    h2 LASIK (Laser-Assisted In-Situ Keratomileusis)
+    h3 Dr. Conrad was one of the first surgeons in the Louisville area to perform FDA-approved laser vision correction and has been performing these procedures since 1997.
+    p LASIK procedures boast high patient satisfaction and in many cases underestimated affordability. When compared to contact lens use, many patients can actually save money over the long run with LASIK. According to an article published by WebMD in 2006, when the cost of office visits, fitting fees, and contact lenses is tabulated over the average length of time a person wears contacts (10-20 years) contact lens use can add up to between $9,000 and $15,000! That can make anyone feel like taking a second look at LASIK especially when we offer FREE LASIK SCREENING and payment packages as low as $65/month!
+    p LASIK procedures boast high patient satisfaction and in many cases underestimated affordability. When compared to contact lens use, many patients can actually save money over the long run with LASIK. According to an article published by WebMD in 2006, when the cost of office visits, fitting fees, and contact lenses is tabulated over the average length of time a person wears contacts (10-20 years) contact lens use can add up to between $9,000 and $15,000! That can make anyone feel like taking a second look at LASIK especially when we offer FREE LASIK SCREENING and payment packages as low as $65/month!
+    h2 Surface Ablation, or PRK (Photo-Refractive Keratectomy)
+    h3 There are some patients in which Lasik is not the best choice for laser vision correction. For these patients, surface ablation or PRK is better.
+    p PRK was developed prior to LASIK and was the foundation for the LASIK procedure. Unlike LASIK, PRK does not create a corneal flap. Instead an excimer laser is used directly on the outer surface of the cornea to reshape it. This can allow patients that may not be good candidates for LASIK due to thinner corneas or a handful of other reasons to still have a highly successful option in laser refractive procedures. Dr. Conrad is happy to discuss your options and help you decide which procedure is right for you.
+  #divide-line
+  #implant-content.container
+    h3 Conrad Eye Centers uses the most advanced multi-focal lens implant technology in intraocular lens replacement for cataracts.
+    p As we age, the eye’s central focusing structure, the lens, becomes cloudy or  hazy due to the natural breakdown of the crystalline structures that compose it. This condition is known as a cataract and causes blurry or hazy vision. Cataracts that impair the vision must be removed surgically. In this procedure, Dr. Conrad will replace the natural lens with an artificial lens implant which can be either monofocal or multifocal. Monofocal implants have been in widespread use since the 70’s and are safe and effective. However, monofocal implants allow good vision at only one distance; so glasses are needed to see well at other distances. Multifocal implants, on the other hand, can focus at both near and far, greatly reducing the need for glasses after cataract surgery. Dr. Conrad is a certified surgeon for the ReStor and Crystallens multifocal lenses. Most patients get better vision than they have ever experienced, and many do not need glasses. Dr. Conrad will help you decide which option is best for you, and should you choose to invest in your eyesight with a multifocal lens, we can determine an easy payment plan for you at our office.
+  #divide-line
+  #pediatric-content.container
+    h3 Dr. Conrad sees patients of all ages, and has had additional training in pediatric eye diseases.
+    p Going to the doctor in general can be a troubling experience to a child. Having raised 5 children, Dr. Conrad has a wonderful way with kids of all ages. We see children from six months and up.
+  #divide-line
+  #cosmetics-content.container
+    h2 Botox
+    h3 Make those wrinkles disappear with a quick visit to Conrad Eye Centers. We safely administer effective Botox cosmetic and medical injections at competitive rates.
+    p Botox is used in very minute quantities for multiple purposes. Medically, Botox is can be used to treat slight muscle spasms including those in the eyes and eyelids; however, most people know Botox for it’s cosmetic use. Botox can be used to effectively reduce the wrinkles and tension lines on the face. It can also be used to relieve intense underarm sweating. Dr. Conrad has years of experience in proper administration of Botox and would love to help you relieve your muscle spasms or take a few years off your look. Whatever your need we can be your one-stop Botox treatment.
+    h3 Latisse
+    h3 Do not pay more for the cosmetic eyelash drug sweeping the nation when we have it for less!
+    p After releasing Latisse in 2008, this once daily treatment for eyelash growth quickly swept the nation. Using a small brush to administer the product, you can expect full, dark, lush lashes in just 6 to 12 weeks. We have seen a wonderful result and outstanding patient satisfaction with this product and enjoy offering it to our patients for what we believe is the cheapest price in Louisville. Since Latisse is a prescription drug Dr. Conrad needs to conduct a full eye exam before beginning Latisse, so call today to schedule your appointment!
+  #right-column
      .right-container
         #eye-exam-sidebar
           #vision-networks 
@@ -96,7 +98,3 @@ block content
             li: a(href='') WebMD
             li: a(href='') Familydoctor.org
             li: a(href='') EyeSmart
-
-              
-              
-              

@@ -634,6 +634,36 @@ position: absolute;
 ========Service.jade========
 ==========================*/
 
+#static-nav {
+  position: fixed;
+  width: 100px;
+  top: 200px;
+  right: 0px;
+  border: 3px solid purple;
+  background-color: rgba(255,255,230,0.7);
+  
+}
+
+#static-nav ul {
+  padding: 0;
+}
+
+.container {
+  height: 750px;
+  border: 3px solid green;
+}
+
+#divide-line {
+  border: 3px solid lightblue;
+}
+
+
+
+
+/*++++++++OLD+++++++++++++
+++++++++++++++++++++++++++
+++++++++++++++++++++++++*/
+
 #vision-networks {
   float: left;
   clear: right;
@@ -655,18 +685,6 @@ td#vision-member-ben {
 #eye-exam-sidebar {
   display: block;
   
-}
-
-#gls-cls-content,
-#injury-content,
-#injury-sidebar,
-#disease-content,
-#disease-sidebar,
-#laser-vis-content,
-#implant-content,
-#pediatric-content,
-#cosmetics-content {
-  display: none;
 }
 
 
