@@ -640,7 +640,6 @@ position: absolute;
   top: 200px;
   right: 0px;
   background-color: rgba(255,255,230,0.7);
-  
 }
 
 #static-nav ul {
@@ -648,7 +647,8 @@ position: absolute;
 }
 
 #container {
-  height: 750px;
+  height: 100%;
+  padding: 50px 0;
 }
 
 #main-content {
@@ -656,6 +656,10 @@ position: absolute;
   margin: 0 auto;
   margin-top: 50px;
   text-align: center;
+}
+
+#main-content p {
+  text-align: justify;
 }
 
 #divide-line {
@@ -673,6 +677,56 @@ position: absolute;
   text-align: center;
 }
 
+
+/*=========================================================================
+================================GLS & CLS==================================
+=========================================================================*/
+
+#gls-brands,
+#cls-brands {
+  margin: 0 auto;
+  width: 40%;
+  border: 2px solid silver;
+}
+
+#gls-brands td {
+  height: 30px;
+}
+
+#gls-brands tr:nth-child(even),
+#cls-brands tr:nth-child(even) {
+  background-color: gold;
+}
+
+
+/*=========================================================================
+================================Injury-Content=============================
+=========================================================================*/
+
+#common-problem-wrap {
+  width: 78%;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: lightblue;
+}
+
+#common-problem-text {
+  text-align: justify;
+}
+
+
+/*=========================================================================
+================================Eye Disease=============================
+=========================================================================*/
+
+#premium-testing-chart {
+ border: 3px red solid;
+}
+
+#premium-testing-chart th {
+ width: 200px;
+ border: 2px green solid;
+}
 
 
 /*++++++++OLD+++++++++++++
