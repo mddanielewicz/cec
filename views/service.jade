@@ -5,10 +5,23 @@ block content
     ul
         each val in ['Eye Exams', 'Glasses and Contacts', 'Eye Injuries and Infections', 'Eye Diseases', 'Laser Vsion Correction', 'Eye Implants', 'Surgical Procedures', 'Pediatric Ophthamology', 'Cosmetics']
           li: p(id=val)= val          
-  #eye-exam-content.container
-    h3 Conrad Eye Centers focuses on your vision with one-on-one personalized eye exams for any age.
-    p We know your sight is important. That is why Dr. Conrad personally examines every patient. Dr. Conrad is a trained and nationally recognized ophthalmologist; this means during even a routine eye exam everything about your eye is being examined by one of the best medical doctors in Louisville. Though optometrists are qualified to prescribe glasses and contacts and even treat some disorders of the eye, an ophthalmologist is a medical doctor who can prescribe contacts and glasses, diagnose and treat all conditions of the eye, prescribe medications, and perform surgery on the eye.
-    p We accept most vision and eye care plans. Every full routine eye exam will leave you with a custom prescription for glasses and the assurance that you had the most in-depth exam possible.
+  #container
+    #main-content
+      #eye-exam-content
+        h3 Conrad Eye Centers focuses on your vision with one-on-one personalized eye exams for any age.
+        p We know your sight is important. That is why Dr. Conrad personally examines every patient. Dr. Conrad is a trained and nationally recognized ophthalmologist; this means during even a routine eye exam everything about your eye is being examined by one of the best medical doctors in Louisville. Though optometrists are qualified to prescribe glasses and contacts and even treat some disorders of the eye, an ophthalmologist is a medical doctor who can prescribe contacts and glasses, diagnose and treat all conditions of the eye, prescribe medications, and perform surgery on the eye.
+        p We accept most vision and eye care plans. Every full routine eye exam will leave you with a custom prescription for glasses and the assurance that you had the most in-depth exam possible.
+    #content-divide
+    #insurance-wraper
+      h3 In-Network Insurance
+      select#insurance-picker
+        -var medicalInsurances = [ {name: 'AARP - UHC'},{name: 'Advantica'},{name: 'Advantra Freedom'},{name: 'Aetna'},{name: 'Aetna Senior Supplemental'},{name: 'All Savers'},{name: 'Alliance Healthcare Solutions'},{name: 'Allied Benefit Systems'},{name: 'AlwaysCare Benefits'},{name: 'Ambetter'},{name: 'American Administrator'},{name: 'American Republic'},{name: 'Ameritas Life'},{name: 'Anthem IN Medicaid'},{name: 'Anthem Indiana'},{name: 'Anthem Kentucky'},{name: 'APWU'},{name: 'Assurant Health'},{name: 'Bankers Life'},{name: 'Baptist Health Plan'},{name: 'Beech Street'},{name: 'Benefit Planners'},{name: 'Benesight'},{name: 'Benovision'},{name: 'Block Vision'},{name: 'Blue Cross Blue Shield of Georgia'},{name: 'Blue Cross Blue Shield of Illinois'},{name: 'Blue Cross Blue Shield of Indiana'},{name: 'Blue Cross Blue Shield of Kentucky'},{name: 'BP Benefit Planners'},{name: 'CareFirst Administrators'},{name: 'Caresource Just4Me - Indiana'},{name: 'Caresource Just4Me - Kentucky'},{name: 'CHA Health'},{name: 'ChampVA'},{name: 'Christian Brothers Services'},{name: 'Cigna'},{name: 'Cigna Medical Access'},{name: 'Coloniel Penn'},{name: 'consumers life member service'},{name: 'Co-ordinated Benefits Plan'},{name: 'Coresource'},{name: 'Corporate Benefit'},{name: 'Coventry'},{name: 'Empire Plan'},{name: 'Essence'},{name: 'Eyecare of America'},{name: 'Family Life Insurance Company'},{name: 'Federated'},{name: 'First Health'},{name: 'Freedom Life Insurance'},{name: 'Gateway Health'},{name: 'GEHA'},{name: 'GHI'},{name: 'Gilsbar'},{name: 'GMMI'},{name: 'Golden Rule'},{name: 'Great West'},{name: 'Guardian - Davis Vision'},{name: 'Guardian - VSP'},{name: 'Harington Benefits Services'},{name: 'Health Partners'},{name: 'Health Smart'},{name: 'HealthStar'},{name: 'Hoosier Alliance'},{name: 'Humana'},{name: 'Humana Caresource'},{name: 'Indiana Farm Bureau Insurance'},{name: 'Kentucky Health Cooperative'},{name: 'Key Benefit Administrators'},{name: 'Klais Co'},{name: 'Loyal American'},{name: 'Mailhandlers'},{name: 'Managed Health Services'},{name: 'MDWise'},{name: 'Medben'},{name: 'Medicaid Indiana'},{name: 'Medicaid KY EDS'},{name: 'Medical Mutual'},{name: 'Medical Mutual of Ohio'},{name: 'Medicare B Kentucky'},{name: 'Medicare IN'},{name: 'Medico Insurance Company'},{name: 'Mega Life'},{name: 'Meritain Health'},{name: 'MOAA'},{name: 'Mutual of Omaha'},{name: 'NALC'},{name: 'NGS American'},{name: 'Nippon Life'},{name: 'North American Administrators'},{name: 'Passport Health Plan'},{name: 'Passport Medicare Advantage Plan'},{name: 'PHCS'},{name: 'Physicians Mutual Insurance Company'},{name: 'PIA'},{name: 'Preferred Helath Plan'},{name: 'Principal Life'},{name: 'Railroad Medicare'},{name: 'Sagamore'},{name: 'SIHO'},{name: 'Standard Life & Accident Ins'},{name: 'Starark'},{name: 'Sterling Option'},{name: 'Superior Vision'},{name: 'Three Rivers Preferred'} ]
+        each insurance in medicalInsurances
+          option= insurance.name
+      #insurance-info
+        span: p#insurance-name
+        span: p: a#insurance-phone
+        
   #divide-line
   #gls-cls-content.container
     h3 Each of our locations has a full service optical boutique. Our optician has years of experience and will work one-on-one with you to find the perfect balance of style, quality, and affordability.

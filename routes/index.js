@@ -77,6 +77,7 @@ router.get('/contact', function(req, res, next) {
 router.post('/scheduleAppointment', function(req, res) {
   //Set interal DB variable
   var db = req.db;
+  console.log('hey');
   
   //get our form values
   var scheduleFirstName = req.body.scheduleFirstName;
