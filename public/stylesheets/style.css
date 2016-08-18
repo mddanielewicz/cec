@@ -723,9 +723,25 @@ position: absolute;
  border: 3px red solid;
 }
 
+#premium-testing-chart p {
+  font-size: 1rem;
+}
+
+#premium-testing-chart th p {
+  text-align: center;
+}
+
 #premium-testing-chart th {
- width: 200px;
+ width: 300px;
  border: 2px green solid;
+}
+
+#premium-testing-chart td p {
+  text-align: center;
+}
+
+#premium-testing-chart tr:nth-child(even) {
+  background-color: silver;
 }
 
 
