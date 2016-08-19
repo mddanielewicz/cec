@@ -1,14 +1,12 @@
 extends layout
 
 block content
-
-  #left-column
-    .nav
-      ul
-      each val in ['Office Information', 'Tim J. Conrad, M.D.', 'CEC: Past, Present, and Future', 'Suburban Excimer Laser Center and hysicians Medical Center']
-        li: h3(id=val)= val
-  #middle-column
-    .middle-container
+  #static-nav
+    ul
+      each val in ['Eye Exams', 'Glasses and Contacts', 'Eye Injuries and Infections', 'Eye Diseases', 'Laser Vsion Correction', 'Eye Implants', 'Surgical Procedures', 'Pediatric Ophthamology', 'Cosmetics']
+        li: p(id=val)= val  
+  #container
+    #main-content
       #general-office-information
         #general-wrap
           h3 General Information
@@ -26,86 +24,90 @@ block content
           .button-wrap
             h3#louisville-link Louisville
             h3#new-albany-link New Albany
-          #louisville-wrap
-            #louisville-info
-              table
-                tr
-                  th Address: 
-                  td 204 Breckenridge Lane<br> Louisville, KY 40207
-                tr
-                  th Phone: 
-                  td: a(href='tel:502-899-7778') 502-899-7778
-            #louisville-hours
-              table
-                tr 
-                  th Monday
-                  td 9am - 5pm*
-                  td closed
-                tr 
-                  th Tuesday
-                  td 9am - 5pm
-                  td Closed
-                tr
-                  th Wednesday
-                  td 9am - 5pm*
-                  td Closed
-                tr
-                  th Thursday
-                  td 9am - 5pm
-                  td Closed
-                tr
-                  th Friday
-                  td 9am - 5pm*
-                  td Closed
-                tr
-                  th Saturday
-                  td Closed
-                  td Closed
-                tr
-                  th Sunday
-                  td Closed
-                  td Closed
-              p *Office is only open for material pickups and administrative needs.
+          #office-wrap
+            #louisville-wrap
+              #louisville-info
+                table
+                  tr
+                    th Address: 
+                    td 204 Breckenridge Lane<br> Louisville, KY 40207
+                  tr
+                    th Phone: 
+                    td: a(href='tel:502-899-7778') 502-899-7778
+              #louisville-hours
+                table
+                  tr 
+                    th Monday
+                    td 9am - 5pm*
+                    td closed
+                  tr 
+                    th Tuesday
+                    td 9am - 5pm
+                    td Closed
+                  tr
+                    th Wednesday
+                    td 9am - 5pm*
+                    td Closed
+                  tr
+                    th Thursday
+                    td 9am - 5pm
+                    td Closed
+                  tr
+                    th Friday
+                    td 9am - 5pm*
+                    td Closed
+                  tr
+                    th Saturday
+                    td Closed
+                    td Closed
+                  tr
+                    th Sunday
+                    td Closed
+                    td Closed
+                p *Office is only open for material pickups and administrative needs.
 
-          #new-albany-wrap
-            #new-albany-info
-              table
-                tr
-                  th Address: 
-                  td 1919 State Street<br>Suite 210 <br>New Albany, IN 47150
-                tr
-                  th Phone: 
-                  td: a(href='tel:812-944-6063') 812-944-6063
-            #new-albany-hours
-              table
-                tr 
-                  th Monday
-                  td 1pm - 5pm
-                  td closed
-                tr 
-                  th Tuesday
-                  td Closed
-                  td Closed
-                tr
-                  th Wednesday
-                  td 9am - 5pm
-                  td Closed
-                tr
-                  th Thursday
-                  td Closed
-                  td Closed
-                tr
-                  th Friday
-                  td Closed
-                  td Closed
-                tr
-                  th Saturday
-                  td Closed
-                  td Closed
-                tr
-                  th Sunday
-                  td Closed
-                  td Closed
+            #new-albany-wrap
+              #new-albany-info
+                table
+                  tr
+                    th Address: 
+                    td 1919 State Street<br>Suite 210 <br>New Albany, IN 47150
+                  tr
+                    th Phone: 
+                    td: a(href='tel:812-944-6063') 812-944-6063
+              #new-albany-hours
+                table
+                  tr 
+                    th Monday
+                    td 1pm - 5pm
+                    td closed
+                  tr 
+                    th Tuesday
+                    td Closed
+                    td Closed
+                  tr
+                    th Wednesday
+                    td 9am - 5pm
+                    td Closed
+                  tr
+                    th Thursday
+                    td Closed
+                    td Closed
+                  tr
+                    th Friday
+                    td Closed
+                    td Closed
+                  tr
+                    th Saturday
+                    td Closed
+                    td Closed
+                  tr
+                    th Sunday
+                    td Closed
+                    td Closed
+  #divide-line
+  #container
+    #main-content
       #bio
         h2 Tim J. Conrad, MD
         h3 Louisville’s answer to comprehensive personalized eye care; you have found your eye doctor!
@@ -114,6 +116,9 @@ block content
         p In 1987 Dr. Conrad matriculated at Duke University School of Medicine, one of the nation’s top medical schools. Dr. Conrad excelled at Duke, receiving many honors and doing original collaborative research on corneal neovascularization (abnormal blood vessel growth in the front part of the eye) which yielded a new system for measuring blood vessel growth. In 1991 he was named a Scholar in Pathology and attained his M.D. degree. After Duke, Dr. Conrad trained in Internal Medicine at the University of North Carolina in Chapel Hill and returned to Louisville to complete his residency in Ophthalmology at the Kentucky Lions Eye Research Center at the University of Louisville.
         p Upon completion he started Conrad Eye Centers to provide surgical, medical, and routine eye care to the Louisville area. Dr. Conrad is double board certified through the American Board of Ophthalmology and the National Board of Ophthalmology, a fellow of the American Academy of Ophthalmology, and a member of the Kentucky Medical Association and the Indiana State Medical Association.
         p Dr. Conrad lives in Louisville with his wife Margaret raising their five children, Joe, Laurie, Julie, David, and Ginny. Dr. Conrad is an active community member participating in many medical interests, Boy Scouts of America, and other local organizations. He has been featured on multiple radio shows and is considered an expert in ophthalmology.
+  #divide-line
+  #container
+    #main-content    
       #history 
         h2 CEC: Past, Present, and Future
         h3 Since 1995 Conrad Eye Centers has been committed to providing comprehensive personalized care to the Louisville and Southern Indiana area.
@@ -121,6 +126,9 @@ block content
         p In 2003 Dr. Conrad opened optical boutiques in both locations with the concept of providing a one-stop shop for all your eye care needs. Our optical boutiques have grown to offer our patients a wide array of designer eyewear at affordable prices.
         p In 2007 seeking to further accommodate his surgery patients, Dr. Conrad became a founding physician with the Physicians Medical Center in New Albany, Indiana. Physicians Medical Center is a physician owned and operated hospital with twelve beds and nine operating rooms. It is fully staffed and functions with the goal of providing exceptional outpatient surgery for its patients.
         p The future of Conrad Eye Centers is very bright! Dr. Conrad is in the process of building a new practice and medical building adjacent to Floyd Memorial Hospital. When completed the new office will be a modern reflection of Dr. Conrad’s mission to provide state-of-the-art comprehensive eye care to his patients.
+  #divide-line
+  #container
+    #main-content    
       #medical-centers
         h2 Suburban Excimer Laser Center and hysicians Medical Cente
         h3 Suburban Excimer Laser Center
