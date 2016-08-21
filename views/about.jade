@@ -7,104 +7,98 @@ block content
         li: p(id=val)= val  
   #container
     #main-content
-      #general-office-information
-        #general-wrap
-          h3 General Information
-          table
-            tr
-              th Toll free phone: 
-              td: a(href='tel:1-888-895-2020') 1-888-895-2020
-            tr
-              th Fax
-              td 502-897-5757
-            tr
-              th Email
-              td: a(href='mailto:cec_questions@outlook.com') cec_questions@outlook.com  
-        #office-info-wrap
-          .button-wrap
+      #general-wrap
+        h3 General Information
+        table.table-position.table-text
+          tr
+            th Phone: 
+            td: a(href='tel:1-888-895-2020') 1-888-895-2020
+          tr
+            th Fax:
+            td 502-897-5757
+          tr
+            th Email:
+            td: a(href='mailto:cec_questions@outlook.com') cec_questions@outlook.com  
+      #office-info-wrap
+        #office-wrap
+          #louisville-wrap
             h3#louisville-link Louisville
-            h3#new-albany-link New Albany
-          #office-wrap
-            #louisville-wrap
-              #louisville-info
-                table
-                  tr
-                    th Address: 
-                    td 204 Breckenridge Lane<br> Louisville, KY 40207
-                  tr
-                    th Phone: 
-                    td: a(href='tel:502-899-7778') 502-899-7778
-              #louisville-hours
-                table
-                  tr 
-                    th Monday
-                    td 9am - 5pm*
-                    td closed
-                  tr 
-                    th Tuesday
-                    td 9am - 5pm
-                    td Closed
-                  tr
-                    th Wednesday
-                    td 9am - 5pm*
-                    td Closed
-                  tr
-                    th Thursday
-                    td 9am - 5pm
-                    td Closed
-                  tr
-                    th Friday
-                    td 9am - 5pm*
-                    td Closed
-                  tr
-                    th Saturday
-                    td Closed
-                    td Closed
-                  tr
-                    th Sunday
-                    td Closed
-                    td Closed
-                p *Office is only open for material pickups and administrative needs.
+            #louisville-info
+              table.table-position.table-text
+                tr
+                  td 204 Breckenridge Lane<br> Louisville, KY 40207
+                tr
+                  td: a(href='tel:502-899-7778') 502-899-7778
+            #louisville-hours
+              table.table-position.table-text
+                tr 
+                  th Monday
+                  td 9am - 5pm*
+                  td closed
+                tr 
+                  th Tuesday
+                  td 9am - 5pm
+                  td Closed
+                tr
+                  th Wednesday
+                  td 9am - 5pm*
+                  td Closed
+                tr
+                  th Thursday
+                  td 9am - 5pm
+                  td Closed
+                tr
+                  th Friday
+                  td 9am - 5pm*
+                  td Closed
+                tr
+                  th Saturday
+                  td Closed
+                  td Closed
+                tr
+                  th Sunday
+                  td Closed
+                  td Closed
+              p#main-content.office-note *Office is only open for material pickups and administrative needs.
 
-            #new-albany-wrap
-              #new-albany-info
-                table
-                  tr
-                    th Address: 
-                    td 1919 State Street<br>Suite 210 <br>New Albany, IN 47150
-                  tr
-                    th Phone: 
-                    td: a(href='tel:812-944-6063') 812-944-6063
-              #new-albany-hours
-                table
-                  tr 
-                    th Monday
-                    td 1pm - 5pm
-                    td closed
-                  tr 
-                    th Tuesday
-                    td Closed
-                    td Closed
-                  tr
-                    th Wednesday
-                    td 9am - 5pm
-                    td Closed
-                  tr
-                    th Thursday
-                    td Closed
-                    td Closed
-                  tr
-                    th Friday
-                    td Closed
-                    td Closed
-                  tr
-                    th Saturday
-                    td Closed
-                    td Closed
-                  tr
-                    th Sunday
-                    td Closed
-                    td Closed
+          #new-albany-wrap
+            h3#new-albany-link New Albany
+            #new-albany-info
+              table.table-position.table-text
+                tr
+                  td 1919 State Street<br>Suite 210 <br>New Albany, IN 47150
+                tr
+                  td: a(href='tel:812-944-6063') 812-944-6063
+            #new-albany-hours
+              table.table-position.table-text
+                tr 
+                  th Monday
+                  td 1pm - 5pm
+                  td closed
+                tr 
+                  th Tuesday
+                  td Closed
+                  td Closed
+                tr
+                  th Wednesday
+                  td 9am - 5pm
+                  td Closed
+                tr
+                  th Thursday
+                  td Closed
+                  td Closed
+                tr
+                  th Friday
+                  td Closed
+                  td Closed
+                tr
+                  th Saturday
+                  td Closed
+                  td Closed
+                tr
+                  th Sunday
+                  td Closed
+                  td Closed
   #divide-line
   #container
     #main-content
@@ -135,7 +129,18 @@ block content
         h3 Conrad Eye Centers is a cofounding partner with the Suburban Excimer Laser Center allowing us to provide state-of-the-art LASIK and other laser vision correction procedures to the Louisville area.
         p The Suburban Excimer Laser Center is a group operated modern laser facility housing the most up-to-date measuring equipment and excimer laser available. Over 3,000 patients have experienced better vision through the help of the laser center and their member ophthalmologist.
         p Dating back to 1989, the Suburban Hospital’s predecessor to the laser center was one of the original FDA test sites for LASIK and PRK procedures using an excimer laser. Today Dr. Conrad uses the VISX laser with Wavefront guidance to accurately perform the best possible LASIK for each of his patients.
-        p: a(href='') Call today to schedule your FREE LASIK SCREENING with us!
+        p.center: a(href='') Schedule your FREE LASIK SCREENING with us!
+        form#form-new(name="lasikPackage" action="lasikPackage" method="post")
+          input(type='text' id='lasikFirstName' name="lasikFirstName" placeholder='First Name')
+          input(type='text' id='lasikLastName' name="lasikLastName" placeholder='Last Name')
+          input(type='tel' id='lasikPhone' name="lasikPhone" placeholder='###-###-####')
+          input(type='email' id='lasikEmail' name="lasikEmail" placeholder='Email')
+          label(for='lasikFirstAppointment') Preferred appointment date
+          input(type='date' id='lasikFirstApt' name="lasikFirstAppointment" )
+          label(for='lasikSecondtAppointment') Secondary appointment date
+          input(type='date' id='lasikSecondApt' name="lasikSecondAppointment")
+          input(type='submit' value='Submit')
+        #content-divide
         h2 Physicians Medical Center
         h3 As a co-owner of Physicians Medical Center just outside of Louisville in New Albany, Dr. Conrad can offer his patients a state-of-the-art relaxing experience for all outpatient procedures.
         p The Physicians Medical Center, located just ten minutes from downtown Louisville in New Albany, Indiana, is a physician owned and operated hospital. This gives your care to the physician. Dr. Conrad rests assured that each patient will have personal comfortable care in the hands of the medical center. Physicians Medical Center has a strict nurse-to-patient ratio and provides clean, new, relaxing accommodations.

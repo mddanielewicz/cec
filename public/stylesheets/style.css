@@ -50,6 +50,13 @@ table {
   border-spacing: 0;
 }
 
+/*================Classes=============================
+====================================================*/
+
+.center {
+  text-align: center;
+}
+
 input[type=date]::-webkit-inner-spin-button, 
 input[type=date]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
@@ -779,6 +786,48 @@ position: absolute;
 
 /*=====Office Info=====*/
 
+
+.table-position {
+  margin: 30px auto;
+}
+
+.table-text th {
+  width: 125px;
+  height: 35px;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.table-text td {
+  width: 200px;
+  padding: 10px 0;
+}
+
+#main-content.office-note {
+    margin-top: 20px;
+}
+
+#main-content.office-note p {
+  text-align: center;
+}
+
+#louisville-hours,
+#new-albany-hours {
+  margin-left: 80px !important;
+}
+
+
+/*===========================Laser Center ====================
+============================================================*/
+
+#main-content .center {
+  text-align: center;
+}
+
+
+/*+++++++++++++++++++OLD+++++++++++++++++++++++++++++++++*/
+
+/*
 #general-wrap h3,
 #general-wrap table {
   text-align: center;
@@ -798,8 +847,6 @@ position: absolute;
     margin: 0 35% 0 0;
     padding: 5px 15px;
     display: inline-block;
-    /* border: 3px solid; */
-    /* border-radius: 10px; */
 }
 
 #louisville-wrap,
@@ -842,6 +889,7 @@ position: absolute;
 #new-albany-hours td {
   padding-left: 20px;
 }
+*/
 
 
 
@@ -902,6 +950,7 @@ position: absolute;
 
 /*=========Louisville Office==========*/
 
+/*
 #contact-phone-wrap,
 #contact-address-wrap {
   width: 48%;
@@ -934,9 +983,10 @@ position: absolute;
 
 #louisville-hours {
   clear: left;
-  margin-top: 120px;
+  margin-top: 30px;
   margin-left: 10px;
 }
+*/
 
 
 /*==========================
