@@ -386,15 +386,13 @@ input[type=date]::-webkit-outer-spin-button {
 }
 
 .social-icon {
-  width: 50px;
+  width: 40px;
   float: left;
-  margin: 13px 25px;
+  padding: 13px 20px;
 }
 
 .social-icon img {
-  margin: 0 50px;
   height: 50px;
-  width: 50px;
 }
 
 /*==========================================Main Footer===============================================*/
@@ -1108,16 +1106,9 @@ td#vision-member-ben {
 ========About.jade========
 ==========================*/
 
-#bio,
-#history,
-#medical-centers {
-  display: none;
-}
-
-
 /*=====Office Info=====*/
   
-#general-wrap {
+#general-content {
   margin-left: 35%;
 }
 
@@ -1158,16 +1149,6 @@ td#vision-member-ben {
 /*==========================
 ======Resources.jade========
 ==========================*/
-
-#patient-portal {
-  display: block;
-}
-  
-  
-#privacy-practice,
-#insurance {
-  display: none;
-}
   
 #insurance-info-wrap .button-wrap {
   margin-left: 0;
@@ -1184,10 +1165,10 @@ td#vision-member-ben {
 =======Contact=.jade========
 ==========================*/
   
-  #middle-column-contact {
-    width: 80%;
-    float: left;
-  }
+#middle-column-contact {
+  width: 80%;
+  float: left;
+}
   
 #contact-schedule-apt {
   display: block;
