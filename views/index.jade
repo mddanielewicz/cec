@@ -3,24 +3,23 @@ extends layout
 block content
   #modal-wrap
     #apt-modal.modal-thin
-      h2 Schedule an appointment
-      p Fill out the information below, including three days that work best for you, and we will call you with options that work best around your schedule!
-      form#apt(action="scheduleAppointment", method="POST")
-        input(type="text" name="scheduleFirstName" id="scheduleFirstName" placeholder="First Name")
-        input(type="text" name="scheduleLastName" id="scheduleLastName" placeholder="Last Name")
-        input(type="tel" name="schedulePhoneNum" id="schedulePhoneNum" placeholder="###-###-####")
-        input(type="email" name="scheduleEmail" id="scheduleEmail" placeholder="Email")
-        select#office-location(name='scheduleOfficeLocation')
-          option Louisville
-          option New Albany
-        input(type="date" name="scheduleFirstChoice" id="scheduleFirstChoice")
-        label(for="scheduleFirstChoice") First Choice
-        input(type="date" name="scheduleSecondChoice" id="scheduleSecondChoice")
-        label(for="scheduleSecondChoice") Second Choice
-        input(type="date" name="scheduleThirdChoice" id="scheduleThirdChoice")
-        label(for="scheduleThirdChoice") Third Choice
-        input(type="submit" id="submit" value="Submit")
-   
+         h2 Schedule an appointment
+         p Fill out the information below, including three days that work best for you, and we will call you with options that work best around your schedule!
+         form#apt(action="scheduleAppointment", method="POST")
+           input(type="text" name="scheduleFirstName" id="scheduleFirstName" placeholder="First Name")
+           input(type="text" name="scheduleLastName" id="scheduleLastName" placeholder="Last Name")
+           input(type="tel" name="schedulePhoneNum" id="schedulePhoneNum" placeholder="###-###-####")
+           input(type="email" name="scheduleEmail" id="scheduleEmail" placeholder="Email")
+           select#office-location(name='scheduleOfficeLocation')
+             option Louisville
+             option New Albany
+           input(type="date" name="scheduleFirstChoice" id="scheduleFirstChoice")
+           label(for="scheduleFirstChoice") First Choice
+           input(type="date" name="scheduleSecondChoice" id="scheduleSecondChoice")
+           label(for="scheduleSecondChoice") Second Choice
+           input(type="date" name="scheduleThirdChoice" id="scheduleThirdChoice")
+           label(for="scheduleThirdChoice") Third Choice
+           input(type="submit" id="submit" value="Submit")
     #review-modal.modal-wide
       .left
         h2 Review us and get rewards!!
@@ -61,66 +60,64 @@ block content
             option(value='coffeeTumbler') Coffee Tumbler
           textarea(type='text' id='reviewtext' name='reviewText' placeholder='Let us know how we did...' required)
           input(type='submit' value='Submit')
-          
+
     #premium-modal.modal-wide
-        .left
-            .nav
-                ul
-                  li#glaucoma-link Glaucoma Risk Assessment
-                  li#retinal-link Retinal Helath Assessment
-            #glaucoma-pkg    
-                h3 Glaucoma Risk Assessment
-                p As many as two million Americans may have glaucoma, but over 50% of them don't know it.
-                p Learn your risk for glaucoma with our premium Glaucoma Rish Assessment package. We will measure the thickness of your corneas and scan your optic nerve. At these screenings, the doctor will personally discuss your risk factors and any recomendations.
-                h2 Schedule your preventative care appointment today!
-                p.fine-print *Since the purpose of these assessments is to rule out the presence of one or more ocular diseases, they are not billable to insurance.
-            #retinal-pkg
-                h3 Retinal Helath Assessment
-                p Without a healthy retina, the human eye is like a camera without a film. Retinal disease or injury often results in partial or complete vison loss.
-                p Learn your risk for retinal diseases like diabetic retinopathy, macular degeneration, and more with our premium Retinal Health Assessment package. We will take a focused look at the back of your eye by scanning the retina. At these screenings, the doctor will personally discuss your risk factors and any recommendations.
-                p.fine-print Since the purpose of these assessments is to rule out the presence of one or more ocular diseases, they are not billable to insurance.
-        .right
-            form(name="premiumPackageForm" action="premiumPackage" method="post")
-                input(type='text' id='premiumFirstName' name="premiumFirstName" placeholder='First Name')
-                input(type='text' id='premiumLastName' name="premiumLastName" placeholder='Last Name')
-                input(type='tel' id='premiumPhone' name="premiumPhone" placeholder='###-###-####')
-                input(type='email' id='premiumEmail' name="premiumEmail" placeholder='Email')
-                select(id='premiumPackage' name='premiumPackage')
-                    option(value='Glaucoma Risk Assessment') Glaucoma Risk Assessment
-                    option(value='Retinal Health Assessment') Retinal Health Assessment
-                    option(value='Premium Eye Health Package - Both') Premium Eye Health Package - Both
-                label(for='premiumFirstAppointment') Preferred appointment date
-                input(type='date' id='premiumFirstApt' name="premiumFirstAppointment" )
-                label(for='premiumSecondtAppointment') Secondary appointment date
-                input(type='date' id='premiumSecondApt' name="premiumSecondAppointment")
-                input(type='submit' value='Submit')
+      .left
+        .nav
+            ul
+              li#glaucoma-link Glaucoma Risk Assessment
+              li#retinal-link Retinal Helath Assessment
+        #glaucoma-pkg    
+            h3 Glaucoma Risk Assessment
+            p As many as two million Americans may have glaucoma, but over 50% of them don't know it.
+            p Learn your risk for glaucoma with our premium Glaucoma Rish Assessment package. We will measure the thickness of your corneas and scan your optic nerve. At these screenings, the doctor will personally discuss your risk factors and any recomendations.
+            h2 Schedule your preventative care appointment today!
+            p.fine-print *Since the purpose of these assessments is to rule out the presence of one or more ocular diseases, they are not billable to insurance.
+        #retinal-pkg
+            h3 Retinal Helath Assessment
+            p Without a healthy retina, the human eye is like a camera without a film. Retinal disease or injury often results in partial or complete vison loss.
+            p Learn your risk for retinal diseases like diabetic retinopathy, macular degeneration, and more with our premium Retinal Health Assessment package. We will take a focused look at the back of your eye by scanning the retina. At these screenings, the doctor will personally discuss your risk factors and any recommendations.
+            p.fine-print Since the purpose of these assessments is to rule out the presence of one or more ocular diseases, they are not billable to insurance.
+      .right
+        form(name="premiumPackageForm" action="premiumPackage" method="post")
+            input(type='text' id='premiumFirstName' name="premiumFirstName" placeholder='First Name')
+            input(type='text' id='premiumLastName' name="premiumLastName" placeholder='Last Name')
+            input(type='tel' id='premiumPhone' name="premiumPhone" placeholder='###-###-####')
+            input(type='email' id='premiumEmail' name="premiumEmail" placeholder='Email')
+            select(id='premiumPackage' name='premiumPackage')
+                option(value='Glaucoma Risk Assessment') Glaucoma Risk Assessment
+                option(value='Retinal Health Assessment') Retinal Health Assessment
+                option(value='Premium Eye Health Package - Both') Premium Eye Health Package - Both
+            label(for='premiumFirstAppointment') Preferred appointment date
+            input(type='date' id='premiumFirstApt' name="premiumFirstAppointment" )
+            label(for='premiumSecondtAppointment') Secondary appointment date
+            input(type='date' id='premiumSecondApt' name="premiumSecondAppointment")
+            input(type='submit' value='Submit')
     #follow-modal.modal-thin
-        h2 Follow us online!
-        p Join our onine community to keep current with what is happening at Conrad Eye Centers.
-        ul
-            li: a(href="https://plus.google.com/+ConradEyeCentersLouisville/posts" target="_blank") Conntect on Google+ Louisville
-            li: a(href="https://plus.google.com/112202261525095620339/about" target="_blank") Conntect on Google+ New Albany
-            li: a(href="https://www.facebook.com/ConradEyeCenters/" target="_blank") Friend us on Facebook
-            li: a(href="https://twitter.com/conradeyecenter" target="_blank") Follow us on Twitter
-            
-                
+      h2 Follow us online!
+      p Join our onine community to keep current with what is happening at Conrad Eye Centers.
+      ul
+          li: a(href="https://plus.google.com/+ConradEyeCentersLouisville/posts" target="_blank") Conntect on Google+ Louisville
+          li: a(href="https://plus.google.com/112202261525095620339/about" target="_blank") Conntect on Google+ New Albany
+          li: a(href="https://www.facebook.com/ConradEyeCenters/" target="_blank") Friend us on Facebook
+          li: a(href="https://twitter.com/conradeyecenter" target="_blank") Follow us on Twitter
   #page-container
-    .page-main-text
-      h2 Conrad Eye Centers is Kentuckiana's one-stop-shop for all your eye care needs.
-      p Here at <strong>Conrad Eye Centers</strong> we know your time is important. That is why we offer a one-stop experience for all of your eye care needs. With locations in <strong>Louisville</strong> and <strong>New Albany</strong> we provide our patients an intimate relaxing environment with easy handicap access, ample parking, flexible schedules, and the best personal ophthalmic eye care possible. Both locations are equipped with a full service optical boutique featuring stylish frames and a wide range of prices. We utilize the most current and advanced technology in diagnostics and surgery, and we are directly affiliated with Physicians Medical Center, a state-of-the-art outpatient surgery facility, and the Suburban Excimer Laser Center so scheduling your next procedure is a breeze. We are here for all your vision needs; Conrad Eye Centers.
-    .buttons-container
-      #schedule-apt.box
-        p Schedule Appointment
-      #patient-portal-button.box
-        p Patient Portal
-      #review-us.box
-        p Review us, Get Stuff
-      #lasik.box
-        p Ask us about Lasik!
-      #premium-eye.box
-        p Premium Eye Screening
-      #follow-us.box
-        p Follow us!
-        
+  .page-main-text
+    h2 Conrad Eye Centers is Kentuckiana's one-stop-shop for all your eye care needs.
+    p Here at <strong>Conrad Eye Centers</strong> we know your time is important. That is why we offer a one-stop experience for all of your eye care needs. With locations in <strong>Louisville</strong> and <strong>New Albany</strong> we provide our patients an intimate relaxing environment with easy handicap access, ample parking, flexible schedules, and the best personal ophthalmic eye care possible. Both locations are equipped with a full service optical boutique featuring stylish frames and a wide range of prices. We utilize the most current and advanced technology in diagnostics and surgery, and we are directly affiliated with Physicians Medical Center, a state-of-the-art outpatient surgery facility, and the Suburban Excimer Laser Center so scheduling your next procedure is a breeze. We are here for all your vision needs; Conrad Eye Centers.
+  .buttons-container
+    #schedule-apt.box
+      p Schedule Appointment
+    #patient-portal-button.box
+      p Patient Portal
+    #review-us.box
+      p Review us, Get Stuff
+    #lasik.box
+      p Ask us about Lasik!
+    #premium-eye.box
+      p Premium Eye Screening
+    #follow-us.box
+      p Follow us!
+
         
 

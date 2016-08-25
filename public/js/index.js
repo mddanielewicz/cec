@@ -1,7 +1,6 @@
 
 window.onload = function() {
-  if (window.location.pathname == '/'){ 
-    //Modal for apt schedule
+  //Modal for apt schedule
 
     var modalWrap = document.getElementById('modal-wrap');
     var modalApt = document.getElementById('apt-modal');
@@ -13,7 +12,17 @@ window.onload = function() {
       modalApt.style.display='block';
     };  
 
-      aptModalBtn.onclick = function(){
+   // Modal Clear
+    window.onclick = function(event) {
+        if (event.target == modalWrap) {
+            modalApt.style.display="none";
+            modalWrap.style.display='none';
+        }
+    }
+  
+  if (window.location.pathname == '/'){ 
+    
+    aptModalBtn.onclick = function(){
       modalWrap.style.display='block';
       modalApt.style.display='block';
     };
@@ -87,15 +96,170 @@ window.onload = function() {
             modalPremium.style.display='none';
             modalReview.style.display='none';
             modalApt.style.display="none";
-            modalWrap.style.display='none';
+            modalWrap.style.display='none'
         }
     }
-    
 }
   else if (window.location.pathname == '/service'){
 
     //SERVICE PAGE JS
     
+    //Content Id's
+      var staticNav = document.getElementById('static-nav');
+      var eyeExamEle = document.getElementById('eye-exam-content');
+      var glsClsEle = document.getElementById('gls-cls-content');
+      var eyeInjuryEle = document.getElementById('injury-content');
+      var eyeDiseaseEle = document.getElementById('disease-content');
+      var laserVisionEle = document.getElementById('laser-vis-content');
+      var eyeImplantEle = document.getElementById('implant-content');
+      var pediatricOpthEle = document.getElementById('pediatric-content');
+      var cosmeticsEle = document.getElementById('cosmetics-content');
+   
+    //Navigation ID's
+      var eyeExamNav = document.getElementById('Eye Exams');
+      var glsClsNav = document.getElementById('Glasses and Contacts');
+      var eyeInjuryNav = document.getElementById('Eye Injuries and Infections');
+      var eyeDiseasesNav = document.getElementById('Eye Diseases');
+      var laserVisionNav = document.getElementById('Laser Vsion Correction');
+      var eyeImplantNav = document.getElementById('Eye Implants');
+      var pediatricOpthNav = document.getElementById('Pediatric Ophthamology');
+      var cosmeticsNav = document.getElementById('Cosmetics');
+    
+    //Element Positions
+      var eyeExamPos = eyeExamEle.getBoundingClientRect();
+      var glsClsPos = glsClsEle.getBoundingClientRect();
+      var eyeInjuryPos = eyeInjuryEle.getBoundingClientRect();
+      var eyeDiseasePos = eyeDiseaseEle.getBoundingClientRect();
+      var laserVisionPos = laserVisionEle.getBoundingClientRect();
+      var eyeImplantPos = eyeImplantEle.getBoundingClientRect();
+      var pediatricOpthPos = pediatricOpthEle.getBoundingClientRect();
+      var cosmeticsPos = cosmeticsEle.getBoundingClientRect();
+    
+    function removeStaticNavClass(){
+     var elems = document.querySelectorAll(".static-active");
+      [].forEach.call(elems, function(el) {
+        el.classList.remove("static-active");
+      });
+    }
+    
+    //Scroll Function
+    document.addEventListener('scroll', function(){
+      var windowScrollY = window.scrollY;
+      if (windowScrollY < eyeExamPos.top){
+        staticNav.style.opacity='0.0';
+        removeStaticNavClass();
+      }else if(windowScrollY > eyeExamPos.top && windowScrollY < eyeExamPos.bottom){
+        staticNav.style.opacity='100';
+        removeStaticNavClass();
+        eyeExamNav.className ='static-active';
+        //alert("You entered the eye exam zone");
+      }else if (windowScrollY > glsClsPos.top && windowScrollY < glsClsPos.bottom) {
+        staticNav.style.opacity='100';
+        removeStaticNavClass();
+        glsClsNav.className ='static-active';
+      }else if (windowScrollY > eyeInjuryPos.top && windowScrollY < eyeInjuryPos.bottom){
+        staticNav.style.opacity='100';
+        removeStaticNavClass();
+        eyeInjuryNav.className ='static-active';
+      }else if (windowScrollY > eyeDiseasePos.top && windowScrollY < eyeDiseasePos.bottom){
+        staticNav.style.opacity='100';
+        removeStaticNavClass();
+        eyeDiseasesNav.className ='static-active';
+      }else if (windowScrollY > laserVisionPos.top && windowScrollY < laserVisionPos.bottom){
+        staticNav.style.opacity='100';
+        removeStaticNavClass();
+        laserVisionNav.className ='static-active';
+      }else if (windowScrollY > eyeImplantPos.top && windowScrollY < eyeImplantPos.bottom){
+        staticNav.style.opacity='100';
+        removeStaticNavClass();
+        eyeImplantNav.className ='static-active';
+      }else if (windowScrollY > pediatricOpthPos.top && windowScrollY < pediatricOpthPos.bottom){
+        staticNav.style.opacity='100';
+        removeStaticNavClass();
+        pediatricOpthNav.className ='static-active';
+      }else if (windowScrollY > cosmeticsPos.top && windowScrollY < cosmeticsPos.bottom){
+        staticNav.style.opacity='100';
+        removeStaticNavClass();
+        cosmeticsNav.className ='static-active';
+      }
+    });
+    
+    //Scroll to links
+      //functions
+        var eyeExamScroll = function(){
+          window.scrollTo(0,eyeExamPos.top);
+          removeStaticNavClass();
+          eyeExamNav.className='static-active';
+        }
+        
+        var glsClsScroll = function(){
+          window.scrollTo(0,glsClsPos.top);
+          removeStaticNavClass();
+          glsClsNav.className='static-active';
+        }
+        
+        var eyeInjuryScroll = function(){
+          window.scrollTo(0,eyeInjuryPos.top);
+          removeStaticNavClass();
+          eyeInjuryNav.className='static-active';
+        }
+        
+        var eyeDiseaseScroll = function(){
+          window.scrollTo(0,eyeDiseasePos.top);
+          removeStaticNavClass();
+          eyeDiseasesNav.className='static-active';
+        }
+        
+        var laserVisionScroll = function(){
+          window.scrollTo(0,laserVisionPos.top);
+          removeStaticNavClass();
+          laserVisionNav.className='static-active';
+        }
+        
+        var eyeImplantScroll = function(){
+          window.scrollTo(0,eyeImplantPos.top);
+          removeStaticNavClass();
+          eyeImplantNav.className='static-active';
+        }
+        
+        var pediatricOpthScroll = function(){
+          window.scrollTo(0,pediatricOpthPos.top);
+          removeStaticNavClass();
+          pediatricOpthNav.className='static-active';
+        }
+        
+        var cosmeticScroll = function(){
+          window.scrollTo(0,cosmeticsPos.top);
+          removeStaticNavClass();
+          cosmeticsNav.className='static-active';
+        }
+      //Event Listeners
+        eyeExamNav.addEventListener('click', eyeExamScroll);
+        glsClsNav.addEventListener('click', glsClsScroll);
+        eyeInjuryNav.addEventListener('click', eyeInjuryScroll);
+        eyeDiseasesNav.addEventListener('click', eyeDiseaseScroll);
+        laserVisionNav.addEventListener('click', laserVisionScroll);
+        eyeImplantNav.addEventListener('click', eyeImplantScroll);
+        pediatricOpthNav.addEventListener('click', pediatricOpthScroll);
+        cosmeticsNav.addEventListener('click', cosmeticScroll);
+    
+    //Keep static nav from entering footer
+      //Header & Footer elements
+        var headerEle = document.getElementById('header-container');
+      //Header & Footer positions
+        var headerPos = headerEle.getBoundingClientRect();
+    
+      document.addEventListener('scroll', function(){
+        var windowScrollY = window.scrollY;
+        if (windowScrollY < headerPos.bottom){
+          staticNav.style.top='15%';
+        }else if (windowScrollY < cosmeticsPos.top){
+          staticNav.style.top='15%';
+        }else if (windowScrollY > cosmeticsPos.top){
+          staticNav.style.top='3%';
+        }
+      });
+      
     //Insurance List
     var medicalInsurances = [ 
      {name: 'AARP - UHC', 
@@ -374,235 +538,435 @@ window.onload = function() {
     //HTML for problem condition
     document.getElementById('common-problem-text').innerHTML = problemObject.condition;
     }
-    
-    /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ++++++++++++++++++++++++++++++++++++OLD+++++++++++++++++++++++++++++++++++++++++++++
-    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-    
-    //Vision-exam-slidebar
-      var visionNetworkWrap = document.getElementById('vision-networks');
-      var rightColumnWrap = document.getElementById('right-column');
-
-      console.log(document.getElementById('vision-networks'));
-
-      visionNetworkWrap.onclick = function(){
-        rightColumnWrap.addClass('right-column-active');
-      };
-
-
-    //Middle Column Content Display
-      var eyeExamLink = document.getElementById('Eye Exams');
-      var eyeExamContent = document.getElementById('eye-exam-content');
-      var eyeExamSidebar = document.getElementById('eye-exam-sidebar');
-      var glsClsLink = document.getElementById('Glasses and Contacts');
-      var glsClsContent = document.getElementById('gls-cls-content');
-      var injuryLink = document.getElementById('Eye Injuries and Infections')
-      var injuryContent =  document.getElementById('injury-content');
-      var injurySidebar = document.getElementById('injury-sidebar');
-      var diseaseLink = document.getElementById('Eye Diseases');
-      var diseaseContent = document.getElementById('disease-content');
-      var diseaseSidebar = document.getElementById('disease-sidebar');
-      var laserVisionLink = document.getElementById('Laser Vsion Correction');
-      var laserVisionContent = document.getElementById('laser-vis-content');
-      var implantLink = document.getElementById('Eye Implants');
-      var implantContent = document.getElementById('implant-content');
-      var pediatricLink = document.getElementById('Pediatric Ophthamology');
-      var pediatricContent = document.getElementById('pediatric-content');
-      var cosmeticLink = document.getElementById('Cosmetics');
-      var cosmeticContent = document.getElementById('cosmetics-content');
-      var rightColumn = document.getElementById('right-column');
-      var leftColumn = document.getElementById('left-column');
-      
-     
-  
-        var getCommonProblem = document.getElementById('common-problem');
-        var commonProblemVal = getCommonProblem.value;
-    
-        document.getElementById('common-problem-text').innerHTML = commonProblemsObj[commonProblemVal];
-  
-        getCommonProblem.onchange = function() {
-          commonProblemVal = getCommonProblem.value;
-
-          console.log(commonProblemVal);
-          console.log(commonProblemsObj.commonProblemVal);
-              
-        document.getElementById('common-problem-text').innerHTML =  commonProblemsObj[commonProblemVal];
-        }
-  
-      var serviceNavClear = function() {
-        eyeExamContent.style.display='none';
-        eyeExamSidebar.style.display='none';
-        glsClsContent.style.display='none';
-        injuryContent.style.display='none';
-        injurySidebar.style.display='none';
-        diseaseContent.style.display='none';
-        diseaseSidebar.style.display='none';
-        laserVisionContent.style.display= 'none';
-        implantContent.style.display='none';
-        pediatricContent.style.display='none';
-        cosmeticContent.style.display='none';
-      }
-      
-
-      eyeExamLink.onclick = function() {
-        serviceNavClear();
-        eyeExamContent.style.display='block';
-        eyeExamSidebar.style.display='block';
-        rightColumn.style.display='block';
-        leftColumn.style.height = contentHeight+"px";
-      }
-
-      glsClsLink.onclick = function() {
-        serviceNavClear();
-        glsClsContent.style.display='block';
-        rightColumn.style.display='none';
-        leftColumn.style.height = contentHeight+"px";
-      }
-      
-      injuryLink.onclick = function() {
-        serviceNavClear();
-        injuryContent.style.display='block';
-        injurySidebar.style.display='block';
-        rightColumn.style.display='block';
-        getCommonProblem.style.display='block';
-        leftColumn.style.height = contentHeight+"px";
-        
-      }
-      
-      diseaseLink.onclick = function() {
-        serviceNavClear();
-        diseaseContent.style.display='block';
-        diseaseSidebar.style.display='block';
-        rightColumn.style.display='block';
-        getCommonProblem.style.display='block';
-        leftColumn.style.height = contentHeight+"px";
-      }
-      
-      laserVisionLink.onclick = function() {
-        serviceNavClear();
-        laserVisionContent.style.display='block';
-        rightColumn.style.display='none';
-        leftColumn.style.height = contentHeight+"px";
-      }
-      
-      implantLink.onclick = function() {
-        serviceNavClear();
-        implantContent.style.display='block';
-        rightColumn.style.display='none';
-        leftColumn.style.height = contentHeight+"px";
-      }
-      
-      pediatricLink.onclick = function() {
-        serviceNavClear();
-        pediatricContent.style.display='block';
-        rightColumn.style.display='none';
-        leftColumn.style.height = contentHeight+"px";
-      }
-      
-      cosmeticLink.onclick = function() {
-        serviceNavClear();
-        cosmeticContent.style.display='block';
-        rightColumn.style.display='none';
-        leftColumn.style.height = contentHeight+"px";
-      }
-      
-   
-  
   }
   else if (window.location.pathname == '/about'){
     //ABOUT PAGE JS
-      var officeInfoLink = document.getElementById('Office Information');
-      var officeInfoContent = document.getElementById('general-office-information');
-      var bioLink = document.getElementById('Tim J. Conrad, M.D.');
-      var bioContent = document.getElementById('bio');
-      var historyLink = document.getElementById('CEC: Past, Present, and Future');
-      var historyContent = document.getElementById('history');
-      var medicalCentersLink = document.getElementById('Suburban Excimer Laser Center and hysicians Medical Center');
-      var medicalCenterContent = document.getElementById('medical-centers');
     
-      var aboutNavClear = function() {
-        officeInfoContent.style.display='none';
-        bioContent.style.display='none';
-        historyContent.style.display='none';
-        medicalCenterContent.style.display='none';
+    //Content Id's
+      var generalEle = document.getElementById('general-content');
+      var bioEle = document.getElementById('bio-content');
+      var historyEle = document.getElementById('history-content');
+      var medicalCentersEle = document.getElementById('medical-centers');
+   
+    //Navigation ID's
+      var staticNav = document.getElementById('static-nav');
+      var generalNav = document.getElementById('Office Info');
+      var bioNav = document.getElementById('Tim J. Conrad, M.D.');
+      var historyNav = document.getElementById('CEC: Past, Present, and Future');
+      var medicalCentersNav = document.getElementById('Suburban Excimer Laser Center and hysicians Medical Center');
+    
+    //Element Positions
+      var generalPos = generalEle.getBoundingClientRect();
+      var bioPos = bioEle.getBoundingClientRect();
+      var historyPos = historyEle.getBoundingClientRect();
+      var medicalCenterPos = medicalCentersEle.getBoundingClientRect();
+    
+    function removeStaticNavClass(){
+     var elems = document.querySelectorAll(".static-active");
+      [].forEach.call(elems, function(el) {
+        el.classList.remove("static-active");
+      });
+    }
+    
+    //Scroll Function
+    document.addEventListener('scroll', function(){
+      var windowScrollY = window.scrollY;
+      if (windowScrollY < generalPos.top){
+        staticNav.style.opacity='0.0';
+        removeStaticNavClass();
+      }else if(windowScrollY > generalPos.top && windowScrollY < generalPos.bottom){
+        staticNav.style.opacity='100';
+        removeStaticNavClass();
+        generalNav.className ='static-active';
+        //alert("You entered the eye exam zone");
+      }else if (windowScrollY > bioPos.top && windowScrollY < bioPos.bottom) {
+        staticNav.style.opacity='100';
+        removeStaticNavClass();
+        bioNav.className ='static-active';
+      }else if (windowScrollY > historyPos.top && windowScrollY < historyPos.bottom){
+        staticNav.style.opacity='100';
+        removeStaticNavClass();
+        historyNav.className ='static-active';
+      }else if (windowScrollY > medicalCenterPos.top && windowScrollY < medicalCenterPos.bottom){
+        staticNav.style.opacity='100';
+        removeStaticNavClass();
+        medicalCentersNav.className ='static-active';
       }
-      
-      officeInfoLink.onclick = function(){
-        aboutNavClear();
-        officeInfoContent.style.display='block';
-      }
-      
-      bioLink.onclick = function(){
-        aboutNavClear();
-        bioContent.style.display='block';
-      }
-      
-      historyLink.onclick = function(){
-        aboutNavClear();
-        historyContent.style.display='block';
-      }
-      
-      medicalCentersLink.onclick = function(){
-        aboutNavClear();
-        medicalCenterContent.style.display='block';
-      }
-      
-      var size = {
-        width: window.innerWidth || document.body.clientWidth,
-      }
-      
-      if (size.width <= 1024) {
-        console.log('Window is equal to or smaller than 1024')
-        
-        var louisvilleLink = document.getElementById('louisville-link');
-        var newAlbanyLink = document.getElementById('new-albany-link');
-        var louisvilleWrap = document.getElementById('louisville-wrap');
-        var newAlbanyWrap = document.getElementById('new-albany-wrap');
-        
-        var clearGeneralInfo = function() {
-          louisvilleWrap.style.display='none';
-          newAlbanyWrap.style.display='none';
+    });
+    
+    //Scroll to links
+      //functions
+        var generalScroll = function(){
+          window.scrollTo(0,generalPos.top);
+          removeStaticNavClass();
+          generalNav.className='static-active';
         }
         
-        louisvilleLink.onclick = function() {
-          clearGeneralInfo();
-          louisvilleWrap.style.display='block';
+        var bioScroll = function(){
+          window.scrollTo(0,bioPos.top);
+          removeStaticNavClass();
+          bioNav.className='static-active';
         }
         
-        newAlbanyLink.onclick = function() {
-          clearGeneralInfo();
-          newAlbanyWrap.style.display='block';
+        var historyScroll = function(){
+          window.scrollTo(0,historyPos.top);
+          removeStaticNavClass();
+          historyNav.className='static-active';
         }
-      }
+        
+        var medicalCenterScroll = function(){
+          window.scrollTo(0,medicalCenterPos.top);
+          removeStaticNavClass();
+          medicalCentersNav.className='static-active';
+        }
+        
+      //Event Listeners
+        generalNav.addEventListener('click', generalScroll);
+        bioNav.addEventListener('click', bioScroll);
+        historyNav.addEventListener('click', historyScroll);
+        medicalCentersNav.addEventListener('click', medicalCenterScroll);
+    
+    //Keep static nav from entering footer
+      //Header & Footer elements
+        var headerEle = document.getElementById('header-container');
+      //Header & Footer positions
+        var headerPos = headerEle.getBoundingClientRect();
+    
+      document.addEventListener('scroll', function(){
+        var windowScrollY = window.scrollY;
+        if (windowScrollY < headerPos.bottom){
+          staticNav.style.top='15%';
+        }else if (windowScrollY < medicalCenterScroll.top){
+          staticNav.style.top='15%';
+        }else if (windowScrollY > medicalCenterScroll.top){
+          staticNav.style.top='3%';
+        }
+      });
+           
   }
   else if(window.location.pathname == '/resources'){
     //Resource PAGE JS
-      var patientPortalLink = document.getElementById('Patient Portal');
-      var patientPortalContent = document.getElementById('patient-portal');
-      var privacyLink = document.getElementById('Notice of Privacy Practices');
-      var privacyContent = document.getElementById('privacy-practice');
-      var insuranceLink = document.getElementById('Insurance Options');
-      var insuranceContent = document.getElementById('insurance');
     
-      var resourcesNavClear = function(){
-        patientPortalContent.style.display='none';
-        privacyContent.style.display='none';
-        insuranceContent.style.display='none';
+    //Content Id's
+      var patientPortalEle = document.getElementById('patient-portal-content');
+      var privacyPracticeEle = document.getElementById('privacy-practice-content');
+      var insuranceEle = document.getElementById('insurance-content');
+    
+    //Navigation ID's
+      var staticNav = document.getElementById('static-nav');
+      var patientPortalNav = document.getElementById('Patient Portal');
+      var privacyPracticeNav = document.getElementById('Notice of Privacy Practices');
+      var insuranceNav = document.getElementById('Insurance Options');
+    
+    //Element Positions
+      var patientPortalPos = patientPortalEle.getBoundingClientRect();
+      var privacyPracticePos = privacyPracticeEle.getBoundingClientRect();
+      var insurancePos = insuranceEle.getBoundingClientRect();
+    
+    function removeStaticNavClass(){
+     var elems = document.querySelectorAll(".static-active");
+      [].forEach.call(elems, function(el) {
+        el.classList.remove("static-active");
+      });
+    }
+    
+    //Scroll Function
+    document.addEventListener('scroll', function(){
+      var windowScrollY = window.scrollY;
+      if (windowScrollY < patientPortalPos.top){
+        staticNav.style.opacity='0.0';
+        removeStaticNavClass();
+      }else if(windowScrollY > patientPortalPos.top && windowScrollY < patientPortalPos.bottom){
+        staticNav.style.opacity='100';
+        removeStaticNavClass();
+        patientPortalNav.className ='static-active';
+        //alert("You entered the eye exam zone");
+      }else if (windowScrollY > privacyPracticePos.top && windowScrollY < privacyPracticePos.bottom) {
+        staticNav.style.opacity='100';
+        removeStaticNavClass();
+        privacyPracticeNav.className ='static-active';
+      }else if (windowScrollY > insurancePos.top && windowScrollY < insurancePos.bottom){
+        staticNav.style.opacity='100';
+        removeStaticNavClass();
+        insuranceNav.className ='static-active';
       }
-      
-      patientPortalLink.onclick = function(){
-        resourcesNavClear();
-        patientPortalContent.style.display='block';
-      }
-      
-      privacyLink.onclick = function(){
-        resourcesNavClear();
-        privacyContent.style.display='block';
-      }
-      
-      insuranceLink.onclick = function(){
-        resourcesNavClear();
-        insuranceContent.style.display='block';
+    });
+    
+    //Scroll to links
+      //functions
+        var patientPortalScroll = function(){
+          window.scrollTo(0,patientPortalPos.top);
+          removeStaticNavClass();
+          patientPortalNav.className='static-active';
+        }
+        
+        var privacePracticeScroll = function(){
+          window.scrollTo(0,privacyPracticePos.top);
+          removeStaticNavClass();
+          privacyPracticeNav.className='static-active';
+        }
+        
+        var insuranceScroll = function(){
+          window.scrollTo(0,insurancePos.top);
+          removeStaticNavClass();
+          insuranceNav.className='static-active';
+        }
+        
+      //Event Listeners
+        patientPortalNav.addEventListener('click', patientPortalScroll);
+        privacyPracticeNav.addEventListener('click', privacePracticeScroll);
+        insuranceNav.addEventListener('click', insuranceScroll);
+    
+    //Keep static nav from entering footer
+      //Header & Footer elements
+        var headerEle = document.getElementById('header-container');
+      //Header & Footer positions
+        var headerPos = headerEle.getBoundingClientRect();
+    
+      document.addEventListener('scroll', function(){
+        var windowScrollY = window.scrollY;
+        if (windowScrollY < headerPos.bottom){
+          staticNav.style.top='15%';
+        }else if (windowScrollY < insurancePos.top){
+          staticNav.style.top='15%';
+        }else if (windowScrollY > insurancePos.top){
+          staticNav.style.top='3%';
+        }
+      });
+    
+    //Insurance List
+      var medicalInsurances = [ 
+       {name: 'AARP - UHC', 
+        phone: '1-866-301-2918' },
+       {name: 'Advantica', 
+        phone: '1-866-354-2020'},
+       {name: 'Advantra Freedom', 
+        phone: ' 1-800-765-7197'},
+       {name: 'Aetna', 
+        phone: '1-800-872-3862'},
+       {name: 'Aetna Senior Supplemental', 
+        phone: '1-800-264-4000'},
+       {name: 'All Savers', 
+        phone: '1-800-291-2634'},
+       {name: 'Alliance Healthcare Solutions', 
+        phone: '1-866-939-0100'},
+       {name: 'Allied Benefit Systems', 
+        phone: '1-800-288-2078'},
+       {name: 'AlwaysCare Benefits', 
+        phone: '1-888-729-5433'},
+       {name: 'Ambetter', 
+        phone: '1-800-743-3333'},
+       {name: 'American Administrator', 
+        phone: '1-717-591-8280'},
+       {name: 'American Republic', 
+        phone: '1-800-247-2190'},
+       {name: 'Ameritas Life', 
+        phone: '1-800-776-9446'},
+       {name: 'Anthem IN Medicaid', 
+        phone: '1-866-864-2544'},
+       {name: 'Anthem Indiana', 
+        phone: '1-866-804-9321'},
+       {name: 'Anthem Kentucky', 
+        phone: '1-800-810-2583'},
+       {name: 'APWU', 
+        phone: '1-800-222-2798'},
+       {name: 'Assurant Health', 
+        phone: '1-800-553-7654'},
+       {name: 'Bankers Life', 
+        phone: '1-800-621-3724'},
+       {name: 'Baptist Health Plan', 
+        phone: '1-800-787-2680'},
+       {name: 'Beech Street', 
+        phone: '1-800-877-1444'},
+       {name: 'Benefit Planners', 
+        phone: '1-334-382-7476'},
+       {name: 'Benesight', 
+        phone: '1-602-674-2345'},
+       {name: 'Benovision', 
+        phone: '1-513-872-7505'},
+       {name: 'Block Vision', 
+        phone: '1-866-265-0517'},
+       {name: 'Blue Cross Blue Shield of Georgia', 
+        phone: '1-855-397-9267'},
+       {name: 'Blue Cross Blue Shield of Illinois', 
+        phone: '1-800-538-8833'},
+       {name: 'Blue Cross Blue Shield of Indiana', 
+        phone: '1-800-810-2583'},
+       {name: 'Blue Cross Blue Shield of Kentucky', 
+        phone: '1-800-810-2583'},
+       {name: 'BP Benefit Planners', 
+        phone: '1-800-890-4100'},
+       {name: 'CareFirst Administrators', 
+        phone: '1-866-945-9839'},
+       {name: 'Caresource Just4Me - Indiana', 
+        phone: '1-800-418-0172'},
+       {name: 'Caresource Just4Me - Kentucky', 
+        phone: '1-800-833-3239'},
+       {name: 'CHA Health', 
+        phone: '1-800-580-8574'},
+       {name: 'ChampVA', 
+        phone: '1-800-733-8387'},
+       {name: 'Christian Brothers Services', 
+        phone: '1-800-807-0100'},
+       {name: 'Cigna', 
+        phone: '1-800-627-7534'},
+       {name: 'Cigna Medical Access', 
+        phone: '1-800-668-3813'},
+       {name: 'Coloniel Penn', 
+        phone: '1-800-523-9100'},
+       {name: 'consumers life member service', 
+        phone: '1-866-925-2542'},
+       {name: 'Co-ordinated Benefits Plan', 
+        phone: '1-800-753-1000'},
+       {name: 'Coresource', 
+        phone: '1-800-832-3332'},
+       {name: 'Corporate Benefit', 
+        phone: '1-800-277-9476'},
+       {name: 'Coventry', 
+        phone: '1-301-581-0600'},
+       {name: 'Empire Plan', 
+        phone: '1-877-769-7447'},
+       {name: 'Essence', 
+        phone: '1-866-597-9560'},
+       {name: 'Eyecare of America', 
+        phone: '1-877-887-6327'},
+       {name: 'Family Life Insurance Company', 
+        phone: '1-800-877-7703'},
+       {name: 'Federated', 
+        phone: '1-507-455-5200'},
+       {name: 'First Health', 
+        phone: '1-800-937-6824'},
+       {name: 'Freedom Life Insurance', 
+        phone: '1-800-387-9027'},
+       {name: 'Gateway Health', 
+        phone: '1-800-392-1147'},
+       {name: 'GEHA', 
+        phone: '1-800-821-6136'},
+       {name: 'GHI', 
+        phone: '1-800-624-2414'},
+       {name: 'Gilsbar', 
+        phone: '1-888-472-4352'},
+       {name: 'GMMI', 
+        phone: '1-954-370-6404'},
+       {name: 'Golden Rule', 
+        phone: '1-800-657-8205'},
+       {name: 'Great West', 
+        phone: '1-800-701-8255'},
+       {name: 'Guardian - Davis Vision', 
+        phone: '1-877-393-7363'},
+       {name: 'Guardian - VSP', 
+        phone: '1-877-814-8970'},
+       {name: 'Harington Benefits Services', 
+        phone: '1-800-216-2166'},
+       {name: 'Health Partners', 
+        phone: '1-800-883-2177'},
+       {name: 'Health Smart', 
+        phone: '1-214-574-3546'},
+       {name: 'HealthStar', 
+        phone: '1-423-581-5925'},
+       {name: 'Hoosier Alliance', 
+        phone: '1-800-356-1204'},
+       {name: 'Humana', 
+        phone: '1-800-833-6917'},
+       {name: 'Humana Caresource', 
+        phone: '1-855-852-7005'},
+       {name: 'Indiana Farm Bureau Insurance', 
+        phone: '1-800-777-8252'},
+       {name: 'Kentucky Health Cooperative', 
+        phone: '1-502-287-1285'},
+       {name: 'Key Benefit Administrators', 
+        phone: '1-800-331-4757'},
+       {name: 'Klais Co', 
+        phone: '1-800-331-1096'},
+       {name: 'Loyal American', 
+        phone: '1-866-459-4272'},
+       {name: 'Mailhandlers', 
+        phone: '1-800-410-7778'},
+       {name: 'Managed Health Services', 
+        phone: '1-877-647-4848'},
+       {name: 'MDWise', 
+        phone: '1-800-356-1204'},
+       {name: 'Medben', 
+        phone: '1-800-686-8425'},
+       {name: 'Medicaid Indiana', 
+        phone: '1-317-713-9627'},
+       {name: 'Medicaid KY EDS', 
+        phone: '1-800-372-2973'},
+       {name: 'Medical Mutual', 
+        phone: '1-800-382-5729'},
+       {name: 'Medical Mutual of Ohio', 
+        phone: '1-800-382-5729'},
+       {name: 'Medicare B Kentucky', 
+        phone: '1-866-276-9558'},
+       {name: 'Medicare IN', 
+        phone: '1-800-633-4227'},
+       {name: 'Medico Insurance Company', 
+        phone: '1-800-228-6080'},
+       {name: 'Mega Life', 
+        phone: '1-800-527-5504'},
+       {name: 'Meritain Health', 
+        phone: '1-800-925-2272'},
+       {name: 'MOAA', 
+        phone: '1-800-234-6622'},
+       {name: 'Mutual of Omaha', 
+        phone: '1-800-775-1000'},
+       {name: 'NALC', 
+        phone: '1-703-729-4677'},
+       {name: 'NGS American', 
+        phone: '1-800-521-1555'},
+       {name: 'Nippon Life', 
+        phone: '1-800-374-1835'},
+       {name: 'North American Administrators', 
+        phone: '1-800-411-3650'},
+       {name: 'Passport Health Plan', 
+        phone: '1-800-578-0603'},
+       {name: 'Passport Medicare Advantage Plan', 
+        phone: '1-844-859-6152'},
+       {name: 'PHCS', 
+        phone: '1-800-922-4362'},
+       {name: 'Physicians Mutual Insurance Company', 
+        phone: '1-800-228-9100'},
+       {name: 'PIA', 
+        phone: '1-800-424-4244'},
+       {name: 'Preferred Helath Plan', 
+        phone: '1-800-832-8212'},
+       {name: 'Principal Life', 
+        phone: '1-800-986-3343'},
+       {name: 'Railroad Medicare', 
+        phone: '1-877-288-7600'},
+       {name: 'Sagamore', 
+        phone: '1-800-364-3469'},
+       {name: 'SIHO', 
+        phone: '1-812-378-7000'},
+       {name: 'Standard Life & Accident Ins', 
+        phone: '1-888-350-1488'},
+       {name: 'Starark', 
+        phone: '1-847-615-1313'},
+       {name: 'Sterling Option', 
+        phone: '1-800-688-0010'},
+       {name: 'Superior Vision', 
+        phone: '1-800-879-6901'},
+       {name: 'Three Rivers Preferred', 
+        phone: '1-260-479-3553'} ]
+    
+    //Get insurance name from service dropdown 
+      var insuranceName = document.getElementById('insurance-picker');
+      var insuranceNameVal = insuranceName.value;
+
+      insuranceName.onchange = function() {
+        insuranceNameVal = insuranceName.value;
+        function findinsurance(insInfo){
+          return insInfo.name === insuranceNameVal;
+        }
+        //gets object for selected insurance carrier
+        var insuranceObj = medicalInsurances.find(findinsurance);
+
+        //html for insurance carrier
+        document.getElementById('insurance-name').innerHTML = insuranceObj.name;
+
+        //html for insurance phone /w tel link      
+        document.getElementById('insurance-phone').innerHTML = 'P. ' + insuranceObj.phone;
+        document.getElementById('insurance-phone').setAttribute('href', "tel:"+insuranceObj.phone);
       }
   }
   else if(window.location.pathname == '/contact'){
@@ -634,30 +998,5 @@ window.onload = function() {
         contactNavClear();
         newAlbanyOfficeContent.style.display='block';
       }
-  }
-  else if(window.location.pathname == '/submit'){
-//    var firstNameText = document.getElementById('first-name');
-//    
-//    var fname = document.getElementById('fname').value;
-//    firstNameText=fname;
-//    console.log(fname);
-  
-    // Connection URL
-  var url = 'mongodb://localhost:27017/myapp';
-  // Use connect method to connect to the Server
-    MongoClient.connect(url, function(err, db) {
-    assert.equal(null, err);
-    console.log("Connected correctly to server");
-
-    var collection = db.collection('test')
-    collection.insert({name: 'Martin Luther', reformer: true}, function(err, result) { 
-    collection.find({name: 'Martin Luther'}).toArray(function(err, docs) {
-      console.log(docs[0])
-
-    db.close();
-      })
-    })
-  });
-    
   }
 }
