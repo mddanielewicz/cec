@@ -5,10 +5,10 @@ html
     link(rel='stylesheet', href='/stylesheets/normalize.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body    
-   #header-container
-    .header-overlay
-      //.header-logo
-        img(src="../images/Conrad Eye 2.jpg" alt='Conrad Eye Centers Logo')
+    #header-container
+      .header-overlay
+        //.header-logo
+        //img(src="../images/Conrad Eye 2.jpg" alt='Conrad Eye Centers Logo')
       .main-nav
         ul
           li
@@ -26,53 +26,54 @@ html
         a(href="/")
           h1 #{title}
           h3 Personalized, Comprehensive Eyecare.
-   block content
+    block content
     
-   #social-links-bkgrnd
-     .social-links-container
-       .social-icon
-             a(href="https://www.facebook.com/ConradEyeCenters/" target="_blank")
-               img(src="images/facebook-icon.png" alt="Facebook Logo")
+    #social-links-bkgrnd
+      .social-links-container
+        .social-icon
+          a(href="https://www.facebook.com/ConradEyeCenters/" target="_blank")
+            img(src="images/facebook-icon.png" alt="Facebook Logo")
 
-       .social-icon
-             a(href="https://plus.google.com/+ConradEyeCentersLouisville/posts" target="_blank")
-               img(src="images/Google-plus-icon.png" alt="Google Plus Louisville Logo")
+        .social-icon
+          a(href="https://plus.google.com/+ConradEyeCentersLouisville/posts" target="_blank")
+            img(src="images/Google-plus-icon.png" alt="Google Plus Louisville Logo")
 
-       .social-icon
-             a(href="https://plus.google.com/112202261525095620339/about" target="_blank")
-               img(src="images/Google-plus-icon.png" alt="Google Plus New Albany Logo")
+        .social-icon
+          a(href="https://plus.google.com/112202261525095620339/about" target="_blank")
+            img(src="images/Google-plus-icon.png" alt="Google Plus New Albany Logo")
 
-       .social-icon
-             a(href="https://twitter.com/conradeyecenter" target="_blank")
-               img(src="images/twitter-logo.png" alt="Twitter")
+        .social-icon
+          a(href="https://twitter.com/conradeyecenter" target="_blank")
+            img(src="images/twitter-logo.png" alt="Twitter")
 
-   #footer-container
-       .partner-logo-container
-         .bbb-logo
-           a(href="http://www.bbb.org/louisville/business-reviews/physicians-and-surgeons-ophthalmology/conrad-eye-centers-in-louisville-ky-2013516/" target="_blank")
-             img(src="../images/bbb.png" alt="Better Buisness Bueru Logo")
-         .aao-logo
-           a(href="http://www.aao.org/" target="_blank")
-             img(src="../images/aao.png" alt="American Academy of Opthamologists")
-       .office-louisville
-         p Louisville Office
-         p 204 Breckenridge Lane
-         p Louisville, KY 40207
-         p p. 502-899-7778
-       .office-devide
-       .office-indiana
-         p New Albany Office 
-         p 1919 State Street
-         p Suite 210
-         p New Albany, IN 47150
-         p p. 812-944-6063
-       .office-devide
-       .patient-reviews-foot
-         h2 Patient Reviews
-           each user in userreviews
-               ul
-                 p= '"'+user.reviewtext+'"'
-                 p= '- '+user.reviewfirstname+' '+user.reviewlastname 
-                 p= user.reviewsite
-                 p= user.reviewdate              
-script(src="/js/index.js")
+    #footer-container
+      .partner-logo-container
+        .bbb-logo
+          a(href="http://www.bbb.org/louisville/business-reviews/physicians-and-surgeons-ophthalmology/conrad-eye-centers-in-louisville-ky-2013516/" target="_blank")
+            img(src="../images/bbb.png" alt="Better Buisness Bueru Logo")
+        .aao-logo
+          a(href="http://www.aao.org/" target="_blank")
+            img(src="../images/aao.png" alt="American Academy of Opthamologists")
+      .office-louisville
+        p Louisville Office
+        p 204 Breckenridge Lane
+        p Louisville, KY 40207
+        p p. 502-899-7778
+      .office-devide
+      .office-indiana
+        p New Albany Office 
+        p 1919 State Street
+        p Suite 210
+        p New Albany, IN 47150
+        p p. 812-944-6063
+      .office-devide
+      .patient-reviews-foot
+        h2 Patient Reviews
+          each user in userreviews
+            ul
+              p= '"'+user.reviewtext+'"'
+              p= '- '+user.reviewfirstname+' '+user.reviewlastname 
+              p= user.reviewsite
+              p= user.reviewdate       
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+  script(src="/js/index.js")

@@ -1,3 +1,21 @@
+$(document).on('ready', function() {
+  $('#header-container').slideDown('slow');
+  $('#page-container').delay(1600).fadeIn(1600);
+  $('#social-links-bkgrnd').delay(1600).fadeIn(1600);
+  $('#footer-container').delay(1600).fadeIn(1600);
+});
+
+$('.main-nav')
+    .css("margin-left",-$(this).width())
+    .animate({
+        marginLeft: '48%'
+    }, 800);
+
+$('.title-container')
+    .css("margin-left",-$(this).width())
+    .animate({
+        marginLeft: '35%'
+    }, 1600);
 
 window.onload = function() {
   //Modal for apt schedule

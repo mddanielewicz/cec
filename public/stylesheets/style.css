@@ -86,9 +86,10 @@ input[type=date]::-webkit-outer-spin-button {
 }
 
 .modal-thin {
-    margin: 5% auto;
+    margin: 1% auto;
+    padding: 20px;
     background-color: #f3f3f3;
-    height: 80%;
+    height: 90%;
     border: 1px solid #888;
     width: 25%;
     box-shadow: 5px 5px 20px #c0B9B9;
@@ -159,7 +160,8 @@ input[type=date]::-webkit-outer-spin-button {
 /*========================================Modal Wide=================================================*/
 
 .modal-wide {
-  margin: 5% auto;
+  margin: 2% auto;
+  padding: 15px;
   width: 60%;
   height: 88%;
   background-color: #fff;
@@ -284,19 +286,24 @@ input[type=date]::-webkit-outer-spin-button {
 ===========================================Layout.jade==================================================
 ======================================================================================================*/
 
+
 #header-container {
-  margin: 0;
   padding: 0;
   width: 100%;
   height: 600px;
   background-image:url(../images/refraction.jpg);
   background-size: cover;
+  display: none;
+  
+  
 }
 
 .header-overlay {
+  height: 600px;
+  float: left;
+  clear: both;
   background-color: rgba(192, 185, 185, 0.4);
   width: 100%;
-  height: 100%;
   z-index: 1;
 }
 
@@ -315,12 +322,12 @@ input[type=date]::-webkit-outer-spin-button {
 }
 
 .main-nav {
-  float: right;
+  position: absolute;
+  margin-left: 48%;
   width: 800px;
-  margin-right: 1%;
   margin-top: 35px;
-  clear: right;
   background-color: rgba(132, 139, 174, 0.7);
+  
 }
 
 .main-nav li {
@@ -350,12 +357,14 @@ input[type=date]::-webkit-outer-spin-button {
 }
 
 .title-container {
+  position: absolute;
   float: left;
   clear: both;
   margin-left: 35%;
-  margin-top: 200px;
+  margin-top: 280px;
   background-color: rgba(132, 139, 174, 0.7);
   width: 500px;
+  
     
 }
 
@@ -376,6 +385,7 @@ input[type=date]::-webkit-outer-spin-button {
   height: 75px;
   background-color: #303C74;
   clear: both;
+  display: none;
   
 }
 
@@ -403,6 +413,7 @@ input[type=date]::-webkit-outer-spin-button {
   background-color: #556091;
   margin: 0;
   padding-bottom: 15px;
+  display: none;
 }
 
 .partner-logo-container {
@@ -481,6 +492,7 @@ input[type=date]::-webkit-outer-spin-button {
 #page-container {
   width: 80%;
   margin: 0 auto;
+  display: none;
 }
 
 .page-main-text {
