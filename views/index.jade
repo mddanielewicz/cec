@@ -21,46 +21,14 @@ block content
            label(for="scheduleThirdChoice") Third Choice
            input(type="submit" id="submit" value="Submit")
     #review-modal.modal-wide
-      .left
-        h2 Review us and get rewards!!
-        h3 Help us, our valued patients, grow our online presence!
-        p If you were satisfied with your most recent visit, please consider leaving  us a positive review on one of the websites listed below. Simply click on a link, leave a review, and complete the form to let us know! Once confirmed, we will send you a free Conrad Eye Centers water bottle or coffee tumbler; you're choice! Thank you for your valued support!
-        ul
-          li: a(href="http://www.bbb.org/louisville/business-reviews/physicians-and-surgeons-ophthalmology/conrad-eye-centers-in-louisville-ky-2013516/" target="_blank") Better Business Bureau
-          li: a(href="http://www.citysearch.com/profile/34095100/louisville_ky/conrad_tim_j_md_conrad_eye_ctr.html" target="_blank") City Search Louisville
-          li: a(href="http://www.citysearch.com/profile/33919309/new_albany_in/conrad_eye_centers.html" target="_blank") City Search New Albany
-          li: a(href="https://plus.google.com/+ConradEyeCentersLouisville/posts" target="_blank") Google+ Louisville
-          li: a(href="https://plus.google.com/112202261525095620339/about" target="_blank") Google+ New Albany
-          li: a(href="http://www.healthgrades.com/physician/dr-tim-conrad-yp3gk/patient-ratings" target="_blank") Healthgrades
-          li: a(href="http://www.merchantcircle.com/business/Conrad.Eye.Centers.Louisville.KY.502-899-7778" target="_blank") Merchant Circle
-          li: a(href="http://www.ratemds.com/doctor-ratings/371364/Dr-Tim-Conrad-LOUISVILLE-KY.html" target="_blank") RateMDs
-          li: a(href="http://www.ucomparehealthcare.com/drs/timmie_conrad/" target="_blank") UcompareHealthcare
-          li: a(href="http://www.vitals.com/doctors/Dr_Tim_Conrad.html" target="_blank") Vitals
-          li: a(href="http://www.wellness.com/reviews/2151374/tim-conrad-md-conrad-eye-centers-ophthalmologist" target="_blank") Wellness
-          li: a(href="https://local.yahoo.com/info-15256955-conrad-eye-center-louisville" target="_blank") Yahoo
-          li: a(href="http://www.yelp.com/biz/conrad-eye-centers-louisville" target="_blank") Yelp Louisville
-          li: a(href="http://www.yelp.com/biz/conrad-eye-center-new-albany?osq=conrad+eye+centers" target="_blank") Yelp New Albany
-      .right
-        h2 Submision Form
-        form(name='addreview' action='userReview' method='post')
-          input(type='text' id='reviewFname' name='reviewFname' placeholder='First Name' required)
-          input(type='text' id='reviewLname' name='reviewLname' placeholder='Last Name' required)
-          input(type='email' id='reviewEmail' name='reviewEmail' placeholder='Email' required)
-          select(id='reviewSite' name='reviewSite' required)
-            option(value='Yelp - Louisville') Yelp - Louisville
-            option(value='Yelp - New Albany') Yelp - New Albany
-            option(value='Google+ - Louisville') Google+ - Louisville
-            option(value='Google+ - New Albany') Google+ - New Albany
-            option(value='Better Bueisness Bueru') Better Bueisness Beurue
-            option(value='Healthgrades') Healthgrades
-            option(value='UCompare Healthcare') UCompate Healthcare
-          input(type='date' id='reviewPostDate' name='reviewDate' required)
-          select(id='reviewReward' name='reviewReward' required)
-            option(value='waterBottle') Water Bottle
-            option(value='coffeeTumbler') Coffee Tumbler
-          textarea(type='text' id='reviewtext' name='reviewText' placeholder='Let us know how we did...' required)
-          input(type='submit' value='Submit')
-
+      h3 Let us know about your experience!
+      form#review(action='')
+        ul#star-rating
+          li.star-1: input(type='radio' name='star-rating' value='star-1')
+          li.star-2: input(type='radio' name='star-rating' value='star-2')
+          li.star-3: input(type='radio' name='star-rating' value='star-3')  
+          li.star-4: input(type='radio' name='star-rating' value='star-4')
+          li.star-5: input(type='radio' name='star-rating' value='star-5')
     #premium-modal.modal-wide
       .left
         .nav

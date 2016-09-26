@@ -1,3 +1,4 @@
+
 $(document).on('ready', function() {
   $('#header-container').slideDown('slow');
   $('#page-container').delay(1600).fadeIn(1600);
@@ -16,6 +17,63 @@ $('.title-container')
     .animate({
         marginLeft: '35%'
     }, 1600);
+
+
+//Review Star Selector
+  var liClass;
+  $('#star-rating li').hover(
+    function() {
+      liClass = $(this).attr('class');
+      if (liClass === 'star-1'){
+        $('#star-rating').css({'background-position': '160px -160px'});
+        $(this).find('input').prop('checked', true);
+        $(this).mousedown(
+          $.post(
+             "/reviews/improvements", 
+             {starRating: $("[name='star-rating']:checked").val()}, 
+             function(data){}
+          )
+        )
+    
+      }else if (liClass === 'star-2'){
+        $('#star-rating').css({'background-position': '160px -320px'});
+        $(this).prop('checked', true)
+      }else if (liClass === 'star-3'){
+        $('#star-rating').css({'background-position': '160px -480px'});
+        $(this).prop('checked', true)
+      }else if (liClass === 'star-4'){
+        $('#star-rating').css({'background-position': '160px -640px'});
+        $(this).prop('checked', true)
+      }else if (liClass === 'star-5'){
+        $('#star-rating').css({'background-position': '160px -800px'});
+        $(this).prop('checked', true)
+      }
+      console.log(liClass);
+    },
+    function(){
+      $('#star-rating').css({'background-position': '160px 0'});
+    }
+  );
+
+
+//  function() {
+//    console.log('5 hover out');
+//    
+//  }
+//);
+//
+////Review POST redirect
+//
+//$('.star-1, .star-2').click(function() {
+//  console.log('1 or 2 mouse click');
+//  var value = $('#star-rating input:checked').val();
+//  console.log(value);
+//  
+//})
+//
+//$('.star-3, .star-4, .star-5').click(function() {
+//  console.log('3, 4, or 5 mouse click');
+//})
 
 window.onload = function() {
   //Modal for apt schedule

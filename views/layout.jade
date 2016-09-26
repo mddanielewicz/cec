@@ -26,6 +26,7 @@ html
         a(href="/")
           h1 #{title}
           h3 Personalized, Comprehensive Eyecare.
+          h3 #{subtitle}
     block content
     
     #social-links-bkgrnd
@@ -66,14 +67,6 @@ html
         p Suite 210
         p New Albany, IN 47150
         p p. 812-944-6063
-      .office-devide
-      .patient-reviews-foot
-        h2 Patient Reviews
-          each user in userreviews
-            ul
-              p= '"'+user.reviewtext+'"'
-              p= '- '+user.reviewfirstname+' '+user.reviewlastname 
-              p= user.reviewsite
-              p= user.reviewdate       
+                 
   script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
   script(src="/js/index.js")

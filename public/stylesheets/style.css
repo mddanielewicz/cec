@@ -283,6 +283,48 @@ input[type=date]::-webkit-outer-spin-button {
 
 
 /*======================================================================================================
+===========================================MODAL REVIEW==================================================
+======================================================================================================*/
+
+#star-rating {
+  margin-top: 300px;
+  padding-left: 0;
+  background-image: url(../images/Large%20Star%20Review.png);
+  background-position: 160px 0;
+  background-repeat: no-repeat;
+  text-align: center;
+  
+}
+
+#star-rating ul {
+  
+}
+
+#star-rating li {
+  height: 150px;
+  width: 150px;
+  padding: 0 5px;
+  display: inline-block;
+}
+
+#star-rating input {
+  -webkit-appearance: none;
+}
+
+#star-rating li:hover {
+  background-color: transparent;
+}
+
+/*
+.star-1:hover {
+  text-align: center;
+  border: 3px solid red;
+  background-position: 0 150px;
+} 
+*/
+
+
+/*======================================================================================================
 ===========================================Layout.jade==================================================
 ======================================================================================================*/
 
