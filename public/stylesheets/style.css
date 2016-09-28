@@ -336,8 +336,6 @@ input[type=date]::-webkit-outer-spin-button {
   background-image:url(../images/refraction.jpg);
   background-size: cover;
   display: none;
-  
-  
 }
 
 .header-overlay {
@@ -369,8 +367,7 @@ input[type=date]::-webkit-outer-spin-button {
   right: 24px;
   width: 800px;
   margin-top: 35px;
-  background-color: rgba(132, 139, 174, 0.7);
-  
+  background-color: rgba(132, 139, 174, 0.7); 
 }
 
 .main-nav li {
@@ -406,9 +403,7 @@ input[type=date]::-webkit-outer-spin-button {
   margin-left: 35%;
   margin-top: 280px;
   background-color: rgba(132, 139, 174, 0.7);
-  width: 500px;
-  
-    
+  width: 500px;    
 }
 
 .title-container h1 {
@@ -418,6 +413,35 @@ input[type=date]::-webkit-outer-spin-button {
 
 .title-container h3 {
   color: #fff;
+  text-align: center;
+}
+
+.gold-bgnd {
+  background-color: #fff5b8;
+}
+
+.table {
+  margin: 0 auto;
+  width: 40%;
+}
+
+.table td {
+  height: 30px;
+}
+
+.table tr:nth-child(even) {
+  background-color: #FFF5B8;
+}
+
+.table-right {
+  text-align: right;
+}
+
+.table-left {
+  text-align: left;
+}
+
+.center {
   text-align: center;
 }
 
@@ -671,6 +695,8 @@ input[type=date]::-webkit-outer-spin-button {
 }
 
 
+
+
 /*=====Common Problems=====*/
 
 #common-problem {
@@ -753,34 +779,17 @@ input[type=date]::-webkit-outer-spin-button {
 }
 
 #content-divide {
-  width: 60%;
+  width: 90%;
   border: 1.5px solid #FFF5B8;
   margin: 50px auto;
   clear: both;
 }
 
 #insurance-wraper {
-  text-align: center;
-}
-
-
-/*=========================================================================
-================================GLS & CLS==================================
-=========================================================================*/
-
-#gls-brands,
-#cls-brands {
+  width: 90%;
   margin: 0 auto;
-  width: 40%;
-}
-
-#gls-brands td {
-  height: 30px;
-}
-
-#gls-brands tr:nth-child(even),
-#cls-brands tr:nth-child(even) {
-  background-color: #FFF5B8;
+  padding: 20px 0;
+  text-align: center;
 }
 
 
@@ -789,13 +798,13 @@ input[type=date]::-webkit-outer-spin-button {
 =========================================================================*/
 
 #common-problem-wrap {
-  width: 78%;
+  width: 90%;
   margin: 0 auto;
-  padding: 15px;
-  background-color: #FFF5B8;
+  padding: 20px 0;
 }
 
 #common-problem-text {
+  padding: 0 20px;
   text-align: justify;
 }
 
@@ -878,34 +887,43 @@ input[type=date]::-webkit-outer-spin-button {
 /*=====Office Info=====*/
 
 
-.table-position {
+.table-office-info {
   margin: 30px auto;
 }
 
-.table-text th {
+.table-office-info th {
   width: 125px;
   height: 35px;
   font-size: 1.1rem;
   text-align: left;
 }
 
-.table-text td {
+.table-office-info td {
   width: 200px;
-  padding: 10px 0;
+  padding: 10px 10px;
 }
 
-#main-content.office-note {
-    margin-top: 20px;
+.table-hours {
+  width: 100%;
 }
 
-#main-content.office-note p {
-  text-align: center;
+.table-hours tr {
+  height: 60px;
+}
+
+.office-note {
+  font-size: 0.9rem;
+  text-align: center !important;
 }
 
 #louisville-hours,
 #new-albany-hours {
-  margin-left: 80px !important;
+  width: 450px;
+  margin: 0 auto;
+  padding: 40px 0;
 }
+
+
 
 
 /*===========================Laser Center ====================

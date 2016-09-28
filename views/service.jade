@@ -10,17 +10,17 @@ block content
       h3 Conrad Eye Centers focuses on your vision with one-on-one personalized eye exams for any age.
       p We know your sight is important. That is why Dr. Conrad personally examines every patient. Dr. Conrad is a trained and nationally recognized ophthalmologist; this means during even a routine eye exam everything about your eye is being examined by one of the best medical doctors in Louisville. Though optometrists are qualified to prescribe glasses and contacts and even treat some disorders of the eye, an ophthalmologist is a medical doctor who can prescribe contacts and glasses, diagnose and treat all conditions of the eye, prescribe medications, and perform surgery on the eye.
       p We accept most vision and eye care plans. Every full routine eye exam will leave you with a custom prescription for glasses and the assurance that you had the most in-depth exam possible.
-    #content-divide
-    #insurance-wraper
-      h3 In-Network Insurance
-      select#insurance-picker
-        -var medicalInsurances = [ {name: 'AARP - UHC'},{name: 'Advantica'},{name: 'Advantra Freedom'},{name: 'Aetna'},{name: 'Aetna Senior Supplemental'},{name: 'All Savers'},{name: 'Alliance Healthcare Solutions'},{name: 'Allied Benefit Systems'},{name: 'AlwaysCare Benefits'},{name: 'Ambetter'},{name: 'American Administrator'},{name: 'American Republic'},{name: 'Ameritas Life'},{name: 'Anthem IN Medicaid'},{name: 'Anthem Indiana'},{name: 'Anthem Kentucky'},{name: 'APWU'},{name: 'Assurant Health'},{name: 'Bankers Life'},{name: 'Baptist Health Plan'},{name: 'Beech Street'},{name: 'Benefit Planners'},{name: 'Benesight'},{name: 'Benovision'},{name: 'Block Vision'},{name: 'Blue Cross Blue Shield of Georgia'},{name: 'Blue Cross Blue Shield of Illinois'},{name: 'Blue Cross Blue Shield of Indiana'},{name: 'Blue Cross Blue Shield of Kentucky'},{name: 'BP Benefit Planners'},{name: 'CareFirst Administrators'},{name: 'Caresource Just4Me - Indiana'},{name: 'Caresource Just4Me - Kentucky'},{name: 'CHA Health'},{name: 'ChampVA'},{name: 'Christian Brothers Services'},{name: 'Cigna'},{name: 'Cigna Medical Access'},{name: 'Coloniel Penn'},{name: 'consumers life member service'},{name: 'Co-ordinated Benefits Plan'},{name: 'Coresource'},{name: 'Corporate Benefit'},{name: 'Coventry'},{name: 'Empire Plan'},{name: 'Essence'},{name: 'Eyecare of America'},{name: 'Family Life Insurance Company'},{name: 'Federated'},{name: 'First Health'},{name: 'Freedom Life Insurance'},{name: 'Gateway Health'},{name: 'GEHA'},{name: 'GHI'},{name: 'Gilsbar'},{name: 'GMMI'},{name: 'Golden Rule'},{name: 'Great West'},{name: 'Guardian - Davis Vision'},{name: 'Guardian - VSP'},{name: 'Harington Benefits Services'},{name: 'Health Partners'},{name: 'Health Smart'},{name: 'HealthStar'},{name: 'Hoosier Alliance'},{name: 'Humana'},{name: 'Humana Caresource'},{name: 'Indiana Farm Bureau Insurance'},{name: 'Kentucky Health Cooperative'},{name: 'Key Benefit Administrators'},{name: 'Klais Co'},{name: 'Loyal American'},{name: 'Mailhandlers'},{name: 'Managed Health Services'},{name: 'MDWise'},{name: 'Medben'},{name: 'Medicaid Indiana'},{name: 'Medicaid KY EDS'},{name: 'Medical Mutual'},{name: 'Medical Mutual of Ohio'},{name: 'Medicare B Kentucky'},{name: 'Medicare IN'},{name: 'Medico Insurance Company'},{name: 'Mega Life'},{name: 'Meritain Health'},{name: 'MOAA'},{name: 'Mutual of Omaha'},{name: 'NALC'},{name: 'NGS American'},{name: 'Nippon Life'},{name: 'North American Administrators'},{name: 'Passport Health Plan'},{name: 'Passport Medicare Advantage Plan'},{name: 'PHCS'},{name: 'Physicians Mutual Insurance Company'},{name: 'PIA'},{name: 'Preferred Helath Plan'},{name: 'Principal Life'},{name: 'Railroad Medicare'},{name: 'Sagamore'},{name: 'SIHO'},{name: 'Standard Life & Accident Ins'},{name: 'Starark'},{name: 'Sterling Option'},{name: 'Superior Vision'},{name: 'Three Rivers Preferred'} ]
-        each insurance in medicalInsurances
-          option= insurance.name
-      #insurance-info
-        h3 Member Benefit Contact
-        span: p#insurance-name
-        span: p: a#insurance-phone      
+      #content-divide
+      #insurance-wraper.gold-bgnd
+        h3 In-Network Insurance
+        select#insurance-picker
+          -var medicalInsurances = [ {name: 'AARP - UHC'},{name: 'Advantica'},{name: 'Advantra Freedom'},{name: 'Aetna'},{name: 'Aetna Senior Supplemental'},{name: 'All Savers'},{name: 'Alliance Healthcare Solutions'},{name: 'Allied Benefit Systems'},{name: 'AlwaysCare Benefits'},{name: 'Ambetter'},{name: 'American Administrator'},{name: 'American Republic'},{name: 'Ameritas Life'},{name: 'Anthem IN Medicaid'},{name: 'Anthem Indiana'},{name: 'Anthem Kentucky'},{name: 'APWU'},{name: 'Assurant Health'},{name: 'Bankers Life'},{name: 'Baptist Health Plan'},{name: 'Beech Street'},{name: 'Benefit Planners'},{name: 'Benesight'},{name: 'Benovision'},{name: 'Block Vision'},{name: 'Blue Cross Blue Shield of Georgia'},{name: 'Blue Cross Blue Shield of Illinois'},{name: 'Blue Cross Blue Shield of Indiana'},{name: 'Blue Cross Blue Shield of Kentucky'},{name: 'BP Benefit Planners'},{name: 'CareFirst Administrators'},{name: 'Caresource Just4Me - Indiana'},{name: 'Caresource Just4Me - Kentucky'},{name: 'CHA Health'},{name: 'ChampVA'},{name: 'Christian Brothers Services'},{name: 'Cigna'},{name: 'Cigna Medical Access'},{name: 'Coloniel Penn'},{name: 'consumers life member service'},{name: 'Co-ordinated Benefits Plan'},{name: 'Coresource'},{name: 'Corporate Benefit'},{name: 'Coventry'},{name: 'Empire Plan'},{name: 'Essence'},{name: 'Eyecare of America'},{name: 'Family Life Insurance Company'},{name: 'Federated'},{name: 'First Health'},{name: 'Freedom Life Insurance'},{name: 'Gateway Health'},{name: 'GEHA'},{name: 'GHI'},{name: 'Gilsbar'},{name: 'GMMI'},{name: 'Golden Rule'},{name: 'Great West'},{name: 'Guardian - Davis Vision'},{name: 'Guardian - VSP'},{name: 'Harington Benefits Services'},{name: 'Health Partners'},{name: 'Health Smart'},{name: 'HealthStar'},{name: 'Hoosier Alliance'},{name: 'Humana'},{name: 'Humana Caresource'},{name: 'Indiana Farm Bureau Insurance'},{name: 'Kentucky Health Cooperative'},{name: 'Key Benefit Administrators'},{name: 'Klais Co'},{name: 'Loyal American'},{name: 'Mailhandlers'},{name: 'Managed Health Services'},{name: 'MDWise'},{name: 'Medben'},{name: 'Medicaid Indiana'},{name: 'Medicaid KY EDS'},{name: 'Medical Mutual'},{name: 'Medical Mutual of Ohio'},{name: 'Medicare B Kentucky'},{name: 'Medicare IN'},{name: 'Medico Insurance Company'},{name: 'Mega Life'},{name: 'Meritain Health'},{name: 'MOAA'},{name: 'Mutual of Omaha'},{name: 'NALC'},{name: 'NGS American'},{name: 'Nippon Life'},{name: 'North American Administrators'},{name: 'Passport Health Plan'},{name: 'Passport Medicare Advantage Plan'},{name: 'PHCS'},{name: 'Physicians Mutual Insurance Company'},{name: 'PIA'},{name: 'Preferred Helath Plan'},{name: 'Principal Life'},{name: 'Railroad Medicare'},{name: 'Sagamore'},{name: 'SIHO'},{name: 'Standard Life & Accident Ins'},{name: 'Starark'},{name: 'Sterling Option'},{name: 'Superior Vision'},{name: 'Three Rivers Preferred'} ]
+          each insurance in medicalInsurances
+            option= insurance.name
+        #insurance-info
+          h3 Member Benefit Contact
+          span: p#insurance-name.center
+          span: p.center: a#insurance-phone      
   #divide-line
   #gls-cls-content.content
     #main-content
@@ -28,7 +28,7 @@ block content
       h4 Glasses
       p Conrad Eye Centers specializes in providing each patient with a wide array of choices for lenses and frames alike. We believe in custom building the perfect glasses for the individual, and we offer top-end name brand frames at affordable prices. When choosing the frames and lenses, it is important to consider your facial features, personal style, and day-to-day activities. Our skilled certified optician will work directly with you to choose the best combination.
       h4 Popular Brands Include:
-      table#gls-brands
+      table.table
         tr
           td Airstar
         tr
@@ -67,7 +67,7 @@ block content
       h4 Contacts
       p Dr. Conrad fits all types of contact lenses, including soft, rigid, multi-focal and specialty contacts. We carry all major types including daily disposable lenses, rigid gas permeable lenses, and multifocal lenses. Our skilled certified optician will work directly with you to choose the contact lenses that are right for you.
       h4 Popular Brands Include:
-      table#cls-brands
+      table.table
         tr
           td Acuvue Oasys 
         tr
@@ -82,7 +82,7 @@ block content
       h3 Is your eye red, irritated, scratchy, watery, or painful? Dr. Conrad is your convenient, quick, and knowledgeable answer.
       p When your eyes are itching, watering, red, irritated, or any combination of symptoms, it is important you receive diagnosis and care in a timely manner from a trained ophthalmologist. Dr. Conrad is more than happy to treat whatever infection or injury you may have. Many chronic infections or injuries can lead to more complicated problems if left unchecked. At Conrad Eye Centers we can get you in our office quickly at a time that is convenient for you. For every injury or infection to the eye Conrad Eye Centers should be your first step in proper diagnosis and treatment.
       #content-divide
-      #common-problem-wrap
+      #common-problem-wrap.gold-bgnd
         select#common-problem
           option Farsighted
           option Nearsightedness
@@ -98,12 +98,17 @@ block content
       #content-divide
       #injury-resource-wrap
         h3 Eye Injury Resources
-        ul
-          li: a(href='') American Academy of Ophthalmology
-          li: a(href='') Eye Surgery Education Council
-          li: a(href='') WebMD
-          li: a(href='') Familydoctor.org
-          li: a(href='') EyeSmart
+        table.table
+          tr
+            td: a(href='') WebMD
+          tr
+            td: a(href='') EyeSmart
+          tr
+            td: a(href='') Familydoctor.org
+          tr
+            td: a(href='') Eye Surgery Education Council
+          tr
+            td: a(href='') American Academy of Ophthalmology 
   #divide-line
   #disease-content.content
     #main-content
@@ -214,7 +219,7 @@ block content
   #pediatric-content.content
     #main-content
       h3 Dr. Conrad sees patients of all ages, and has had additional training in pediatric eye diseases.
-      p Going to the doctor in general can be a troubling experience to a child. Having raised 5 children, Dr. Conrad has a wonderful way with kids of all ages. We see children from six months and up.
+      p Going to the doctor can be a troubling experience for a child. New people and unfamiliar equipment may be scary to little ones. Having raised five children, Dr. Conrad has a wonderful way with kids of all ages. Our friendly, trained staff is ready to help your children have a comfortable, and even pleasant, visit at Conrad Eye Centers. Annual visits help ensure that children’s visual development is progressing properly and enable us to help those with ophthalmologic needs. Proper eye care is essential. Visual health can affect school work, as well as participation in sports, music, and other activities. We see children and youth from age six months and up.
   #divide-line
   #cosmetics-content.content
     #main-content

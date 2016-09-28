@@ -8,27 +8,27 @@ block content
   #general-content.container
     #main-content
       h3 General Information
-      table.table-position.table-text
+      table.table-office-info
         tr
-          td: a(href='tel:1-888-895-2020') 1-888-895-2020
+          td.table-right Toll Free Number:
+          td.table-left: a(href='tel:1-888-895-2020') 1-888-895-2020
         tr
-          td 502-897-5757
-        tr
-          td: a(href='mailto:cec_questions@outlook.com') cec_questions@outlook.com  
+          td.table-right Fax Number:
+          td.table-left 502-897-5757  
       #office-info-wrap
         #office-wrap
           #louisville-wrap
             h3#louisville-link Louisville
             #louisville-info
-              table.table-position.table-text
+              span: a(href='https://www.google.com/maps/dir//Conrad+Eye+Centers,+204+Breckenridge+Ln,+Louisville,+KY+40207/@38.251303,-85.653389,15z/data=!4m15!1m6!3m5!1s0x0:0xebedc6a4a734ae66!2sConrad+Eye+Centers!8m2!3d38.2500728!4d-85.6534103!4m7!1m0!1m5!1m1!1s0x886974db2dd963d9:0xebedc6a4a734ae66!2m2!1d-85.6534103!2d38.2500728?hl=en-US' target='_blank') 204 Breckenridge Lane<br> Louisville, KY 40207
+              table.table-office-info
                 tr
-                  td 204 Breckenridge Lane<br> Louisville, KY 40207
-                tr
-                  td: a(href='tel:502-899-7778') 502-899-7778
+                  td.table-right Phone Number:
+                  td.table-left: a(href='tel:502-899-7778') 502-899-7778
               #louisville-map
               iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3133.2685588918785!2d-85.65560434948111!3d38.25007699234454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886974db2dd963d9%3A0xebedc6a4a734ae66!2sConrad+Eye+Centers!5e0!3m2!1sen!2sus!4v1468868969112" width="450" height="300" frameborder="0" style="border:0" allowfullscreen)
             #louisville-hours
-              table.table-position.table-text
+              table.table.table-hours
                 tr 
                   th Monday
                   td 9am - 5pm*
@@ -57,20 +57,21 @@ block content
                   th Sunday
                   td Closed
                   td Closed
-              p#main-content.office-note *Office is only open for material pickups and administrative needs.
+              p.office-note *Office is only open for material pickups and administrative needs.
 
             #new-albany-wrap
               h3#new-albany-link New Albany
               #new-albany-info
-                table.table-position.table-text
+                span: a(href='https://www.google.com/maps/dir//Conrad+Eye+Center,+Professional+Arts+Building,+1919+State+St+%23210,+New+Albany,+IN+47150/@38.300836,-85.836072,11z/data=!4m15!1m6!3m5!1s0x0:0x780a51940520c991!2sConrad+Eye+Center!8m2!3d38.3008359!4d-85.836072!4m7!1m0!1m5!1m1!1s0x88696c6c2b2af461:0x780a51940520c991!2m2!1d-85.836072!2d38.3008359?hl=en-US' target='_blank') 1919 State Street<br>Suite 210 <br>New Albany, IN 47150
+                table.table-office-info
                   tr
-                    td 1919 State Street<br>Suite 210 <br>New Albany, IN 47150
+                    td Phone Number:
                   tr
                     td: a(href='tel:812-944-6063') 812-944-6063
                 #new-albany-map
                 iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100229.41754664695!2d-85.8149532170875!3d38.27556819591656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88696c6c2b2af461%3A0x780a51940520c991!2sConrad+Eye+Center!5e0!3m2!1sen!2sus!4v1468872270151" width="450" height="300" frameborder="0" style="border:0" allowfullscreen)
               #new-albany-hours
-                table.table-position.table-text
+                table.table.table-hours
                   tr 
                     th Monday
                     td 1pm - 5pm

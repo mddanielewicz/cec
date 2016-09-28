@@ -572,7 +572,7 @@ window.onload = function() {
       document.getElementById('insurance-name').innerHTML = insuranceObj.name;
       
       //html for insurance phone /w tel link      
-      document.getElementById('insurance-phone').innerHTML = 'P. ' + insuranceObj.phone;
+      document.getElementById('insurance-phone').innerHTML = 'Phone: ' + insuranceObj.phone;
       document.getElementById('insurance-phone').setAttribute('href', "tel:"+insuranceObj.phone);
     }
     
