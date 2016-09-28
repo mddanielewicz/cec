@@ -725,6 +725,145 @@ window.onload = function() {
           staticNav.style.top='3%';
         }
       });
+    
+    //Time tracker for location hours
+    function businessHours(){
+      var t = new Date();
+      var day = t.getDay();
+      var h = t.getHours();
+      var m = t.getMinutes();
+      console.log('Time: '+t);
+      console.log('Day: '+day);
+      console.log('Hours: '+h);
+      console.log('Min: '+m);
+      //Get Status Elements
+      //Louisville
+      var louMonday = document.getElementsByClassName('status-1-1')[0];
+      var louTuesday = document.getElementsByClassName('status-1-2')[0];
+      var louWednesday = document.getElementsByClassName('status-1-3')[0];
+      var louThursday = document.getElementsByClassName('status-1-4')[0];
+      var louFriday = document.getElementsByClassName('status-1-5')[0];
+      var louSaturday = document.getElementsByClassName('status-1-6')[0];
+      var louSaturday = document.getElementsByClassName('status-1-7')[0];
+      //New Albany
+      var newAlbanyMonday = document.getElementsByClassName('status-2-1')[0];
+      var newAlbanyTuesday = document.getElementsByClassName('status-2-2')[0];
+      var newAlbanyWednesday = document.getElementsByClassName('status-2-3')[0];
+      var newAlbanyThursday = document.getElementsByClassName('status-2-4')[0];
+      var newAlbanyFriday = document.getElementsByClassName('status-2-5')[0];
+      var newAlbanySaturday = document.getElementsByClassName('status-2-6')[0];
+      var newAlbanySunday = document.getElementsByClassName('status-2-7')[0];
+      
+      
+      console.log(louWednesday[0]);
+      //Select day and update status'
+      //Monday
+      if (day === 1) {
+        //Closed before 12:30
+        if (h <= 12 && m <= 30) {
+          louMonday.innerHTML='Closed';
+          newAlbanyMonday.innerHTML='Closed';
+        }else if (h === 12 && m <= 59){
+          louMonday.innerHTML='Closed';
+          newAlbanyMonday.innerHTML='Opening Soon';
+        }else if ( h <= 16 && m <= 30) {
+          louMonday.innerHTML='Open';
+          newAlbanyMonday.innerHTML='Open';
+        }else if (h === 16 && m <= 59){
+          louMonday.innerHTML='Closing Soon';
+          newAlbanyMonday.innerHTML='Closing Soon';
+        }else if (h >= 17){
+          louMonday.innerHTML = 'Closed';
+          newAlbanyMonday.innerHTML = 'Closed';
+        }
+      }else if (day === 2) {
+        console.log("today is day 3");
+        //Closed before 8:30
+        if (h <= 8 && m <= 30) {
+          louTuesday.innerHTML='Closed';
+          newAlbanyTuesday.innerHTML='Closed';
+        }else if (h === 8 && m <= 59){
+          louTuesday.innerHTML='Opening Soon';
+          newAlbanyTuesday.innerHTML='Closed';
+        }else if ( h <= 16 && m <= 30) {
+          louTuesday.innerHTML='Open';
+          newAlbanyTuesday.innerHTML='Closed';
+        }else if (h === 16 && m <= 59){
+          louTuesday.innerHTML='Closing Soon';
+          newAlbanyTuesday.innerHTML='Closed';
+        }else if (h >= 17){
+          louTuesday.innerHTML = 'Closed';
+          newAlbanyTuesday.innerHTML = 'Closed';
+        }
+      }else if (day === 3) {
+        //Closed before 8:30
+        if (h <= 8 && m <= 30) {
+          louWednesday.innerHTML='Closed';
+          newAlbanyWednesday.innerHTML='Closed';
+        }else if (h === 8 && m <= 59){
+          louWednesday.innerHTML='Opening Soon';
+          newAlbanyWednesday.innerHTML='Opening Soon';
+        }else if ( h <= 16 && m <= 30) {
+          louWednesday.innerHTML='Open';
+          newAlbanyWednesday.innerHTML='Open';
+        }else if (h === 16 && m <= 59){
+          louWednesday.innerHTML='Closing Soon';
+          newAlbanyWednesday.innerHTML='Closing Soon';
+        }else if (h >= 17){
+          louWednesday.innerHTML = 'Closed';
+          newAlbanyWednesday.innerHTML = 'Closed';
+        }
+      }else if (day === 4) {
+        //Closed before 8:30
+        if (h <= 8 && m <= 30) {
+          louThursday.append='Closed';
+          newAlbanyThursday.innerHTML='Closed';
+        }else if (h === 8 && m <= 59){
+          louThursday.append='Opening Soon';
+          newAlbanyThursday.innerHTML='Closed';
+        }else if ( h <= 16 && m <= 30) {
+          louThursday.innerHTML='Open';
+          newAlbanyThursday.innerHTML='Closed';
+        }else if (h === 16 && m <= 59){
+          louThursday.innerHTML='Closing Soon';
+          newAlbanyThursday.innerHTML='Closed';
+        }else if (h >= 17){
+          louThursday.innerHTML = 'Closed';
+          newAlbanyThursday.innerHTML = 'Closed';
+        }
+      }else if (day === 5) {
+        //Closed before 8:30
+        if (h <= 8 && m <= 30) {
+          louThursday.append='Closed';
+          newAlbanyThursday.innerHTML='Closed';
+        }else if (h === 8 && m <= 59){
+          louThursday.append='Opening Soon';
+          newAlbanyThursday.innerHTML='Closed';
+        }else if ( h <= 16 && m <= 30) {
+          louThursday.innerHTML='Open';
+          newAlbanyThursday.innerHTML='Closed';
+        }else if (h === 16 && m <= 59){
+          louThursday.innerHTML='Closing Soon';
+          newAlbanyThursday.innerHTML='Closed';
+        }else if (h >= 17){
+          louThursday.innerHTML = 'Closed';
+          newAlbanyThursday.innerHTML = 'Closed';
+        }
+      }else if (day === 6) {
+        //Closed before 8:30
+        if (h >= 0) {
+          louThursday.append='Closed';
+          newAlbanyThursday.innerHTML='Closed';
+        }
+      }else if (day === 7) {
+        //Closed before 8:30
+        if (h >= 0) {
+          louThursday.append='Closed';
+          newAlbanyThursday.innerHTML='Closed';
+        }
+      }
+    }
+    window.onload = businessHours();
            
   }
   else if(window.location.pathname == '/resources'){
@@ -1032,25 +1171,30 @@ window.onload = function() {
        {name: 'Three Rivers Preferred', 
         phone: '1-260-479-3553'} ]
     
-    //Get insurance name from service dropdown 
+    window.onload = getInsuranceName();
+    document.getElementById('insurance-picker').onclick = getInsuranceName;
+    
+    function getInsuranceName() {
+      //Get insurance name from service dropdown 
       var insuranceName = document.getElementById('insurance-picker');
       var insuranceNameVal = insuranceName.value;
-
-      insuranceName.onchange = function() {
-        insuranceNameVal = insuranceName.value;
-        function findinsurance(insInfo){
-          return insInfo.name === insuranceNameVal;
-        }
-        //gets object for selected insurance carrier
-        var insuranceObj = medicalInsurances.find(findinsurance);
-
-        //html for insurance carrier
-        document.getElementById('insurance-name').innerHTML = insuranceObj.name;
-
-        //html for insurance phone /w tel link      
-        document.getElementById('insurance-phone').innerHTML = 'P. ' + insuranceObj.phone;
-        document.getElementById('insurance-phone').setAttribute('href', "tel:"+insuranceObj.phone);
+      
+      insuranceNameVal = insuranceName.value;
+      function findinsurance(insInfo){
+        return insInfo.name === insuranceNameVal;
       }
+    
+      
+      //gets object for selected insurance carrier
+      var insuranceObj = medicalInsurances.find(findinsurance);
+      
+      //html for insurance carrier
+      document.getElementById('insurance-name').innerHTML = insuranceObj.name;
+      
+      //html for insurance phone /w tel link      
+      document.getElementById('insurance-phone').innerHTML = 'Phone: ' + insuranceObj.phone;
+      document.getElementById('insurance-phone').setAttribute('href', "tel:"+insuranceObj.phone);
+    }
   }
   else if(window.location.pathname == '/contact'){
     //CONTACT PAGE JS

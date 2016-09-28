@@ -1,231 +1,232 @@
 extends layout
 
 block content
-  #static-nav
-    ul
-        each val in ['Eye Exams', 'Glasses and Contacts', 'Eye Injuries and Infections', 'Eye Diseases', 'Laser Vsion Correction', 'Eye Implants', 'Pediatric Ophthamology', 'Cosmetics']
-          li(id=val): p: a= val          
-  #eye-exam-content.content
-    #main-content
-      h3 Conrad Eye Centers focuses on your vision with one-on-one personalized eye exams for any age.
-      p We know your sight is important. That is why Dr. Conrad personally examines every patient. Dr. Conrad is a trained and nationally recognized ophthalmologist; this means during even a routine eye exam everything about your eye is being examined by one of the best medical doctors in Louisville. Though optometrists are qualified to prescribe glasses and contacts and even treat some disorders of the eye, an ophthalmologist is a medical doctor who can prescribe contacts and glasses, diagnose and treat all conditions of the eye, prescribe medications, and perform surgery on the eye.
-      p We accept most vision and eye care plans. Every full routine eye exam will leave you with a custom prescription for glasses and the assurance that you had the most in-depth exam possible.
-      #content-divide
-      #insurance-wraper.gold-bgnd
-        h3 In-Network Insurance
-        select#insurance-picker
-          -var medicalInsurances = [ {name: 'AARP - UHC'},{name: 'Advantica'},{name: 'Advantra Freedom'},{name: 'Aetna'},{name: 'Aetna Senior Supplemental'},{name: 'All Savers'},{name: 'Alliance Healthcare Solutions'},{name: 'Allied Benefit Systems'},{name: 'AlwaysCare Benefits'},{name: 'Ambetter'},{name: 'American Administrator'},{name: 'American Republic'},{name: 'Ameritas Life'},{name: 'Anthem IN Medicaid'},{name: 'Anthem Indiana'},{name: 'Anthem Kentucky'},{name: 'APWU'},{name: 'Assurant Health'},{name: 'Bankers Life'},{name: 'Baptist Health Plan'},{name: 'Beech Street'},{name: 'Benefit Planners'},{name: 'Benesight'},{name: 'Benovision'},{name: 'Block Vision'},{name: 'Blue Cross Blue Shield of Georgia'},{name: 'Blue Cross Blue Shield of Illinois'},{name: 'Blue Cross Blue Shield of Indiana'},{name: 'Blue Cross Blue Shield of Kentucky'},{name: 'BP Benefit Planners'},{name: 'CareFirst Administrators'},{name: 'Caresource Just4Me - Indiana'},{name: 'Caresource Just4Me - Kentucky'},{name: 'CHA Health'},{name: 'ChampVA'},{name: 'Christian Brothers Services'},{name: 'Cigna'},{name: 'Cigna Medical Access'},{name: 'Coloniel Penn'},{name: 'consumers life member service'},{name: 'Co-ordinated Benefits Plan'},{name: 'Coresource'},{name: 'Corporate Benefit'},{name: 'Coventry'},{name: 'Empire Plan'},{name: 'Essence'},{name: 'Eyecare of America'},{name: 'Family Life Insurance Company'},{name: 'Federated'},{name: 'First Health'},{name: 'Freedom Life Insurance'},{name: 'Gateway Health'},{name: 'GEHA'},{name: 'GHI'},{name: 'Gilsbar'},{name: 'GMMI'},{name: 'Golden Rule'},{name: 'Great West'},{name: 'Guardian - Davis Vision'},{name: 'Guardian - VSP'},{name: 'Harington Benefits Services'},{name: 'Health Partners'},{name: 'Health Smart'},{name: 'HealthStar'},{name: 'Hoosier Alliance'},{name: 'Humana'},{name: 'Humana Caresource'},{name: 'Indiana Farm Bureau Insurance'},{name: 'Kentucky Health Cooperative'},{name: 'Key Benefit Administrators'},{name: 'Klais Co'},{name: 'Loyal American'},{name: 'Mailhandlers'},{name: 'Managed Health Services'},{name: 'MDWise'},{name: 'Medben'},{name: 'Medicaid Indiana'},{name: 'Medicaid KY EDS'},{name: 'Medical Mutual'},{name: 'Medical Mutual of Ohio'},{name: 'Medicare B Kentucky'},{name: 'Medicare IN'},{name: 'Medico Insurance Company'},{name: 'Mega Life'},{name: 'Meritain Health'},{name: 'MOAA'},{name: 'Mutual of Omaha'},{name: 'NALC'},{name: 'NGS American'},{name: 'Nippon Life'},{name: 'North American Administrators'},{name: 'Passport Health Plan'},{name: 'Passport Medicare Advantage Plan'},{name: 'PHCS'},{name: 'Physicians Mutual Insurance Company'},{name: 'PIA'},{name: 'Preferred Helath Plan'},{name: 'Principal Life'},{name: 'Railroad Medicare'},{name: 'Sagamore'},{name: 'SIHO'},{name: 'Standard Life & Accident Ins'},{name: 'Starark'},{name: 'Sterling Option'},{name: 'Superior Vision'},{name: 'Three Rivers Preferred'} ]
-          each insurance in medicalInsurances
-            option= insurance.name
-        #insurance-info
-          h3 Member Benefit Contact
-          span: p#insurance-name.center
-          span: p.center: a#insurance-phone      
-  #divide-line
-  #gls-cls-content.content
-    #main-content
-      h3 Each of our locations has a full service optical boutique. Our optician has years of experience and will work one-on-one with you to find the perfect balance of style, quality, and affordability.
-      h4 Glasses
-      p Conrad Eye Centers specializes in providing each patient with a wide array of choices for lenses and frames alike. We believe in custom building the perfect glasses for the individual, and we offer top-end name brand frames at affordable prices. When choosing the frames and lenses, it is important to consider your facial features, personal style, and day-to-day activities. Our skilled certified optician will work directly with you to choose the best combination.
-      h4 Popular Brands Include:
-      table.table
-        tr
-          td Airstar
-        tr
-          td Camelot
-        tr
-          td Tura
-        tr
-          td Espirit
-        tr
-          td Ted Becker
-        tr
-          td Guess
-        tr
-          td Vera Bradley
-        tr
-          td Joseph Aboud
-        tr
-          td Lido West
-        tr
-          td Anne Klein
-        tr
-          td Elle
-        tr
-          td Charmont
-        tr 
-          td Safilo
-        tr
-          td Anne Cline 
-        tr
-          td Ted Becker
-        tr
-          td Alexander Julian
-        tr
-          td Kate Spade
-      #content-divide
-      h4 Contacts
-      p Dr. Conrad fits all types of contact lenses, including soft, rigid, multi-focal and specialty contacts. We carry all major types including daily disposable lenses, rigid gas permeable lenses, and multifocal lenses. Our skilled certified optician will work directly with you to choose the contact lenses that are right for you.
-      h4 Popular Brands Include:
-      table.table
-        tr
-          td Acuvue Oasys 
-        tr
-          td Acuvue Dailies
-        tr
-          td Bausch and Lomb 
-        tr
-          td Color Contacts
-  #divide-line
-  #injury-content.container
-    #main-content
-      h3 Is your eye red, irritated, scratchy, watery, or painful? Dr. Conrad is your convenient, quick, and knowledgeable answer.
-      p When your eyes are itching, watering, red, irritated, or any combination of symptoms, it is important you receive diagnosis and care in a timely manner from a trained ophthalmologist. Dr. Conrad is more than happy to treat whatever infection or injury you may have. Many chronic infections or injuries can lead to more complicated problems if left unchecked. At Conrad Eye Centers we can get you in our office quickly at a time that is convenient for you. For every injury or infection to the eye Conrad Eye Centers should be your first step in proper diagnosis and treatment.
-      #content-divide
-      #common-problem-wrap.gold-bgnd
-        select#common-problem
-          option Farsighted
-          option Nearsightedness
-          option Presbyopia
-          option Astigmatism
-          option Dry Eye Syndrome
-          option Cataracts
-          option Glaucoma
-          option Macular degeneration
-          option Floaters and flashes
-          option Pink Eye
-        p#common-problem-text
-      #content-divide
-      #injury-resource-wrap
-        h3 Eye Injury Resources
+  #page-container
+    #static-nav
+      ul
+          each val in ['Eye Exams', 'Glasses and Contacts', 'Eye Injuries and Infections', 'Eye Diseases', 'Laser Vsion Correction', 'Eye Implants', 'Pediatric Ophthamology', 'Cosmetics']
+            li(id=val): p: a= val          
+    #eye-exam-content.content
+      #main-content
+        h3 Conrad Eye Centers focuses on your vision with one-on-one personalized eye exams for any age.
+        p We know your sight is important. That is why Dr. Conrad personally examines every patient. Dr. Conrad is a trained and nationally recognized ophthalmologist; this means during even a routine eye exam everything about your eye is being examined by one of the best medical doctors in Louisville. Though optometrists are qualified to prescribe glasses and contacts and even treat some disorders of the eye, an ophthalmologist is a medical doctor who can prescribe contacts and glasses, diagnose and treat all conditions of the eye, prescribe medications, and perform surgery on the eye.
+        p We accept most vision and eye care plans. Every full routine eye exam will leave you with a custom prescription for glasses and the assurance that you had the most in-depth exam possible.
+        #content-divide
+        #insurance-wraper.gold-bgnd
+          h3 In-Network Insurance
+          select#insurance-picker
+            -var medicalInsurances = [ {name: 'AARP - UHC'},{name: 'Advantica'},{name: 'Advantra Freedom'},{name: 'Aetna'},{name: 'Aetna Senior Supplemental'},{name: 'All Savers'},{name: 'Alliance Healthcare Solutions'},{name: 'Allied Benefit Systems'},{name: 'AlwaysCare Benefits'},{name: 'Ambetter'},{name: 'American Administrator'},{name: 'American Republic'},{name: 'Ameritas Life'},{name: 'Anthem IN Medicaid'},{name: 'Anthem Indiana'},{name: 'Anthem Kentucky'},{name: 'APWU'},{name: 'Assurant Health'},{name: 'Bankers Life'},{name: 'Baptist Health Plan'},{name: 'Beech Street'},{name: 'Benefit Planners'},{name: 'Benesight'},{name: 'Benovision'},{name: 'Block Vision'},{name: 'Blue Cross Blue Shield of Georgia'},{name: 'Blue Cross Blue Shield of Illinois'},{name: 'Blue Cross Blue Shield of Indiana'},{name: 'Blue Cross Blue Shield of Kentucky'},{name: 'BP Benefit Planners'},{name: 'CareFirst Administrators'},{name: 'Caresource Just4Me - Indiana'},{name: 'Caresource Just4Me - Kentucky'},{name: 'CHA Health'},{name: 'ChampVA'},{name: 'Christian Brothers Services'},{name: 'Cigna'},{name: 'Cigna Medical Access'},{name: 'Coloniel Penn'},{name: 'consumers life member service'},{name: 'Co-ordinated Benefits Plan'},{name: 'Coresource'},{name: 'Corporate Benefit'},{name: 'Coventry'},{name: 'Empire Plan'},{name: 'Essence'},{name: 'Eyecare of America'},{name: 'Family Life Insurance Company'},{name: 'Federated'},{name: 'First Health'},{name: 'Freedom Life Insurance'},{name: 'Gateway Health'},{name: 'GEHA'},{name: 'GHI'},{name: 'Gilsbar'},{name: 'GMMI'},{name: 'Golden Rule'},{name: 'Great West'},{name: 'Guardian - Davis Vision'},{name: 'Guardian - VSP'},{name: 'Harington Benefits Services'},{name: 'Health Partners'},{name: 'Health Smart'},{name: 'HealthStar'},{name: 'Hoosier Alliance'},{name: 'Humana'},{name: 'Humana Caresource'},{name: 'Indiana Farm Bureau Insurance'},{name: 'Kentucky Health Cooperative'},{name: 'Key Benefit Administrators'},{name: 'Klais Co'},{name: 'Loyal American'},{name: 'Mailhandlers'},{name: 'Managed Health Services'},{name: 'MDWise'},{name: 'Medben'},{name: 'Medicaid Indiana'},{name: 'Medicaid KY EDS'},{name: 'Medical Mutual'},{name: 'Medical Mutual of Ohio'},{name: 'Medicare B Kentucky'},{name: 'Medicare IN'},{name: 'Medico Insurance Company'},{name: 'Mega Life'},{name: 'Meritain Health'},{name: 'MOAA'},{name: 'Mutual of Omaha'},{name: 'NALC'},{name: 'NGS American'},{name: 'Nippon Life'},{name: 'North American Administrators'},{name: 'Passport Health Plan'},{name: 'Passport Medicare Advantage Plan'},{name: 'PHCS'},{name: 'Physicians Mutual Insurance Company'},{name: 'PIA'},{name: 'Preferred Helath Plan'},{name: 'Principal Life'},{name: 'Railroad Medicare'},{name: 'Sagamore'},{name: 'SIHO'},{name: 'Standard Life & Accident Ins'},{name: 'Starark'},{name: 'Sterling Option'},{name: 'Superior Vision'},{name: 'Three Rivers Preferred'} ]
+            each insurance in medicalInsurances
+              option= insurance.name
+          #insurance-info
+            h3 Member Benefit Contact
+            span: p#insurance-name.center
+            span: p.center: a#insurance-phone      
+    #divide-line
+    #gls-cls-content.content
+      #main-content
+        h3 Each of our locations has a full service optical boutique. Our optician has years of experience and will work one-on-one with you to find the perfect balance of style, quality, and affordability.
+        h4 Glasses
+        p Conrad Eye Centers specializes in providing each patient with a wide array of choices for lenses and frames alike. We believe in custom building the perfect glasses for the individual, and we offer top-end name brand frames at affordable prices. When choosing the frames and lenses, it is important to consider your facial features, personal style, and day-to-day activities. Our skilled certified optician will work directly with you to choose the best combination.
+        h4 Popular Brands Include:
         table.table
           tr
-            td: a(href='') WebMD
+            td Airstar
           tr
-            td: a(href='') EyeSmart
+            td Camelot
           tr
-            td: a(href='') Familydoctor.org
+            td Tura
           tr
-            td: a(href='') Eye Surgery Education Council
+            td Espirit
           tr
-            td: a(href='') American Academy of Ophthalmology 
-  #divide-line
-  #disease-content.content
-    #main-content
-      h3 Conrad Eye Centers can provide you the best care and treatment in Louisville for chronic eye diseases such as glaucoma, macular degeneration, diabetic retinopathy, and many others.
-      p Preserving your eyesight is our top priority at Conrad Eye Centers. Dr. Conrad was named a Scholar in Pathology at Duke University School of Medicine and having collaborated alongside some of the top minds in the world he is an expert in the treatment of eye disease. We use the latest in diagnostic and treatment technology including Optical Coherence Tomography (OCT), visual field exams, pachymetry, intraocular photography, and corneal topography.
-      p Since Conrad Eye Centers is a single physician practice, you can rest assured you will never be bounced back and forth between doctors. All treatment is conducted by Dr. Conrad himself, and he will personally see you at every visit. Dr. Conrad feels that making sure the patient is completely satisfied and current on their condition is of paramount importance. At Conrad Eye Centers we educate you about your eye conditions so you may understand and participate in your eye care.
-      #content-divide
-      #premium-testing-wraper
-       #glaucoma-package
-       h3 Premium Testing
-       h4 Glaucoma Risk Assessment*
-       p Learn your rist for glaucoma with out premium Glaucoma Risk Assessment package. We will measure the thickness of your corneas and scan your optic nerve. At these screenings, the doctor will personally discuss your risk factors and any recomendations. As many as two million Americans may have glaucoma, but over 50% of them don't know it.
-       #retinal-package
-       h4 Retinal Health Assessment*
-       p Without a healthy retina, the human eye is like a camera without film. Retinal disease or injury often results in partial or complete vision loss. Learn your risks for retinal diseases like diabetic retinopathy, macular degeneration, and more with our Premium Health Assessment package. We will take a focused look at the back of your eye by scanning the retina. At these screenings, the doctor will personally discuss your risk factors and any recomendations.
-       table#premium-testing-chart
-        tr
-         th 
-         th: p Glaucoma Risk Assessment
-         th: p Retinal Health Assessment
-        tr
-         th: p Do you have a family history of macular degeneration?
-         td: p No
-         td: p Yes
-        tr
-         th: p Do you have a family history of diabetic retinopathy?
-         td: p No
-         td: p Yes
-        tr
-         th: p When you look at lines, do they appear wavy?
-         td: p No
-         td: p Yes
-        tr
-         th: p Have you noticed your vision is becoming blury?
-         td: p No
-         td: p Yes
-        tr
-         th: p Do you see spots in your vision?
-         td: p No
-         td: p Yes
-        tr
-         th: p Are you seeing floaters in your vision?
-         td: p No
-         td: p Yes
-        tr
-         th: p Do you have a family history of eye disease?
-         td: p Yes
-         td: p Yes
-        tr
-         th: p Have you noticed partial loss of vision?
-         td: p Yes
-         td: p Yes
-        tr
-         th: p Is it difficlt for you to see in dim light?
-         td: p Yes
-         td: p Yes
-        tr
-         th: p Do areas in your vision apear to be darker then others?
-         td: p Yes
-         td: p Yes
-        tr
-         th: p Are you having difficulty preceving colors?
-         td: p Yes
-         td: p Yes
-       h3 Schedule your Premium Testing today!
-       form#form-new(name="premiumPackageForm" action="premiumPackage" method="post")
-         input(type='text' id='premiumFirstName' name="premiumFirstName" placeholder='First Name')
-         input(type='text' id='premiumLastName' name="premiumLastName" placeholder='Last Name')
-         input(type='tel' id='premiumPhone' name="premiumPhone" placeholder='###-###-####')
-         input(type='email' id='premiumEmail' name="premiumEmail" placeholder='Email')
-         select(id='premiumPackage' name='premiumPackage')
-             option(value='Glaucoma Risk Assessment') Glaucoma Risk Assessment
-             option(value='Retinal Health Assessment') Retinal Health Assessment
-             option(value='Premium Eye Health Package - Both') Premium Eye Health Package - Both
-         label(for='premiumFirstAppointment') Preferred appointment date
-         input(type='date' id='premiumFirstApt' name="premiumFirstAppointment" )
-         label(for='premiumSecondtAppointment') Secondary appointment date
-         input(type='date' id='premiumSecondApt' name="premiumSecondAppointment")
-         input(type='submit' value='Submit')
-  #divide-line
-  #laser-vis-content.content
-    #main-content
-      h3 LASIK (Laser-Assisted In-Situ Keratomileusis)
-      h4 Dr. Conrad was one of the first surgeons in the Louisville area to perform FDA-approved laser vision correction and has been performing these procedures since 1997.
-      p LASIK procedures boast high patient satisfaction and in many cases underestimated affordability. When compared to contact lens use, many patients can actually save money over the long run with LASIK. According to an article published by WebMD in 2006, when the cost of office visits, fitting fees, and contact lenses is tabulated over the average length of time a person wears contacts (10-20 years) contact lens use can add up to between $9,000 and $15,000! That can make anyone feel like taking a second look at LASIK especially when we offer FREE LASIK SCREENING and payment packages as low as $65/month!
-      p LASIK procedures boast high patient satisfaction and in many cases underestimated affordability. When compared to contact lens use, many patients can actually save money over the long run with LASIK. According to an article published by WebMD in 2006, when the cost of office visits, fitting fees, and contact lenses is tabulated over the average length of time a person wears contacts (10-20 years) contact lens use can add up to between $9,000 and $15,000! That can make anyone feel like taking a second look at LASIK especially when we offer FREE LASIK SCREENING and payment packages as low as $65/month!
-      h3 Surface Ablation, or PRK (Photo-Refractive Keratectomy)
-      h4 There are some patients in which Lasik is not the best choice for laser vision correction. For these patients, surface ablation or PRK is better.
-      p PRK was developed prior to LASIK and was the foundation for the LASIK procedure. Unlike LASIK, PRK does not create a corneal flap. Instead an excimer laser is used directly on the outer surface of the cornea to reshape it. This can allow patients that may not be good candidates for LASIK due to thinner corneas or a handful of other reasons to still have a highly successful option in laser refractive procedures. Dr. Conrad is happy to discuss your options and help you decide which procedure is right for you.
-      #content-divide
-      h3 Schedule your consult today!
-      form#form-new(name="lasikPackage" action="lasikPackage" method="post")
-        input(type='text' id='lasikFirstName' name="lasikFirstName" placeholder='First Name')
-        input(type='text' id='lasikLastName' name="lasikLastName" placeholder='Last Name')
-        input(type='tel' id='lasikPhone' name="lasikPhone" placeholder='###-###-####')
-        input(type='email' id='lasikEmail' name="lasikEmail" placeholder='Email')
-        label(for='lasikFirstAppointment') Preferred appointment date
-        input(type='date' id='lasikFirstApt' name="lasikFirstAppointment" )
-        label(for='lasikSecondtAppointment') Secondary appointment date
-        input(type='date' id='lasikSecondApt' name="lasikSecondAppointment")
-        input(type='submit' value='Submit')
-  #divide-line
-  #implant-content.content
-    #main-content
-      h3 Conrad Eye Centers uses the most advanced multi-focal lens implant technology in intraocular lens replacement for cataracts.
-      p As we age, the eye’s central focusing structure, the lens, becomes cloudy or  hazy due to the natural breakdown of the crystalline structures that compose it. This condition is known as a cataract and causes blurry or hazy vision. Cataracts that impair the vision must be removed surgically. In this procedure, Dr. Conrad will replace the natural lens with an artificial lens implant which can be either monofocal or multifocal. Monofocal implants have been in widespread use since the 70’s and are safe and effective. However, monofocal implants allow good vision at only one distance; so glasses are needed to see well at other distances. Multifocal implants, on the other hand, can focus at both near and far, greatly reducing the need for glasses after cataract surgery. Dr. Conrad is a certified surgeon for the ReStor and Crystallens multifocal lenses. Most patients get better vision than they have ever experienced, and many do not need glasses. Dr. Conrad will help you decide which option is best for you, and should you choose to invest in your eyesight with a multifocal lens, we can determine an easy payment plan for you at our office.
-  #divide-line
-  #pediatric-content.content
-    #main-content
-      h3 Dr. Conrad sees patients of all ages, and has had additional training in pediatric eye diseases.
-      p Going to the doctor can be a troubling experience for a child. New people and unfamiliar equipment may be scary to little ones. Having raised five children, Dr. Conrad has a wonderful way with kids of all ages. Our friendly, trained staff is ready to help your children have a comfortable, and even pleasant, visit at Conrad Eye Centers. Annual visits help ensure that children’s visual development is progressing properly and enable us to help those with ophthalmologic needs. Proper eye care is essential. Visual health can affect school work, as well as participation in sports, music, and other activities. We see children and youth from age six months and up.
-  #divide-line
-  #cosmetics-content.content
-    #main-content
-      h2 Botox
-      h3 Make those wrinkles disappear with a quick visit to Conrad Eye Centers. We safely administer effective Botox cosmetic and medical injections at competitive rates.
-      p Botox is used in very minute quantities for multiple purposes. Medically, Botox is can be used to treat slight muscle spasms including those in the eyes and eyelids; however, most people know Botox for it’s cosmetic use. Botox can be used to effectively reduce the wrinkles and tension lines on the face. It can also be used to relieve intense underarm sweating. Dr. Conrad has years of experience in proper administration of Botox and would love to help you relieve your muscle spasms or take a few years off your look. Whatever your need we can be your one-stop Botox treatment.
-      h3 Latisse
-      h3 Do not pay more for the cosmetic eyelash drug sweeping the nation when we have it for less!
-      p After releasing Latisse in 2008, this once daily treatment for eyelash growth quickly swept the nation. Using a small brush to administer the product, you can expect full, dark, lush lashes in just 6 to 12 weeks. We have seen a wonderful result and outstanding patient satisfaction with this product and enjoy offering it to our patients for what we believe is the cheapest price in Louisville. Since Latisse is a prescription drug Dr. Conrad needs to conduct a full eye exam before beginning Latisse, so call today to schedule your appointment!
+            td Ted Becker
+          tr
+            td Guess
+          tr
+            td Vera Bradley
+          tr
+            td Joseph Aboud
+          tr
+            td Lido West
+          tr
+            td Anne Klein
+          tr
+            td Elle
+          tr
+            td Charmont
+          tr 
+            td Safilo
+          tr
+            td Anne Cline 
+          tr
+            td Ted Becker
+          tr
+            td Alexander Julian
+          tr
+            td Kate Spade
+        #content-divide
+        h4 Contacts
+        p Dr. Conrad fits all types of contact lenses, including soft, rigid, multi-focal and specialty contacts. We carry all major types including daily disposable lenses, rigid gas permeable lenses, and multifocal lenses. Our skilled certified optician will work directly with you to choose the contact lenses that are right for you.
+        h4 Popular Brands Include:
+        table.table
+          tr
+            td Acuvue Oasys 
+          tr
+            td Acuvue Dailies
+          tr
+            td Bausch and Lomb 
+          tr
+            td Color Contacts
+    #divide-line
+    #injury-content.container
+      #main-content
+        h3 Is your eye red, irritated, scratchy, watery, or painful? Dr. Conrad is your convenient, quick, and knowledgeable answer.
+        p When your eyes are itching, watering, red, irritated, or any combination of symptoms, it is important you receive diagnosis and care in a timely manner from a trained ophthalmologist. Dr. Conrad is more than happy to treat whatever infection or injury you may have. Many chronic infections or injuries can lead to more complicated problems if left unchecked. At Conrad Eye Centers we can get you in our office quickly at a time that is convenient for you. For every injury or infection to the eye Conrad Eye Centers should be your first step in proper diagnosis and treatment.
+        #content-divide
+        #common-problem-wrap.gold-bgnd
+          select#common-problem
+            option Farsighted
+            option Nearsightedness
+            option Presbyopia
+            option Astigmatism
+            option Dry Eye Syndrome
+            option Cataracts
+            option Glaucoma
+            option Macular degeneration
+            option Floaters and flashes
+            option Pink Eye
+          p#common-problem-text
+        #content-divide
+        #injury-resource-wrap
+          h3 Eye Injury Resources
+          table.table
+            tr
+              td: a(href='') WebMD
+            tr
+              td: a(href='') EyeSmart
+            tr
+              td: a(href='') Familydoctor.org
+            tr
+              td: a(href='') Eye Surgery Education Council
+            tr
+              td: a(href='') American Academy of Ophthalmology 
+    #divide-line
+    #disease-content.content
+      #main-content
+        h3 Conrad Eye Centers can provide you the best care and treatment in Louisville for chronic eye diseases such as glaucoma, macular degeneration, diabetic retinopathy, and many others.
+        p Preserving your eyesight is our top priority at Conrad Eye Centers. Dr. Conrad was named a Scholar in Pathology at Duke University School of Medicine and having collaborated alongside some of the top minds in the world he is an expert in the treatment of eye disease. We use the latest in diagnostic and treatment technology including Optical Coherence Tomography (OCT), visual field exams, pachymetry, intraocular photography, and corneal topography.
+        p Since Conrad Eye Centers is a single physician practice, you can rest assured you will never be bounced back and forth between doctors. All treatment is conducted by Dr. Conrad himself, and he will personally see you at every visit. Dr. Conrad feels that making sure the patient is completely satisfied and current on their condition is of paramount importance. At Conrad Eye Centers we educate you about your eye conditions so you may understand and participate in your eye care.
+        #content-divide
+        #premium-testing-wraper
+         #glaucoma-package
+         h3 Premium Testing
+         h4 Glaucoma Risk Assessment*
+         p Learn your rist for glaucoma with out premium Glaucoma Risk Assessment package. We will measure the thickness of your corneas and scan your optic nerve. At these screenings, the doctor will personally discuss your risk factors and any recomendations. As many as two million Americans may have glaucoma, but over 50% of them don't know it.
+         #retinal-package
+         h4 Retinal Health Assessment*
+         p Without a healthy retina, the human eye is like a camera without film. Retinal disease or injury often results in partial or complete vision loss. Learn your risks for retinal diseases like diabetic retinopathy, macular degeneration, and more with our Premium Health Assessment package. We will take a focused look at the back of your eye by scanning the retina. At these screenings, the doctor will personally discuss your risk factors and any recomendations.
+         table#premium-testing-chart
+          tr
+           th 
+           th: p Glaucoma Risk Assessment
+           th: p Retinal Health Assessment
+          tr
+           th: p Do you have a family history of macular degeneration?
+           td: p No
+           td: p Yes
+          tr
+           th: p Do you have a family history of diabetic retinopathy?
+           td: p No
+           td: p Yes
+          tr
+           th: p When you look at lines, do they appear wavy?
+           td: p No
+           td: p Yes
+          tr
+           th: p Have you noticed your vision is becoming blury?
+           td: p No
+           td: p Yes
+          tr
+           th: p Do you see spots in your vision?
+           td: p No
+           td: p Yes
+          tr
+           th: p Are you seeing floaters in your vision?
+           td: p No
+           td: p Yes
+          tr
+           th: p Do you have a family history of eye disease?
+           td: p Yes
+           td: p Yes
+          tr
+           th: p Have you noticed partial loss of vision?
+           td: p Yes
+           td: p Yes
+          tr
+           th: p Is it difficlt for you to see in dim light?
+           td: p Yes
+           td: p Yes
+          tr
+           th: p Do areas in your vision apear to be darker then others?
+           td: p Yes
+           td: p Yes
+          tr
+           th: p Are you having difficulty preceving colors?
+           td: p Yes
+           td: p Yes
+         h3 Schedule your Premium Testing today!
+         form#form-new(name="premiumPackageForm" action="premiumPackage" method="post")
+           input(type='text' id='premiumFirstName' name="premiumFirstName" placeholder='First Name')
+           input(type='text' id='premiumLastName' name="premiumLastName" placeholder='Last Name')
+           input(type='tel' id='premiumPhone' name="premiumPhone" placeholder='###-###-####')
+           input(type='email' id='premiumEmail' name="premiumEmail" placeholder='Email')
+           select(id='premiumPackage' name='premiumPackage')
+               option(value='Glaucoma Risk Assessment') Glaucoma Risk Assessment
+               option(value='Retinal Health Assessment') Retinal Health Assessment
+               option(value='Premium Eye Health Package - Both') Premium Eye Health Package - Both
+           label(for='premiumFirstAppointment') Preferred appointment date
+           input(type='date' id='premiumFirstApt' name="premiumFirstAppointment" )
+           label(for='premiumSecondtAppointment') Secondary appointment date
+           input(type='date' id='premiumSecondApt' name="premiumSecondAppointment")
+           input(type='submit' value='Submit')
+    #divide-line
+    #laser-vis-content.content
+      #main-content
+        h3 LASIK (Laser-Assisted In-Situ Keratomileusis)
+        h4 Dr. Conrad was one of the first surgeons in the Louisville area to perform FDA-approved laser vision correction and has been performing these procedures since 1997.
+        p LASIK procedures boast high patient satisfaction and in many cases underestimated affordability. When compared to contact lens use, many patients can actually save money over the long run with LASIK. According to an article published by WebMD in 2006, when the cost of office visits, fitting fees, and contact lenses is tabulated over the average length of time a person wears contacts (10-20 years) contact lens use can add up to between $9,000 and $15,000! That can make anyone feel like taking a second look at LASIK especially when we offer FREE LASIK SCREENING and payment packages as low as $65/month!
+        p LASIK procedures boast high patient satisfaction and in many cases underestimated affordability. When compared to contact lens use, many patients can actually save money over the long run with LASIK. According to an article published by WebMD in 2006, when the cost of office visits, fitting fees, and contact lenses is tabulated over the average length of time a person wears contacts (10-20 years) contact lens use can add up to between $9,000 and $15,000! That can make anyone feel like taking a second look at LASIK especially when we offer FREE LASIK SCREENING and payment packages as low as $65/month!
+        h3 Surface Ablation, or PRK (Photo-Refractive Keratectomy)
+        h4 There are some patients in which Lasik is not the best choice for laser vision correction. For these patients, surface ablation or PRK is better.
+        p PRK was developed prior to LASIK and was the foundation for the LASIK procedure. Unlike LASIK, PRK does not create a corneal flap. Instead an excimer laser is used directly on the outer surface of the cornea to reshape it. This can allow patients that may not be good candidates for LASIK due to thinner corneas or a handful of other reasons to still have a highly successful option in laser refractive procedures. Dr. Conrad is happy to discuss your options and help you decide which procedure is right for you.
+        #content-divide
+        h3 Schedule your consult today!
+        form#form-new(name="lasikPackage" action="lasikPackage" method="post")
+          input(type='text' id='lasikFirstName' name="lasikFirstName" placeholder='First Name')
+          input(type='text' id='lasikLastName' name="lasikLastName" placeholder='Last Name')
+          input(type='tel' id='lasikPhone' name="lasikPhone" placeholder='###-###-####')
+          input(type='email' id='lasikEmail' name="lasikEmail" placeholder='Email')
+          label(for='lasikFirstAppointment') Preferred appointment date
+          input(type='date' id='lasikFirstApt' name="lasikFirstAppointment" )
+          label(for='lasikSecondtAppointment') Secondary appointment date
+          input(type='date' id='lasikSecondApt' name="lasikSecondAppointment")
+          input(type='submit' value='Submit')
+    #divide-line
+    #implant-content.content
+      #main-content
+        h3 Conrad Eye Centers uses the most advanced multi-focal lens implant technology in intraocular lens replacement for cataracts.
+        p As we age, the eye’s central focusing structure, the lens, becomes cloudy or  hazy due to the natural breakdown of the crystalline structures that compose it. This condition is known as a cataract and causes blurry or hazy vision. Cataracts that impair the vision must be removed surgically. In this procedure, Dr. Conrad will replace the natural lens with an artificial lens implant which can be either monofocal or multifocal. Monofocal implants have been in widespread use since the 70’s and are safe and effective. However, monofocal implants allow good vision at only one distance; so glasses are needed to see well at other distances. Multifocal implants, on the other hand, can focus at both near and far, greatly reducing the need for glasses after cataract surgery. Dr. Conrad is a certified surgeon for the ReStor and Crystallens multifocal lenses. Most patients get better vision than they have ever experienced, and many do not need glasses. Dr. Conrad will help you decide which option is best for you, and should you choose to invest in your eyesight with a multifocal lens, we can determine an easy payment plan for you at our office.
+    #divide-line
+    #pediatric-content.content
+      #main-content
+        h3 Dr. Conrad sees patients of all ages, and has had additional training in pediatric eye diseases.
+        p Going to the doctor can be a troubling experience for a child. New people and unfamiliar equipment may be scary to little ones. Having raised five children, Dr. Conrad has a wonderful way with kids of all ages. Our friendly, trained staff is ready to help your children have a comfortable, and even pleasant, visit at Conrad Eye Centers. Annual visits help ensure that children’s visual development is progressing properly and enable us to help those with ophthalmologic needs. Proper eye care is essential. Visual health can affect school work, as well as participation in sports, music, and other activities. We see children and youth from age six months and up.
+    #divide-line
+    #cosmetics-content.content
+      #main-content
+        h2 Botox
+        h3 Make those wrinkles disappear with a quick visit to Conrad Eye Centers. We safely administer effective Botox cosmetic and medical injections at competitive rates.
+        p Botox is used in very minute quantities for multiple purposes. Medically, Botox is can be used to treat slight muscle spasms including those in the eyes and eyelids; however, most people know Botox for it’s cosmetic use. Botox can be used to effectively reduce the wrinkles and tension lines on the face. It can also be used to relieve intense underarm sweating. Dr. Conrad has years of experience in proper administration of Botox and would love to help you relieve your muscle spasms or take a few years off your look. Whatever your need we can be your one-stop Botox treatment.
+        h3 Latisse
+        h3 Do not pay more for the cosmetic eyelash drug sweeping the nation when we have it for less!
+        p After releasing Latisse in 2008, this once daily treatment for eyelash growth quickly swept the nation. Using a small brush to administer the product, you can expect full, dark, lush lashes in just 6 to 12 weeks. We have seen a wonderful result and outstanding patient satisfaction with this product and enjoy offering it to our patients for what we believe is the cheapest price in Louisville. Since Latisse is a prescription drug Dr. Conrad needs to conduct a full eye exam before beginning Latisse, so call today to schedule your appointment!

@@ -1,18 +1,18 @@
 extends layout
 
 block content
-  #container
-      #main-content
-        #contact
-          h2 Send us a message!
-          p.center If you have any questins or comments, fill out the form below and we'll get back with you.
-          form#form-new(action="contact" method="post")
-            input(type="text" name="contactFirstName" id="contactFirstName" placeholder="First Name")
-            input(type="text" name="contactLastName" id="contactLastNameme" placeholder="Last Name")
-            input(type="tel" name="contactPhoneNum" id="contactPhoneNum" placeholder="###-###-####")
-            input(type="email" name="contactEmail" id="contactEmail" placeholder="Email")
-            select#office-location(name='contactOfficeLocation')
-              option Louisville
-              option New Albany
-            textarea( placeholder="What's on your mind?" name="contactMessage" id="contactMessage")
-            input(type="submit" value="Submit")
+  #page-container
+    #main-content
+      #contact
+        h2 Send us a message!
+        p.center If you have any questins or comments, fill out the form below and we'll get back with you.
+        form#form-new(action="contact" method="post")
+          input(type="text" name="contactFirstName" id="contactFirstName" placeholder="First Name")
+          input(type="text" name="contactLastName" id="contactLastNameme" placeholder="Last Name")
+          input(type="tel" name="contactPhoneNum" id="contactPhoneNum" placeholder="###-###-####")
+          input(type="email" name="contactEmail" id="contactEmail" placeholder="Email")
+          select#office-location(name='contactOfficeLocation')
+            option Louisville
+            option New Albany
+          textarea( placeholder="What's on your mind?" name="contactMessage" id="contactMessage")
+          input(type="submit" value="Submit")
