@@ -754,8 +754,6 @@ window.onload = function() {
       var newAlbanySaturday = document.getElementsByClassName('status-2-6')[0];
       var newAlbanySunday = document.getElementsByClassName('status-2-7')[0];
       
-      
-      console.log(louWednesday[0]);
       //Select day and update status'
       //Monday
       if (day === 1) {
