@@ -5,50 +5,91 @@ block content
     ul
       each val in ['Office Info', 'Tim J. Conrad, M.D.', 'CEC: Past, Present, and Future', 'Suburban Excimer Laser Center and hysicians Medical Center']
         li(id=val): p: a= val   
-  #general-content
-    #container
-      #main-content
-        h3 General Information
-        table.table-position.table-text
-          tr
-            td: a(href='tel:1-888-895-2020') 1-888-895-2020
-          tr
-            td 502-897-5757
-          tr
-            td: a(href='mailto:cec_questions@outlook.com') cec_questions@outlook.com  
-        #office-info-wrap
-          #office-wrap
-            #louisville-wrap
-              h3#louisville-link Louisville
-              #louisville-info
+  #general-content.container
+    #main-content
+      h3 General Information
+      table.table-position.table-text
+        tr
+          td: a(href='tel:1-888-895-2020') 1-888-895-2020
+        tr
+          td 502-897-5757
+        tr
+          td: a(href='mailto:cec_questions@outlook.com') cec_questions@outlook.com  
+      #office-info-wrap
+        #office-wrap
+          #louisville-wrap
+            h3#louisville-link Louisville
+            #louisville-info
+              table.table-position.table-text
+                tr
+                  td 204 Breckenridge Lane<br> Louisville, KY 40207
+                tr
+                  td: a(href='tel:502-899-7778') 502-899-7778
+              #louisville-map
+              iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3133.2685588918785!2d-85.65560434948111!3d38.25007699234454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886974db2dd963d9%3A0xebedc6a4a734ae66!2sConrad+Eye+Centers!5e0!3m2!1sen!2sus!4v1468868969112" width="450" height="300" frameborder="0" style="border:0" allowfullscreen)
+            #louisville-hours
+              table.table-position.table-text
+                tr 
+                  th Monday
+                  td 9am - 5pm*
+                  td closed
+                tr 
+                  th Tuesday
+                  td 9am - 5pm
+                  td Closed
+                tr
+                  th Wednesday
+                  td 9am - 5pm*
+                  td Closed
+                tr
+                  th Thursday
+                  td 9am - 5pm
+                  td Closed
+                tr
+                  th Friday
+                  td 9am - 5pm*
+                  td Closed
+                tr
+                  th Saturday
+                  td Closed
+                  td Closed
+                tr
+                  th Sunday
+                  td Closed
+                  td Closed
+              p#main-content.office-note *Office is only open for material pickups and administrative needs.
+
+            #new-albany-wrap
+              h3#new-albany-link New Albany
+              #new-albany-info
                 table.table-position.table-text
                   tr
-                    td 204 Breckenridge Lane<br> Louisville, KY 40207
+                    td 1919 State Street<br>Suite 210 <br>New Albany, IN 47150
                   tr
-                    td: a(href='tel:502-899-7778') 502-899-7778
-                #louisville-map
-                iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3133.2685588918785!2d-85.65560434948111!3d38.25007699234454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886974db2dd963d9%3A0xebedc6a4a734ae66!2sConrad+Eye+Centers!5e0!3m2!1sen!2sus!4v1468868969112" width="450" height="300" frameborder="0" style="border:0" allowfullscreen)
-              #louisville-hours
+                    td: a(href='tel:812-944-6063') 812-944-6063
+                #new-albany-map
+                iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100229.41754664695!2d-85.8149532170875!3d38.27556819591656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88696c6c2b2af461%3A0x780a51940520c991!2sConrad+Eye+Center!5e0!3m2!1sen!2sus!4v1468872270151" width="450" height="300" frameborder="0" style="border:0" allowfullscreen)
+              #new-albany-hours
                 table.table-position.table-text
                   tr 
                     th Monday
-                    td 9am - 5pm*
+                    td 1pm - 5pm
                     td closed
                   tr 
                     th Tuesday
-                    td 9am - 5pm
+                    td Closed
                     td Closed
                   tr
                     th Wednesday
-                    td 9am - 5pm*
-                    td Closed
-                  tr
-                    th Thursday
                     td 9am - 5pm
                     td Closed
                   tr
+                    th Thursday
+                    td Closed
+                    td Closed
+                  tr
                     th Friday
-                    td 9am - 5pm*
+                    td Closed
                     td Closed
                   tr
                     th Saturday
@@ -58,92 +99,47 @@ block content
                     th Sunday
                     td Closed
                     td Closed
-                p#main-content.office-note *Office is only open for material pickups and administrative needs.
+  #divide-line
+  #bio-content.container
+    #main-content
+      h2 Tim J. Conrad, MD
+      h3 Louisville’s answer to comprehensive personalized eye care; you have found your eye doctor!
+      h3 Trained at Duke University, University of North Carolina in Chapel Hill, and the Kentucky Lions Eye Research Center at the University of Louisville, Dr. Conrad is committed to providing a personal comprehensive approach to eye care.
+      p Dr. Tim Conrad was born in 1960 in Louisville, Kentucky, and spent his adolescent years in nearby Palmyra, Indiana. After graduating at the top of his high school class, he attended Purdue University on full scholarship where he achieved a BS degree in Chemical Engineering. From there he worked with Marathon Oil Company in Ohio for four years writing and developing analytical software.
+      p In 1987 Dr. Conrad matriculated at Duke University School of Medicine, one of the nation’s top medical schools. Dr. Conrad excelled at Duke, receiving many honors and doing original collaborative research on corneal neovascularization (abnormal blood vessel growth in the front part of the eye) which yielded a new system for measuring blood vessel growth. In 1991 he was named a Scholar in Pathology and attained his M.D. degree. After Duke, Dr. Conrad trained in Internal Medicine at the University of North Carolina in Chapel Hill and returned to Louisville to complete his residency in Ophthalmology at the Kentucky Lions Eye Research Center at the University of Louisville.
+      p Upon completion he started Conrad Eye Centers to provide surgical, medical, and routine eye care to the Louisville area. Dr. Conrad is double board certified through the American Board of Ophthalmology and the National Board of Ophthalmology, a fellow of the American Academy of Ophthalmology, and a member of the Kentucky Medical Association and the Indiana State Medical Association.
+      p Dr. Conrad lives in Louisville with his wife Margaret raising their five children, Joe, Laurie, Julie, David, and Ginny. Dr. Conrad is an active community member participating in many medical interests, Boy Scouts of America, and other local organizations. He has been featured on multiple radio shows and is considered an expert in ophthalmology.
+  #divide-line
+  #history-content.container
+    #main-content    
+      h2 CEC: Past, Present, and Future
+      h3 Since 1995 Conrad Eye Centers has been committed to providing comprehensive personalized care to the Louisville and Southern Indiana area.
+      p Dr. Conrad opened the doors to the first Conrad Eye Centers office in Corydon, Indiana in October of 1995. In 1996 he opened another office in New Albany, Indiana at the Professional Arts Building on State Street. After two successful years in Indiana he closed the Corydon office and opened an office in a cozy building conveniently located in the heart of St. Matthews. Since 1998 Dr. Conrad has provided exceptional care to his patients at both the New Albany and St. Matthews locations. 1998 was also a big year for Conrad Eye Centers as Dr. Conrad became one of the 13 original founding physicians of the Suburban Excimer Laser Center purchasing the first VISX laser in Louisville and later offering the first blade-free LASIK procedures in the city.
+      p In 2003 Dr. Conrad opened optical boutiques in both locations with the concept of providing a one-stop shop for all your eye care needs. Our optical boutiques have grown to offer our patients a wide array of designer eyewear at affordable prices.
+      p In 2007 seeking to further accommodate his surgery patients, Dr. Conrad became a founding physician with the Physicians Medical Center in New Albany, Indiana. Physicians Medical Center is a physician owned and operated hospital with twelve beds and nine operating rooms. It is fully staffed and functions with the goal of providing exceptional outpatient surgery for its patients.
+      p The future of Conrad Eye Centers is very bright! Dr. Conrad is in the process of building a new practice and medical building adjacent to Floyd Memorial Hospital. When completed the new office will be a modern reflection of Dr. Conrad’s mission to provide state-of-the-art comprehensive eye care to his patients.
+  #divide-line
+  #medical-centers.container
+    #main-content    
+      h2 Suburban Excimer Laser Center and hysicians Medical Cente
+      h3 Suburban Excimer Laser Center
+      h3 Conrad Eye Centers is a cofounding partner with the Suburban Excimer Laser Center allowing us to provide state-of-the-art LASIK and other laser vision correction procedures to the Louisville area.
+      p The Suburban Excimer Laser Center is a group operated modern laser facility housing the most up-to-date measuring equipment and excimer laser available. Over 3,000 patients have experienced better vision through the help of the laser center and their member ophthalmologist.
+      p Dating back to 1989, the Suburban Hospital’s predecessor to the laser center was one of the original FDA test sites for LASIK and PRK procedures using an excimer laser. Today Dr. Conrad uses the VISX laser with Wavefront guidance to accurately perform the best possible LASIK for each of his patients.
+      p.center: a(href='') Schedule your FREE LASIK SCREENING with us!
+      form#form-new(name="lasikPackage" action="lasikPackage" method="post")
+        input(type='text' id='lasikFirstName' name="lasikFirstName" placeholder='First Name')
+        input(type='text' id='lasikLastName' name="lasikLastName" placeholder='Last Name')
+        input(type='tel' id='lasikPhone' name="lasikPhone" placeholder='###-###-####')
+        input(type='email' id='lasikEmail' name="lasikEmail" placeholder='Email')
+        label(for='lasikFirstAppointment') Preferred appointment date
+        input(type='date' id='lasikFirstApt' name="lasikFirstAppointment" )
+        label(for='lasikSecondtAppointment') Secondary appointment date
+        input(type='date' id='lasikSecondApt' name="lasikSecondAppointment")
+        input(type='submit' value='Submit')
+      #content-divide
+      h2 Physicians Medical Center
+      h3 As a co-owner of Physicians Medical Center just outside of Louisville in New Albany, Dr. Conrad can offer his patients a state-of-the-art relaxing experience for all outpatient procedures.
+      p The Physicians Medical Center, located just ten minutes from downtown Louisville in New Albany, Indiana, is a physician owned and operated hospital. This gives your care to the physician. Dr. Conrad rests assured that each patient will have personal comfortable care in the hands of the medical center. Physicians Medical Center has a strict nurse-to-patient ratio and provides clean, new, relaxing accommodations.
 
-              #new-albany-wrap
-                h3#new-albany-link New Albany
-                #new-albany-info
-                  table.table-position.table-text
-                    tr
-                      td 1919 State Street<br>Suite 210 <br>New Albany, IN 47150
-                    tr
-                      td: a(href='tel:812-944-6063') 812-944-6063
-                  #new-albany-map
-                  iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100229.41754664695!2d-85.8149532170875!3d38.27556819591656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88696c6c2b2af461%3A0x780a51940520c991!2sConrad+Eye+Center!5e0!3m2!1sen!2sus!4v1468872270151" width="450" height="300" frameborder="0" style="border:0" allowfullscreen)
-                #new-albany-hours
-                  table.table-position.table-text
-                    tr 
-                      th Monday
-                      td 1pm - 5pm
-                      td closed
-                    tr 
-                      th Tuesday
-                      td Closed
-                      td Closed
-                    tr
-                      th Wednesday
-                      td 9am - 5pm
-                      td Closed
-                    tr
-                      th Thursday
-                      td Closed
-                      td Closed
-                    tr
-                      th Friday
-                      td Closed
-                      td Closed
-                    tr
-                      th Saturday
-                      td Closed
-                      td Closed
-                    tr
-                      th Sunday
-                      td Closed
-                      td Closed
-  #divide-line
-  #bio-content
-    #container
-      #main-content
-        h2 Tim J. Conrad, MD
-        h3 Louisville’s answer to comprehensive personalized eye care; you have found your eye doctor!
-        h3 Trained at Duke University, University of North Carolina in Chapel Hill, and the Kentucky Lions Eye Research Center at the University of Louisville, Dr. Conrad is committed to providing a personal comprehensive approach to eye care.
-        p Dr. Tim Conrad was born in 1960 in Louisville, Kentucky, and spent his adolescent years in nearby Palmyra, Indiana. After graduating at the top of his high school class, he attended Purdue University on full scholarship where he achieved a BS degree in Chemical Engineering. From there he worked with Marathon Oil Company in Ohio for four years writing and developing analytical software.
-        p In 1987 Dr. Conrad matriculated at Duke University School of Medicine, one of the nation’s top medical schools. Dr. Conrad excelled at Duke, receiving many honors and doing original collaborative research on corneal neovascularization (abnormal blood vessel growth in the front part of the eye) which yielded a new system for measuring blood vessel growth. In 1991 he was named a Scholar in Pathology and attained his M.D. degree. After Duke, Dr. Conrad trained in Internal Medicine at the University of North Carolina in Chapel Hill and returned to Louisville to complete his residency in Ophthalmology at the Kentucky Lions Eye Research Center at the University of Louisville.
-        p Upon completion he started Conrad Eye Centers to provide surgical, medical, and routine eye care to the Louisville area. Dr. Conrad is double board certified through the American Board of Ophthalmology and the National Board of Ophthalmology, a fellow of the American Academy of Ophthalmology, and a member of the Kentucky Medical Association and the Indiana State Medical Association.
-        p Dr. Conrad lives in Louisville with his wife Margaret raising their five children, Joe, Laurie, Julie, David, and Ginny. Dr. Conrad is an active community member participating in many medical interests, Boy Scouts of America, and other local organizations. He has been featured on multiple radio shows and is considered an expert in ophthalmology.
-  #divide-line
-  #history-content
-    #container
-      #main-content    
-        h2 CEC: Past, Present, and Future
-        h3 Since 1995 Conrad Eye Centers has been committed to providing comprehensive personalized care to the Louisville and Southern Indiana area.
-        p Dr. Conrad opened the doors to the first Conrad Eye Centers office in Corydon, Indiana in October of 1995. In 1996 he opened another office in New Albany, Indiana at the Professional Arts Building on State Street. After two successful years in Indiana he closed the Corydon office and opened an office in a cozy building conveniently located in the heart of St. Matthews. Since 1998 Dr. Conrad has provided exceptional care to his patients at both the New Albany and St. Matthews locations. 1998 was also a big year for Conrad Eye Centers as Dr. Conrad became one of the 13 original founding physicians of the Suburban Excimer Laser Center purchasing the first VISX laser in Louisville and later offering the first blade-free LASIK procedures in the city.
-        p In 2003 Dr. Conrad opened optical boutiques in both locations with the concept of providing a one-stop shop for all your eye care needs. Our optical boutiques have grown to offer our patients a wide array of designer eyewear at affordable prices.
-        p In 2007 seeking to further accommodate his surgery patients, Dr. Conrad became a founding physician with the Physicians Medical Center in New Albany, Indiana. Physicians Medical Center is a physician owned and operated hospital with twelve beds and nine operating rooms. It is fully staffed and functions with the goal of providing exceptional outpatient surgery for its patients.
-        p The future of Conrad Eye Centers is very bright! Dr. Conrad is in the process of building a new practice and medical building adjacent to Floyd Memorial Hospital. When completed the new office will be a modern reflection of Dr. Conrad’s mission to provide state-of-the-art comprehensive eye care to his patients.
-  #divide-line
-  #medical-centers
-    #container
-      #main-content    
-        h2 Suburban Excimer Laser Center and hysicians Medical Cente
-        h3 Suburban Excimer Laser Center
-        h3 Conrad Eye Centers is a cofounding partner with the Suburban Excimer Laser Center allowing us to provide state-of-the-art LASIK and other laser vision correction procedures to the Louisville area.
-        p The Suburban Excimer Laser Center is a group operated modern laser facility housing the most up-to-date measuring equipment and excimer laser available. Over 3,000 patients have experienced better vision through the help of the laser center and their member ophthalmologist.
-        p Dating back to 1989, the Suburban Hospital’s predecessor to the laser center was one of the original FDA test sites for LASIK and PRK procedures using an excimer laser. Today Dr. Conrad uses the VISX laser with Wavefront guidance to accurately perform the best possible LASIK for each of his patients.
-        p.center: a(href='') Schedule your FREE LASIK SCREENING with us!
-        form#form-new(name="lasikPackage" action="lasikPackage" method="post")
-          input(type='text' id='lasikFirstName' name="lasikFirstName" placeholder='First Name')
-          input(type='text' id='lasikLastName' name="lasikLastName" placeholder='Last Name')
-          input(type='tel' id='lasikPhone' name="lasikPhone" placeholder='###-###-####')
-          input(type='email' id='lasikEmail' name="lasikEmail" placeholder='Email')
-          label(for='lasikFirstAppointment') Preferred appointment date
-          input(type='date' id='lasikFirstApt' name="lasikFirstAppointment" )
-          label(for='lasikSecondtAppointment') Secondary appointment date
-          input(type='date' id='lasikSecondApt' name="lasikSecondAppointment")
-          input(type='submit' value='Submit')
-        #content-divide
-        h2 Physicians Medical Center
-        h3 As a co-owner of Physicians Medical Center just outside of Louisville in New Albany, Dr. Conrad can offer his patients a state-of-the-art relaxing experience for all outpatient procedures.
-        p The Physicians Medical Center, located just ten minutes from downtown Louisville in New Albany, Indiana, is a physician owned and operated hospital. This gives your care to the physician. Dr. Conrad rests assured that each patient will have personal comfortable care in the hands of the medical center. Physicians Medical Center has a strict nurse-to-patient ratio and provides clean, new, relaxing accommodations.
-        
    

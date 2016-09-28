@@ -7,9 +7,9 @@ $(document).on('ready', function() {
 });
 
 $('.main-nav')
-    .css("margin-left",-$(this).width())
+    .css("right",-$(this).width())
     .animate({
-        marginLeft: '48%'
+        right: '24px'
     }, 800);
 
 $('.title-container')
@@ -551,15 +551,20 @@ window.onload = function() {
      {name: 'Three Rivers Preferred', 
       phone: '1-260-479-3553'} ]
     
-    //Get insurance name from service dropdown 
-    var insuranceName = document.getElementById('insurance-picker');
-    var insuranceNameVal = insuranceName.value;
+    window.onload = getInsuranceName();
+    document.getElementById('insurance-picker').onclick = getInsuranceName;
     
-    insuranceName.onchange = function() {
+    function getInsuranceName() {
+      //Get insurance name from service dropdown 
+      var insuranceName = document.getElementById('insurance-picker');
+      var insuranceNameVal = insuranceName.value;
+      
       insuranceNameVal = insuranceName.value;
       function findinsurance(insInfo){
         return insInfo.name === insuranceNameVal;
       }
+    
+      
       //gets object for selected insurance carrier
       var insuranceObj = medicalInsurances.find(findinsurance);
       
@@ -597,13 +602,15 @@ window.onload = function() {
     ];
     
     //Common problem variables
-    var problemName = document.getElementById('common-problem');
-    var problemNameVal = problemName.value;
+    window.onload = getProblemName();
+    document.getElementById('common-problem').onclick = getProblemName;
     
-    //Get selected common problem value
-    problemName.onchange = function() {
-      problemNameVal = problemName.value;
-      console.log(problemNameVal);
+    function getProblemName() {
+      var problemName = document.getElementById('common-problem');
+      var problemNameVal = problemName.value;
+      //Get selected common problem value
+        problemNameVal = problemName.value;
+        console.log(problemNameVal);
       function findCommonProblem(problemInfo){
         return problemInfo.name === problemNameVal;
       }
